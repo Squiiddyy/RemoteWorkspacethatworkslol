@@ -103,7 +103,7 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": ""
+      "value": "Blocks.REDSTONE_ORE"
     },
     "livingSound": {
       "value": ""
