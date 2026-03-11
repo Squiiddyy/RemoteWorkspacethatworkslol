@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "minksandmisfits:baisc_home",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 33,
+    "separation": 30,
+    "salt": 1872294958
+  }
+}

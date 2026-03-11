@@ -1,0 +1,254 @@
+{
+  "mod_elements": [
+    {
+      "name": "BaiscHome",
+      "type": "structure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baisc_home",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/worldgen/template_pool/baisc_home.json",
+          "src/main/resources/data/minksandmisfits/worldgen/structure/baisc_home.json",
+          "src/main/resources/data/minksandmisfits/worldgen/structure_set/baisc_home.json"
+        ]
+      },
+      "path": "~/Player like/Homes"
+    },
+    {
+      "name": "BasicPlayer",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basic_player",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/client/renderer/BasicPlayerRenderer.java",
+          "src/main/java/net/mcreator/minksandmisfits/entity/BasicPlayerEntity.java",
+          "src/main/resources/assets/minksandmisfits/models/item/basic_player_spawn_egg.json"
+        ]
+      },
+      "path": "~/Player like/PlayerLikes"
+    },
+    {
+      "name": "PlayerWanderDistance",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_wander_distance",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/PlayerWanderDistanceProcedure.java"
+        ]
+      },
+      "path": "~/Player like/PlayerLikes"
+    },
+    {
+      "name": "HouseAnchor",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "house_anchor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/client/renderer/HouseAnchorRenderer.java",
+          "src/main/java/net/mcreator/minksandmisfits/entity/HouseAnchorEntity.java",
+          "src/main/resources/assets/minksandmisfits/models/item/house_anchor_spawn_egg.json"
+        ]
+      },
+      "path": "~/Player like/PlayerLikes"
+    },
+    {
+      "name": "HouseAnchorOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "house_anchor_on_entity_tick_update",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/HouseAnchorOnEntityTickUpdateProcedure.java"
+        ]
+      },
+      "path": "~/Player like/PlayerLikes"
+    },
+    {
+      "name": "BasicPlayerEntityIsHurt",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basic_player_entity_is_hurt",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/BasicPlayerEntityIsHurtProcedure.java"
+        ]
+      },
+      "path": "~/Player like/PlayerLikes"
+    },
+    {
+      "name": "Mink",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/client/renderer/MinkRenderer.java",
+          "src/main/resources/assets/minksandmisfits/models/item/mink_spawn_egg.json",
+          "src/main/java/net/mcreator/minksandmisfits/entity/MinkEntity.java",
+          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/mink_biome_modifier.json"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "BasicPlayerOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basic_player_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/BasicPlayerOnInitialEntitySpawnProcedure.java"
+        ]
+      },
+      "path": "~/Player like/PlayerLikes"
+    },
+    {
+      "name": "PlayerHeadLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_head_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/loot_table/entities/basic_player.json"
+        ]
+      },
+      "path": "~/Player like/PlayerLikes"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "tag_elements": {},
+  "tab_element_order": {},
+  "language_map": {
+    "en_us": {
+      "entity.neighbors.basic_player": "Basic Player",
+      "item.neighbors.basic_player_spawn_egg": "Basic Player Spawn Egg",
+      "entity.neighbors.house_anchor": "House Anchor",
+      "item.neighbors.house_anchor_spawn_egg": "House Anchor Spawn Egg",
+      "item.minksandmisfits.basic_player_spawn_egg": "Basic Player Spawn Egg",
+      "entity.minksandmisfits.basic_player": "Basic Player",
+      "item.minksandmisfits.house_anchor_spawn_egg": "House Anchor Spawn Egg",
+      "entity.minksandmisfits.house_anchor": "House Anchor",
+      "entity.minksandmisfits.mink": "Mink",
+      "item.minksandmisfits.mink_spawn_egg": "Mink Spawn Egg"
+    }
+  },
+  "metadata": {
+    "files": [
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModItems.java",
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntities.java",
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntityRenderers.java",
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModTabs.java",
+      "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsMod.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/pack.mcmeta"
+    ]
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Player like",
+        "children": [
+          {
+            "name": "PlayerLikes",
+            "children": []
+          },
+          {
+            "name": "Homes",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Minks",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "minksandmisfits",
+    "modName": "Minks \u0026 Misfits ",
+    "version": "1.0.0",
+    "author": "MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.21.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.minksandmisfits"
+  },
+  "mcreatorVersion": 202500345720
+}
