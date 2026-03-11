@@ -19,6 +19,7 @@ import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModTabs;
+import net.mcreator.minksandmisfits.init.MinksandmisfitsModMobEffects;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModItems;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModEntities;
 
@@ -42,6 +43,7 @@ public class MinksandmisfitsMod {
 		MinksandmisfitsModItems.REGISTRY.register(modEventBus);
 		MinksandmisfitsModEntities.REGISTRY.register(modEventBus);
 		MinksandmisfitsModTabs.REGISTRY.register(modEventBus);
+		MinksandmisfitsModMobEffects.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

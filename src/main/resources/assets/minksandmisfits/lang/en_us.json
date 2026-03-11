@@ -10,5 +10,6 @@
   "entity.minksandmisfits.mink": "Mink",
   "item.minksandmisfits.mink_spawn_egg": "Mink Spawn Egg",
   "item.minksandmisfits.opossum_spawn_egg": "Opossum Spawn Egg",
-  "entity.minksandmisfits.opossum": "Opossum"
+  "entity.minksandmisfits.opossum": "Opossum",
+  "effect.minksandmisfits.sinker": "Sinker"
 }
