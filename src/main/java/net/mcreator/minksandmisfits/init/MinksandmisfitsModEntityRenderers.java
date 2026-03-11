@@ -8,6 +8,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import net.mcreator.minksandmisfits.client.renderer.OpossumRenderer;
 import net.mcreator.minksandmisfits.client.renderer.MinkRenderer;
 import net.mcreator.minksandmisfits.client.renderer.HouseAnchorRenderer;
 import net.mcreator.minksandmisfits.client.renderer.BasicPlayerRenderer;
@@ -19,5 +20,6 @@ public class MinksandmisfitsModEntityRenderers {
 		event.registerEntityRenderer(MinksandmisfitsModEntities.BASIC_PLAYER.get(), BasicPlayerRenderer::new);
 		event.registerEntityRenderer(MinksandmisfitsModEntities.HOUSE_ANCHOR.get(), HouseAnchorRenderer::new);
 		event.registerEntityRenderer(MinksandmisfitsModEntities.MINK.get(), MinkRenderer::new);
+		event.registerEntityRenderer(MinksandmisfitsModEntities.OPOSSUM.get(), OpossumRenderer::new);
 	}
 }

@@ -24,6 +24,7 @@ public class MinksandmisfitsModTabs {
 			tabData.accept(MinksandmisfitsModItems.BASIC_PLAYER_SPAWN_EGG.get());
 			tabData.accept(MinksandmisfitsModItems.HOUSE_ANCHOR_SPAWN_EGG.get());
 			tabData.accept(MinksandmisfitsModItems.MINK_SPAWN_EGG.get());
+			tabData.accept(MinksandmisfitsModItems.OPOSSUM_SPAWN_EGG.get());
 		}
 	}
 }

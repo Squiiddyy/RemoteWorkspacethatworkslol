@@ -15,6 +15,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.registries.Registries;
 
+import net.mcreator.minksandmisfits.entity.OpossumEntity;
 import net.mcreator.minksandmisfits.entity.MinkEntity;
 import net.mcreator.minksandmisfits.entity.HouseAnchorEntity;
 import net.mcreator.minksandmisfits.entity.BasicPlayerEntity;
@@ -35,6 +36,10 @@ public class MinksandmisfitsModEntities {
 			EntityType.Builder.<MinkEntity>of(MinkEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.ridingOffset(-0.6f).sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<OpossumEntity>> OPOSSUM = register("opossum",
+			EntityType.Builder.<OpossumEntity>of(OpossumEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.9f, 0.9f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -47,6 +52,7 @@ public class MinksandmisfitsModEntities {
 		BasicPlayerEntity.init(event);
 		HouseAnchorEntity.init(event);
 		MinkEntity.init(event);
+		OpossumEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -54,5 +60,6 @@ public class MinksandmisfitsModEntities {
 		event.put(BASIC_PLAYER.get(), BasicPlayerEntity.createAttributes().build());
 		event.put(HOUSE_ANCHOR.get(), HouseAnchorEntity.createAttributes().build());
 		event.put(MINK.get(), MinkEntity.createAttributes().build());
+		event.put(OPOSSUM.get(), OpossumEntity.createAttributes().build());
 	}
 }

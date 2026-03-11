@@ -181,6 +181,22 @@
         ]
       },
       "path": "~/Player like/PlayerLikes"
+    },
+    {
+      "name": "Opossum",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opossum",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/entity/OpossumEntity.java",
+          "src/main/java/net/mcreator/minksandmisfits/client/renderer/OpossumRenderer.java",
+          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/opossum_biome_modifier.json",
+          "src/main/resources/assets/minksandmisfits/models/item/opossum_spawn_egg.json"
+        ]
+      },
+      "path": "~/Opossums"
     }
   ],
   "variable_elements": [],
@@ -198,7 +214,9 @@
       "item.minksandmisfits.house_anchor_spawn_egg": "House Anchor Spawn Egg",
       "entity.minksandmisfits.house_anchor": "House Anchor",
       "entity.minksandmisfits.mink": "Mink",
-      "item.minksandmisfits.mink_spawn_egg": "Mink Spawn Egg"
+      "item.minksandmisfits.mink_spawn_egg": "Mink Spawn Egg",
+      "item.minksandmisfits.opossum_spawn_egg": "Opossum Spawn Egg",
+      "entity.minksandmisfits.opossum": "Opossum"
     }
   },
   "metadata": {
@@ -206,10 +224,10 @@
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModItems.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntities.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntityRenderers.java",
+      "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsMod.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/resources/pack.mcmeta",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModTabs.java",
-      "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsMod.java"
+      "src/main/resources/pack.mcmeta"
     ]
   },
   "foldersRoot": {
