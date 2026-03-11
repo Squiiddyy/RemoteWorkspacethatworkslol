@@ -23,9 +23,9 @@
       "registry_name": "basic_player",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minksandmisfits/client/renderer/BasicPlayerRenderer.java",
+          "src/main/resources/assets/minksandmisfits/models/item/basic_player_spawn_egg.json",
           "src/main/java/net/mcreator/minksandmisfits/entity/BasicPlayerEntity.java",
-          "src/main/resources/assets/minksandmisfits/models/item/basic_player_spawn_egg.json"
+          "src/main/java/net/mcreator/minksandmisfits/client/renderer/BasicPlayerRenderer.java"
         ]
       },
       "path": "~/Player like/PlayerLikes"
@@ -190,10 +190,10 @@
       "registry_name": "opossum",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minksandmisfits/entity/OpossumEntity.java",
-          "src/main/java/net/mcreator/minksandmisfits/client/renderer/OpossumRenderer.java",
+          "src/main/resources/assets/minksandmisfits/models/item/opossum_spawn_egg.json",
           "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/opossum_biome_modifier.json",
-          "src/main/resources/assets/minksandmisfits/models/item/opossum_spawn_egg.json"
+          "src/main/java/net/mcreator/minksandmisfits/entity/OpossumEntity.java",
+          "src/main/java/net/mcreator/minksandmisfits/client/renderer/OpossumRenderer.java"
         ]
       },
       "path": "~/Opossums"
@@ -224,10 +224,10 @@
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModItems.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntities.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntityRenderers.java",
-      "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsMod.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/pack.mcmeta",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModTabs.java",
-      "src/main/resources/pack.mcmeta"
+      "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsMod.java"
     ]
   },
   "foldersRoot": {
