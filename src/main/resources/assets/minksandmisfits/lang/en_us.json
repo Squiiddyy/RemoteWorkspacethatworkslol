@@ -1,12 +1,1 @@
-{
-  "entity.neighbors.basic_player": "Basic Player",
-  "item.neighbors.basic_player_spawn_egg": "Basic Player Spawn Egg",
-  "entity.neighbors.house_anchor": "House Anchor",
-  "item.neighbors.house_anchor_spawn_egg": "House Anchor Spawn Egg",
-  "item.minksandmisfits.basic_player_spawn_egg": "Basic Player Spawn Egg",
-  "entity.minksandmisfits.basic_player": "Basic Player",
-  "item.minksandmisfits.house_anchor_spawn_egg": "House Anchor Spawn Egg",
-  "entity.minksandmisfits.house_anchor": "House Anchor",
-  "entity.minksandmisfits.mink": "Mink",
-  "item.minksandmisfits.mink_spawn_egg": "Mink Spawn Egg"
-}
+{}
