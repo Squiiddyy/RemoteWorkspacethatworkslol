@@ -1,16 +1,38 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "PeenisPlant",
+      "type": "plant",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "peenis_plant",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/block/PeenisPlantBlock.java",
+          "src/main/resources/data/minksandmisfits/loot_table/blocks/peenis_plant.json",
+          "src/main/resources/assets/minksandmisfits/models/block/peenis_plant.json",
+          "src/main/resources/assets/minksandmisfits/blockstates/peenis_plant.json",
+          "src/main/resources/assets/minksandmisfits/models/item/peenis_plant.json"
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "block.minksandmisfits.peenis_plant": "Peenis Plant"
+    }
   },
   "metadata": {
     "files": [
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModBlocks.java",
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModItems.java",
       "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsMod.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModTabs.java",
       "src/main/resources/pack.mcmeta"
     ]
   },

@@ -18,6 +18,10 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.minksandmisfits.init.MinksandmisfitsModTabs;
+import net.mcreator.minksandmisfits.init.MinksandmisfitsModItems;
+import net.mcreator.minksandmisfits.init.MinksandmisfitsModBlocks;
+
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.Map;
 import java.util.List;
@@ -35,6 +39,9 @@ public class MinksandmisfitsMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+		MinksandmisfitsModBlocks.REGISTRY.register(modEventBus);
+		MinksandmisfitsModItems.REGISTRY.register(modEventBus);
+		MinksandmisfitsModTabs.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}
