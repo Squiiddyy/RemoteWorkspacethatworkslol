@@ -2,7 +2,7 @@
   "_fv": 79,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "Sinker",
+    "effectName": "Mink Fast Swimmer",
     "icon": "sink_proof",
     "color": {
       "value": -1,
@@ -12,16 +12,16 @@
       "value": ""
     },
     "isInstant": false,
-    "mobEffectCategory": "NEUTRAL",
+    "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
     "isCuredbyHoney": false,
     "modifiers": [
       {
         "attribute": {
-          "value": "ENTITY_GRAVITY"
+          "value": "SWIM_SPEED"
         },
-        "amount": 0.1,
+        "amount": 0.5,
         "operation": "ADD_MULTIPLIED_BASE"
       },
       {

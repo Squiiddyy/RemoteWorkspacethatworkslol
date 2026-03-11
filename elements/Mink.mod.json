@@ -16,10 +16,10 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 0.6
     },
     "boundingBoxScale": {
-      "fixedValue": 1.0
+      "fixedValue": 0.6
     },
     "modelLayers": [],
     "animations": [],
@@ -29,17 +29,17 @@
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -13296869,
+      "value": -12505297,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -2506046,
+      "value": -3624794,
       "falpha": 0.0
     },
     "spawnEggTexture": "",
     "creativeTabs": [
       {
-        "value": "MISC"
+        "value": "CUSTOM:MinksAndMisfits"
       }
     ],
     "isBoss": false,
@@ -69,12 +69,12 @@
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
-    "stepHeight": 0.6,
+    "stepHeight": 0.65,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
-    "followRange": 22,
+    "followRange": 26,
     "health": 10,
-    "xpAmount": 0,
+    "xpAmount": 3,
     "waterMob": false,
     "breatheUnderwater": {
       "fixedValue": true
@@ -126,10 +126,14 @@
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block><block type=\"attack_action\" x=\"546\" y=\"93\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field></block></next></block></next></block><block type=\"attack_entity\" x=\"631\" y=\"244\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field></block><block type=\"look_around\" x=\"368\" y=\"312\"><field name=\"condition\">null,null</field></block><block type=\"attack_on_collide\" x=\"679\" y=\"333\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field></block></next></block><block type=\"swim_in_water\" x=\"302\" y=\"538\"><field name=\"condition\">null,null</field></block></xml>",
-    "breedable": false,
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"leap_at_target\"><field name=\"speed\">0.4</field><field name=\"condition\">null,null</field><next><block type=\"attack_with_range\"><field name=\"range\">1.25</field><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.FISH#0</field></block></value><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityCod</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityChicken</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"find_and_move_to_air\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": true,
     "tameable": false,
-    "breedTriggerItems": [],
+    "breedTriggerItems": [
+      {
+        "value": "Items.FISH#0"
+      }
+    ],
     "ranged": false,
     "rangedAttackItem": {
       "value": ""

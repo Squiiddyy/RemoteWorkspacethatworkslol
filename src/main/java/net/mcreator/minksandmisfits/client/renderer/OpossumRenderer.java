@@ -17,6 +17,7 @@ public class OpossumRenderer extends MobRenderer<OpossumEntity, PigModel<Opossum
 
 	@Override
 	protected void scale(OpossumEntity entity, PoseStack poseStack, float f) {
+		poseStack.scale(0.8f, 0.8f, 0.8f);
 		poseStack.scale(entity.getAgeScale(), entity.getAgeScale(), entity.getAgeScale());
 	}
 

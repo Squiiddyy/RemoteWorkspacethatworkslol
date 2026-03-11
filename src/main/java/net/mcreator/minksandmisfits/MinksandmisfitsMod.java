@@ -22,6 +22,7 @@ import net.mcreator.minksandmisfits.init.MinksandmisfitsModTabs;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModMobEffects;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModItems;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModEntities;
+import net.mcreator.minksandmisfits.init.MinksandmisfitsModBlocks;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.Map;
@@ -40,6 +41,7 @@ public class MinksandmisfitsMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+		MinksandmisfitsModBlocks.REGISTRY.register(modEventBus);
 		MinksandmisfitsModItems.REGISTRY.register(modEventBus);
 		MinksandmisfitsModEntities.REGISTRY.register(modEventBus);
 		MinksandmisfitsModTabs.REGISTRY.register(modEventBus);

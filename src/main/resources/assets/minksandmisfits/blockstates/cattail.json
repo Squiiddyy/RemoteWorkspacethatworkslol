@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "minksandmisfits:block/cattail"
+    },
+    "half=lower": {
+      "model": "minksandmisfits:block/cattail_bottom"
+    }
+  }
+}

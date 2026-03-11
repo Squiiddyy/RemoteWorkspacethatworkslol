@@ -19,7 +19,7 @@ public class MinksandmisfitsModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(MinksandmisfitsModEntities.BASIC_PLAYER.get(), BasicPlayerRenderer::new);
 		event.registerEntityRenderer(MinksandmisfitsModEntities.HOUSE_ANCHOR.get(), HouseAnchorRenderer::new);
-		event.registerEntityRenderer(MinksandmisfitsModEntities.MINK.get(), MinkRenderer::new);
 		event.registerEntityRenderer(MinksandmisfitsModEntities.OPOSSUM.get(), OpossumRenderer::new);
+		event.registerEntityRenderer(MinksandmisfitsModEntities.MINK.get(), MinkRenderer::new);
 	}
 }

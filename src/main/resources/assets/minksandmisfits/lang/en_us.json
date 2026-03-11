@@ -7,9 +7,14 @@
   "entity.minksandmisfits.basic_player": "Basic Player",
   "item.minksandmisfits.house_anchor_spawn_egg": "House Anchor Spawn Egg",
   "entity.minksandmisfits.house_anchor": "House Anchor",
-  "entity.minksandmisfits.mink": "Mink",
-  "item.minksandmisfits.mink_spawn_egg": "Mink Spawn Egg",
   "item.minksandmisfits.opossum_spawn_egg": "Opossum Spawn Egg",
   "entity.minksandmisfits.opossum": "Opossum",
-  "effect.minksandmisfits.sinker": "Sinker"
+  "biome.minksandmisfits.somber_shore": "Somber Shore",
+  "block.minksandmisfits.cattail": "Cattail",
+  "item_group.minksandmisfits.minks_and_misfits": "Minks And Misfits",
+  "entity.minksandmisfits.mink": "Mink",
+  "item.minksandmisfits.mink_spawn_egg": "Mink Spawn Egg",
+  "effect.minksandmisfits.mink_fast_swimmer": "Mink Fast Swimmer",
+  "item.minksandmisfits.dashtest": "Dashtest",
+  "block.minksandmisfits.dinoflagellate": "Dinoflagellate"
 }

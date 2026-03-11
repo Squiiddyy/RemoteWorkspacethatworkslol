@@ -16,10 +16,10 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 1.0
+      "fixedValue": 0.8
     },
     "boundingBoxScale": {
-      "fixedValue": 1.0
+      "fixedValue": 0.8
     },
     "modelLayers": [],
     "animations": [],
@@ -39,7 +39,7 @@
     "spawnEggTexture": "",
     "creativeTabs": [
       {
-        "value": "MISC"
+        "value": "CUSTOM:MinksAndMisfits"
       }
     ],
     "isBoss": false,

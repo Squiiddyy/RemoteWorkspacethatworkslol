@@ -1,0 +1,9 @@
+{
+  "parent": "minksandmisfits:custom/flatonground",
+  "textures": {
+    "all": "minksandmisfits:block/dinoflagellateplaceholder",
+    "particle": "minksandmisfits:block/dinoflagellateplaceholder",
+    "missing": "minksandmisfits:block/dinoflagellateplaceholder"
+  },
+  "render_type": "cutout"
+}

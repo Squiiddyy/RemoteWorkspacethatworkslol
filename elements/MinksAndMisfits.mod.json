@@ -1,0 +1,11 @@
+{
+  "_fv": 79,
+  "_type": "tab",
+  "definition": {
+    "name": "Minks And Misfits",
+    "icon": {
+      "value": "CUSTOM:BasicPlayer.spawn_egg"
+    },
+    "showSearch": false
+  }
+}

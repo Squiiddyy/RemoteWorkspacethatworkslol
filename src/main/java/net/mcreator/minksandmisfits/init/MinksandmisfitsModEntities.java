@@ -32,12 +32,12 @@ public class MinksandmisfitsModEntities {
 			EntityType.Builder.<HouseAnchorEntity>of(HouseAnchorEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(1f, 1f));
-	public static final DeferredHolder<EntityType<?>, EntityType<MinkEntity>> MINK = register("mink",
-			EntityType.Builder.<MinkEntity>of(MinkEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-
-					.sized(0.9f, 0.9f));
 	public static final DeferredHolder<EntityType<?>, EntityType<OpossumEntity>> OPOSSUM = register("opossum",
 			EntityType.Builder.<OpossumEntity>of(OpossumEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.9f, 0.9f));
+	public static final DeferredHolder<EntityType<?>, EntityType<MinkEntity>> MINK = register("mink",
+			EntityType.Builder.<MinkEntity>of(MinkEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.9f, 0.9f));
 
@@ -51,15 +51,15 @@ public class MinksandmisfitsModEntities {
 	public static void init(RegisterSpawnPlacementsEvent event) {
 		BasicPlayerEntity.init(event);
 		HouseAnchorEntity.init(event);
-		MinkEntity.init(event);
 		OpossumEntity.init(event);
+		MinkEntity.init(event);
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(BASIC_PLAYER.get(), BasicPlayerEntity.createAttributes().build());
 		event.put(HOUSE_ANCHOR.get(), HouseAnchorEntity.createAttributes().build());
-		event.put(MINK.get(), MinkEntity.createAttributes().build());
 		event.put(OPOSSUM.get(), OpossumEntity.createAttributes().build());
+		event.put(MINK.get(), MinkEntity.createAttributes().build());
 	}
 }

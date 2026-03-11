@@ -39,7 +39,7 @@
     "spawnEggTexture": "",
     "creativeTabs": [
       {
-        "value": "MISC"
+        "value": "CUSTOM:MinksAndMisfits"
       }
     ],
     "isBoss": false,

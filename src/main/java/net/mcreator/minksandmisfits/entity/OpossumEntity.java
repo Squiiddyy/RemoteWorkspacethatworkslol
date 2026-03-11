@@ -40,6 +40,7 @@ public class OpossumEntity extends TamableAnimal {
 		super(type, world);
 		xpReward = 2;
 		setNoAi(false);
+		refreshDimensions();
 	}
 
 	@Override
@@ -137,6 +138,11 @@ public class OpossumEntity extends TamableAnimal {
 	@Override
 	public boolean isFood(ItemStack stack) {
 		return Ingredient.of(new ItemStack(Items.SALMON), new ItemStack(Items.APPLE)).test(stack);
+	}
+
+	@Override
+	public EntityDimensions getDefaultDimensions(Pose pose) {
+		return super.getDefaultDimensions(pose).scale(0.8f);
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {

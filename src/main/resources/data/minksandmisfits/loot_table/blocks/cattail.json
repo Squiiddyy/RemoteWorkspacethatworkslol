@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "minksandmisfits:blocks/cattail",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minksandmisfits:cattail",
+          "conditions": [
+            {
+              "block": "minksandmisfits:cattail",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

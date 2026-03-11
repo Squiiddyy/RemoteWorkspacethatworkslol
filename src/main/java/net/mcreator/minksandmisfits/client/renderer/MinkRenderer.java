@@ -8,9 +8,17 @@ import net.minecraft.client.model.PigModel;
 
 import net.mcreator.minksandmisfits.entity.MinkEntity;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+
 public class MinkRenderer extends MobRenderer<MinkEntity, PigModel<MinkEntity>> {
 	public MinkRenderer(EntityRendererProvider.Context context) {
 		super(context, new PigModel<MinkEntity>(context.bakeLayer(ModelLayers.PIG)), 0.5f);
+	}
+
+	@Override
+	protected void scale(MinkEntity entity, PoseStack poseStack, float f) {
+		poseStack.scale(0.6f, 0.6f, 0.6f);
+		poseStack.scale(entity.getAgeScale(), entity.getAgeScale(), entity.getAgeScale());
 	}
 
 	@Override

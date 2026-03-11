@@ -135,22 +135,6 @@
       "path": "~/Player like/PlayerLikes"
     },
     {
-      "name": "Mink",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mink",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/minksandmisfits/client/renderer/MinkRenderer.java",
-          "src/main/resources/assets/minksandmisfits/models/item/mink_spawn_egg.json",
-          "src/main/java/net/mcreator/minksandmisfits/entity/MinkEntity.java",
-          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/mink_biome_modifier.json"
-        ]
-      },
-      "path": "~/Minks"
-    },
-    {
       "name": "BasicPlayerOnInitialEntitySpawn",
       "type": "procedure",
       "compiles": true,
@@ -218,17 +202,229 @@
       "path": "~/Minks"
     },
     {
-      "name": "Sinker",
-      "type": "potioneffect",
+      "name": "MinkSwim",
+      "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "sinker",
+      "registry_name": "mink_swim",
       "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
         "files": [
-          "src/main/java/net/mcreator/minksandmisfits/potion/SinkerMobEffect.java"
+          "src/main/java/net/mcreator/minksandmisfits/procedures/MinkSwimProcedure.java"
         ]
       },
       "path": "~/Minks"
+    },
+    {
+      "name": "SomberShore",
+      "type": "biome",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "somber_shore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/worldgen/biome/somber_shore.json",
+          "src/main/resources/data/minksandmisfits/worldgen/placed_feature/somber_shore_tree.json",
+          "src/main/resources/data/minksandmisfits/worldgen/configured_feature/somber_shore_tree.json"
+        ]
+      },
+      "path": "~/SomberShore"
+    },
+    {
+      "name": "Cattail",
+      "type": "plant",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cattail",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/loot_table/blocks/cattail.json",
+          "src/main/resources/assets/minksandmisfits/models/block/cattail.json",
+          "src/main/resources/assets/minksandmisfits/blockstates/cattail.json",
+          "src/main/resources/assets/minksandmisfits/models/item/cattail.json",
+          "src/main/java/net/mcreator/minksandmisfits/block/CattailBlock.java",
+          "src/main/resources/assets/minksandmisfits/models/block/cattail_bottom.json"
+        ]
+      },
+      "path": "~/Muskrats"
+    },
+    {
+      "name": "MinksAndMisfits",
+      "type": "tab",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minks_and_misfits",
+      "metadata": {
+        "files": []
+      }
+    },
+    {
+      "name": "OverlayCondtion",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "overlay_condtion",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/OverlayCondtionProcedure.java"
+        ]
+      },
+      "path": "~/SomberShore"
+    },
+    {
+      "name": "SomberOverlay",
+      "type": "overlay",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "somber_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/client/screens/SomberOverlayOverlay.java"
+        ]
+      },
+      "path": "~/SomberShore"
+    },
+    {
+      "name": "Mink",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/client/renderer/MinkRenderer.java",
+          "src/main/resources/assets/minksandmisfits/models/item/mink_spawn_egg.json",
+          "src/main/java/net/mcreator/minksandmisfits/entity/MinkEntity.java",
+          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/mink_biome_modifier.json"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkFastSwimmer",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_fast_swimmer",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/potion/MinkFastSwimmerMobEffect.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "DashtestRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dashtest_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/DashtestRightclickedProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "Dashtest",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dashtest",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minksandmisfits/models/item/dashtest.json",
+          "src/main/java/net/mcreator/minksandmisfits/item/DashtestItem.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "A",
+      "type": "plant",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dinoflagellate",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minksandmisfits/models/block/dinoflagellate.json",
+          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/dinoflagellate_biome_modifier.json",
+          "src/main/resources/data/minksandmisfits/worldgen/placed_feature/dinoflagellate.json",
+          "src/main/resources/assets/minksandmisfits/models/item/dinoflagellate.json",
+          "src/main/resources/data/minksandmisfits/loot_table/blocks/dinoflagellate.json",
+          "src/main/java/net/mcreator/minksandmisfits/block/ABlock.java",
+          "src/main/resources/data/minksandmisfits/worldgen/configured_feature/dinoflagellate.json",
+          "src/main/resources/assets/minksandmisfits/blockstates/dinoflagellate.json"
+        ]
+      },
+      "path": "~/SomberShore"
+    },
+    {
+      "name": "Planktomplace",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "planktomplace",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/PlanktomplaceProcedure.java"
+        ]
+      },
+      "path": "~/SomberShore"
     }
   ],
   "variable_elements": [],
@@ -245,19 +441,29 @@
       "entity.minksandmisfits.basic_player": "Basic Player",
       "item.minksandmisfits.house_anchor_spawn_egg": "House Anchor Spawn Egg",
       "entity.minksandmisfits.house_anchor": "House Anchor",
-      "entity.minksandmisfits.mink": "Mink",
-      "item.minksandmisfits.mink_spawn_egg": "Mink Spawn Egg",
       "item.minksandmisfits.opossum_spawn_egg": "Opossum Spawn Egg",
       "entity.minksandmisfits.opossum": "Opossum",
-      "effect.minksandmisfits.sinker": "Sinker"
+      "biome.minksandmisfits.somber_shore": "Somber Shore",
+      "block.minksandmisfits.cattail": "Cattail",
+      "item_group.minksandmisfits.minks_and_misfits": "Minks And Misfits",
+      "entity.minksandmisfits.mink": "Mink",
+      "item.minksandmisfits.mink_spawn_egg": "Mink Spawn Egg",
+      "effect.minksandmisfits.mink_fast_swimmer": "Mink Fast Swimmer",
+      "item.minksandmisfits.dashtest": "Dashtest",
+      "block.minksandmisfits.dinoflagellate": "Dinoflagellate"
     }
   },
   "metadata": {
     "files": [
+      "src/main/java/net/mcreator/minksandmisfits/mixin/NoiseGeneratorSettingsMixin.java",
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModBiomes.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModMobEffects.java",
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModBlocks.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModItems.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntities.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntityRenderers.java",
+      "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/resources/minksandmisfits.mixins.json",
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/resources/pack.mcmeta",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModTabs.java",
@@ -286,6 +492,14 @@
       },
       {
         "name": "Opossums",
+        "children": []
+      },
+      {
+        "name": "SomberShore",
+        "children": []
+      },
+      {
+        "name": "Muskrats",
         "children": []
       }
     ]
