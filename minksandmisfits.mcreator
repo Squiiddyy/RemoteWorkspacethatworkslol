@@ -9,9 +9,9 @@
   },
   "metadata": {
     "files": [
-      "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsMod.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/resources/pack.mcmeta",
-      "src/main/resources/META-INF/neoforge.mods.toml"
+      "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsMod.java"
     ]
   },
   "foldersRoot": {
