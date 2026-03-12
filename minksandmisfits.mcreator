@@ -787,10 +787,293 @@
         ]
       },
       "path": "~/Opossums"
+    },
+    {
+      "name": "MinkTameHealth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_tame_health",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/MinkTameHealthProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "OpossumTameHealth",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opossum_tame_health",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/OpossumTameHealthProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "MinkFurArmorArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": true,
+      "registry_name": "mink_fur_armor_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minksandmisfits/models/item/mink_fur_armor_armor_boots.json",
+          "src/main/java/net/mcreator/minksandmisfits/item/MinkFurArmorArmorItem.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkFurArmorArmorBootsRecipe",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_fur_armor_armor_boots_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/advancement/recipes/mink_fur_armor_armor_boots_recipe.json",
+          "src/main/resources/data/minksandmisfits/recipe/mink_fur_armor_armor_boots_recipe.json"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkFurArmorArmorBootsTickEvent",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_fur_armor_armor_boots_tick_event",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/MinkFurArmorArmorBootsTickEventProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "ArmorCodeBase",
+      "type": "function",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "armor_code_base",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/function/armor_code_base.mcfunction"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "SoftFall",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soft_fall",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/potion/SoftFallMobEffect.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "SnowBoost",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "snow_boost",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/potion/SnowBoostMobEffect.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "SoftFallOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soft_fall_on_effect_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/SoftFallOnEffectActiveTickProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "IsColor1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_color_1",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/IsColor1Procedure.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "IsColor2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_color_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/IsColor2Procedure.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/MinkOnInitialEntitySpawnProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkArmor",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/item/MinkArmorItem.java",
+          "src/main/resources/assets/minksandmisfits/models/item/mink_armor.json"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkArmorR",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_armor_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/advancement/recipes/mink_armor_r.json",
+          "src/main/resources/data/minksandmisfits/recipe/mink_armor_r.json"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkHasArmor",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_has_armor",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/MinkHasArmorProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
     }
   ],
   "variable_elements": [],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "minkhiss",
+      "files": [
+        "minkhiss"
+      ],
+      "category": "neutral",
+      "subtitle": "Mink Hisses"
+    },
+    {
+      "name": "minkhisshsort",
+      "files": [
+        "minkhissshort"
+      ],
+      "category": "neutral",
+      "subtitle": "Mink hisses"
+    }
+  ],
   "tag_elements": {
     "BLOCKS:minecraft:mineable/shovel": [
       "~CUSTOM:BlueSand"
@@ -806,6 +1089,12 @@
     ],
     "ENTITIES:minecraft:arthropod": [
       "CUSTOM:Flea"
+    ],
+    "ITEMS:minecraft:foot_armor": [
+      "~CUSTOM:MinkFurArmorArmor.boots"
+    ],
+    "ITEMS:minecraft:freeze_immune_wearables": [
+      "CUSTOM:MinkFurArmorArmor.boots"
     ]
   },
   "tab_element_order": {},
@@ -836,7 +1125,13 @@
       "block.minksandmisfits.grape_vine": "Grape Vine",
       "item.minksandmisfits.bug_remains": "Bug Remains",
       "entity.minksandmisfits.tick": "Tick",
-      "item.minksandmisfits.tick_spawn_egg": "Tick Spawn Egg"
+      "item.minksandmisfits.tick_spawn_egg": "Tick Spawn Egg",
+      "subtitles.minkhiss": "Mink Hisses",
+      "subtitles.minkhisshsort": "Mink hisses",
+      "item.minksandmisfits.mink_fur_armor_armor_boots": "Mink Fur Boots",
+      "effect.minksandmisfits.soft_fall": "Soft Fall",
+      "effect.minksandmisfits.snow_boost": "Snow Boost",
+      "item.minksandmisfits.mink_armor": "Mink Armor"
     }
   },
   "metadata": {
@@ -852,8 +1147,11 @@
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntityRenderers.java",
       "src/main/resources/META-INF/accesstransformer.cfg",
       "src/main/resources/minksandmisfits.mixins.json",
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModModels.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModSounds.java",
       "src/main/resources/pack.mcmeta",
+      "src/main/resources/assets/minksandmisfits/sounds.json",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModTabs.java",
       "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsMod.java"
     ]
@@ -891,15 +1189,19 @@
         "children": []
       },
       {
-        "name": "SeaOtter",
-        "children": []
-      },
-      {
         "name": "Pee",
         "children": []
       },
       {
         "name": "Flying Foxes",
+        "children": []
+      },
+      {
+        "name": "Luna Moths",
+        "children": []
+      },
+      {
+        "name": "Sea Otters",
         "children": []
       }
     ]

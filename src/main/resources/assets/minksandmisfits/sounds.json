@@ -1,0 +1,20 @@
+{
+  "minkhiss": {
+    "subtitle": "subtitles.minkhiss",
+    "sounds": [
+      {
+        "name": "minksandmisfits:minkhiss",
+        "stream": false
+      }
+    ]
+  },
+  "minkhisshsort": {
+    "subtitle": "subtitles.minkhisshsort",
+    "sounds": [
+      {
+        "name": "minksandmisfits:minkhissshort",
+        "stream": false
+      }
+    ]
+  }
+}

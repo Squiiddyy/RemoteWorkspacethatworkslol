@@ -5,7 +5,6 @@ import net.neoforged.neoforge.event.EventHooks;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.SpawnEggItem;
@@ -31,7 +30,6 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.BlockPos;
 
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModItems;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModEntities;
@@ -47,26 +45,27 @@ public class OpossumEntity extends TamableAnimal {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1.25, (float) 8, (float) 2));
+		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1.25, (float) 9, (float) 2));
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.1));
 		this.goalSelector.addGoal(4, new TemptGoal(this, 1, Ingredient.of(MinksandmisfitsModItems.GRAPE.get()), false));
 		this.goalSelector.addGoal(5, new TemptGoal(this, 1, Ingredient.of(Items.APPLE), false));
 		this.goalSelector.addGoal(6, new TemptGoal(this, 1, Ingredient.of(Items.SALMON), false));
-		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Spider.class, true, true));
-		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, FleaEntity.class, true, true));
-		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, CaveSpider.class, true, true));
-		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, Silverfish.class, true, true));
-		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, Endermite.class, true, true));
-		this.goalSelector.addGoal(12, new PanicGoal(this, 1.25));
-		this.goalSelector.addGoal(13, new MeleeAttackGoal(this, 0.9, false) {
+		this.goalSelector.addGoal(7, new BreedGoal(this, 1));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, Spider.class, true, true));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, FleaEntity.class, true, true));
+		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, CaveSpider.class, true, true));
+		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, Silverfish.class, true, true));
+		this.targetSelector.addGoal(12, new NearestAttackableTargetGoal(this, Endermite.class, true, true));
+		this.goalSelector.addGoal(13, new PanicGoal(this, 1.25));
+		this.goalSelector.addGoal(14, new MeleeAttackGoal(this, 1, false) {
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < 2.7556 && this.mob.getSensing().hasLineOfSight(entity);
 			}
 		});
-		this.goalSelector.addGoal(14, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(15, new FloatGoal(this));
+		this.goalSelector.addGoal(15, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(16, new FloatGoal(this));
 	}
 
 	@Override
@@ -76,12 +75,7 @@ public class OpossumEntity extends TamableAnimal {
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.silverfish.ambient"));
-	}
-
-	@Override
-	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.silverfish.step")), 0.15f, 1);
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("minksandmisfits:minkhiss"));
 	}
 
 	@Override

@@ -37,6 +37,7 @@ public class MinksandmisfitsMod {
 		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
+		MinksandmisfitsModSounds.REGISTRY.register(modEventBus);
 		MinksandmisfitsModBlocks.REGISTRY.register(modEventBus);
 		MinksandmisfitsModItems.REGISTRY.register(modEventBus);
 		MinksandmisfitsModEntities.REGISTRY.register(modEventBus);

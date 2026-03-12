@@ -1,0 +1,56 @@
+{
+  "_fv": 79,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "unlockingItems": [
+      {
+        "value": "CUSTOM:MinkFur"
+      },
+      {
+        "value": "Items.ARMADILLO_SCUTE"
+      }
+    ],
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "EQUIPMENT",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Items.ARMADILLO_SCUTE"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:MinkFur"
+      },
+      {
+        "value": "CUSTOM:MinkFur"
+      },
+      {
+        "value": "CUSTOM:MinkFur"
+      },
+      {
+        "value": "Items.ARMADILLO_SCUTE"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.ARMADILLO_SCUTE"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:MinkArmor"
+    },
+    "name": "mink_armor_r",
+    "namespace": "mod"
+  }
+}

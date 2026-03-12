@@ -24,5 +24,11 @@
   "block.minksandmisfits.grape_vine": "Grape Vine",
   "item.minksandmisfits.bug_remains": "Bug Remains",
   "entity.minksandmisfits.tick": "Tick",
-  "item.minksandmisfits.tick_spawn_egg": "Tick Spawn Egg"
+  "item.minksandmisfits.tick_spawn_egg": "Tick Spawn Egg",
+  "subtitles.minkhiss": "Mink Hisses",
+  "subtitles.minkhisshsort": "Mink hisses",
+  "item.minksandmisfits.mink_fur_armor_armor_boots": "Mink Fur Boots",
+  "effect.minksandmisfits.soft_fall": "Soft Fall",
+  "effect.minksandmisfits.snow_boost": "Snow Boost",
+  "item.minksandmisfits.mink_armor": "Mink Armor"
 }

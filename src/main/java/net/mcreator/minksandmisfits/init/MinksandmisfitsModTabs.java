@@ -30,5 +30,7 @@ public class MinksandmisfitsModTabs {
 				tabData.accept(MinksandmisfitsModItems.GRAPE.get());
 				tabData.accept(MinksandmisfitsModBlocks.GRAPE_VINE.get().asItem());
 				tabData.accept(MinksandmisfitsModItems.TICK_SPAWN_EGG.get());
+				tabData.accept(MinksandmisfitsModItems.MINK_FUR_ARMOR_ARMOR_BOOTS.get());
+				tabData.accept(MinksandmisfitsModItems.MINK_ARMOR.get());
 			}).build());
 }

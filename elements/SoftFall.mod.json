@@ -1,0 +1,39 @@
+{
+  "_fv": 79,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Soft Fall",
+    "icon": "sink_proof",
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "NEUTRAL",
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "isCuredbyHoney": false,
+    "modifiers": [
+      {
+        "attribute": {
+          "value": "SAFE_FALL_DISTANCE"
+        },
+        "amount": 1.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "FALL_DAMAGE_MULTIPLIER"
+        },
+        "amount": -0.05,
+        "operation": "ADD_MULTIPLIED_BASE"
+      }
+    ],
+    "onActiveTick": {
+      "name": "SoftFallOnEffectActiveTick"
+    }
+  }
+}

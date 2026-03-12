@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "a  ",
+    "bbb",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:armadillo_scute"
+    },
+    "b": {
+      "item": "minksandmisfits:mink_fur"
+    }
+  },
+  "result": {
+    "id": "minksandmisfits:mink_armor",
+    "count": 1
+  }
+}

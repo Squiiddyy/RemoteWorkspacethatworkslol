@@ -38,9 +38,9 @@ public class MinksandmisfitsModEntities {
 
 					.sized(0.4f, 0.3f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MinkEntity>> MINK = register("mink",
-			EntityType.Builder.<MinkEntity>of(MinkEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+			EntityType.Builder.<MinkEntity>of(MinkEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(0.9f, 0.9f));
+					.sized(0.6f, 0.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<FleaEntity>> TICK = register("tick",
 			EntityType.Builder.<FleaEntity>of(FleaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 

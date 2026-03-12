@@ -4,8 +4,8 @@
   "definition": {
     "mobName": "Mink",
     "mobLabel": "",
-    "mobModelName": "Pig",
-    "mobModelTexture": "mink.png",
+    "mobModelName": "Modelmink",
+    "mobModelTexture": "minktext1.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -16,16 +16,44 @@
       "fixedValue": false
     },
     "visualScale": {
-      "fixedValue": 0.6
+      "fixedValue": 0.9
     },
     "boundingBoxScale": {
-      "fixedValue": 0.6
+      "fixedValue": 0.9
     },
-    "modelLayers": [],
+    "modelLayers": [
+      {
+        "model": "Modelmink",
+        "texture": "minktext1.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "IsColor1"
+        }
+      },
+      {
+        "model": "Modelmink",
+        "texture": "minktext1white.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "IsColor2"
+        }
+      },
+      {
+        "model": "Default",
+        "texture": "minkarmor.png",
+        "disableHurtOverlay": true,
+        "glow": false,
+        "condition": {
+          "name": "MinkHasArmor"
+        }
+      }
+    ],
     "animations": [],
-    "modelWidth": 0.9,
-    "modelHeight": 0.9,
-    "modelShadowSize": 0.5,
+    "modelWidth": 0.6,
+    "modelHeight": 0.8,
+    "modelShadowSize": 0.4,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
@@ -65,7 +93,7 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 3,
+    "attackStrength": 4,
     "attackKnockback": 0.0,
     "knockbackResistance": 0.0,
     "movementSpeed": 0.3,
@@ -73,7 +101,7 @@
     "armorBaseValue": 0.0,
     "trackingRange": 64,
     "followRange": 26,
-    "health": 10,
+    "health": 12,
     "xpAmount": 3,
     "waterMob": false,
     "breatheUnderwater": {
@@ -103,13 +131,13 @@
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
-      "value": "Blocks.REDSTONE_ORE"
+      "value": ""
     },
     "livingSound": {
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:minkhisshsort"
     },
     "deathSound": {
       "value": "entity.generic.death"
@@ -120,16 +148,34 @@
     "raidCelebrationSound": {
       "value": ""
     },
-    "entityDataEntries": [],
+    "entityDataEntries": [
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Color",
+        "type": "integer",
+        "value": 0
+      },
+      {
+        "min": -2147483648,
+        "max": 2147483647,
+        "name": "Armor",
+        "type": "integer",
+        "value": 0
+      }
+    ],
     "onRightClickedOn": {
       "name": "MinkRightclickedOnEntity"
     },
     "onMobTickUpdate": {
       "name": "MinkOnEntityTickUpdate"
     },
+    "onInitialSpawn": {
+      "name": "MinkOnInitialEntitySpawn"
+    },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"leap_at_target\"><field name=\"speed\">0.4</field><field name=\"condition\">null,null</field><next><block type=\"attack_with_range\"><field name=\"range\">1.25</field><field name=\"speed\">1.1</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"follow_owner\"><field name=\"speed\">1.25</field><field name=\"min_distance\">8</field><field name=\"max_distance\">2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.FISH#0</field></block></value><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.CHICKEN</field></block></value><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityCod</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityChicken</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"find_and_move_to_air\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"leap_at_target\"><field name=\"speed\">0.4</field><field name=\"condition\">null,null</field><next><block type=\"attack_with_range\"><field name=\"range\">1.25</field><field name=\"speed\">1.1</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"follow_owner\"><field name=\"speed\">1.1</field><field name=\"min_distance\">9</field><field name=\"max_distance\">2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.75</field><field name=\"condition\">null,null</field><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.FISH#0</field></block></value><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.CHICKEN</field></block></value><next><block type=\"follow_parent\"><field name=\"speed\">1.1</field><field name=\"condition\">null,null</field><next><block type=\"protect_owner\"><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityCod</field><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityChicken</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">0.9</field><field name=\"condition\">null,null</field><next><block type=\"find_and_move_to_air\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "breedable": true,
     "tameable": true,
     "breedTriggerItems": [
@@ -150,7 +196,7 @@
     "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
     "spawningProbability": 6,
-    "mobSpawningType": "waterCreature",
+    "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 2,
     "restrictionBiomes": [

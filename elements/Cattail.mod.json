@@ -3,10 +3,10 @@
   "_type": "plant",
   "definition": {
     "renderType": 12,
-    "texture": "minecraft:acacia_sapling",
-    "textureBottom": "minecraft:acacia_sapling",
+    "texture": "cattailtop",
+    "textureBottom": "cattailbottom",
     "customModelName": "Cross model",
-    "itemTexture": "",
+    "itemTexture": "cattailtopitem",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,

@@ -13,10 +13,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.BlockItem;
 
-import net.mcreator.minksandmisfits.item.MinkFurItem;
-import net.mcreator.minksandmisfits.item.GrapeItem;
-import net.mcreator.minksandmisfits.item.DashtestItem;
-import net.mcreator.minksandmisfits.item.BugRemainsItem;
+import net.mcreator.minksandmisfits.item.*;
 import net.mcreator.minksandmisfits.MinksandmisfitsMod;
 
 public class MinksandmisfitsModItems {
@@ -35,6 +32,8 @@ public class MinksandmisfitsModItems {
 	public static final DeferredItem<Item> GRAPE_VINE;
 	public static final DeferredItem<Item> BUG_REMAINS;
 	public static final DeferredItem<Item> TICK_SPAWN_EGG;
+	public static final DeferredItem<Item> MINK_FUR_ARMOR_ARMOR_BOOTS;
+	public static final DeferredItem<Item> MINK_ARMOR;
 	static {
 		BASIC_PLAYER_SPAWN_EGG = REGISTRY.register("basic_player_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.BASIC_PLAYER, -7821124, -4491161, new Item.Properties()));
 		HOUSE_ANCHOR_SPAWN_EGG = REGISTRY.register("house_anchor_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.HOUSE_ANCHOR, -1, -1, new Item.Properties()));
@@ -50,6 +49,8 @@ public class MinksandmisfitsModItems {
 		GRAPE_VINE = doubleBlock(MinksandmisfitsModBlocks.GRAPE_VINE);
 		BUG_REMAINS = REGISTRY.register("bug_remains", BugRemainsItem::new);
 		TICK_SPAWN_EGG = REGISTRY.register("tick_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.TICK, -1, -1, new Item.Properties()));
+		MINK_FUR_ARMOR_ARMOR_BOOTS = REGISTRY.register("mink_fur_armor_armor_boots", MinkFurArmorArmorItem.Boots::new);
+		MINK_ARMOR = REGISTRY.register("mink_armor", MinkArmorItem::new);
 	}
 
 	// Start of user code block custom items
