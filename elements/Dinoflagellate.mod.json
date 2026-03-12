@@ -6,7 +6,7 @@
     "texture": "dinoflagellateplaceholder",
     "textureBottom": "",
     "customModelName": "flatonground:default",
-    "itemTexture": "dinotext",
+    "itemTexture": "",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
@@ -28,7 +28,7 @@
     ],
     "growapableSpawnType": "Water",
     "growapableMaxHeight": 3,
-    "customBoundingBox": true,
+    "customBoundingBox": false,
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -36,7 +36,7 @@
         "my": 0.0,
         "mz": 0.0,
         "Mx": 16.0,
-        "My": 1.0,
+        "My": 16.0,
         "Mz": 16.0,
         "subtract": false
       }
@@ -47,22 +47,22 @@
     },
     "creativeTabs": [
       {
-        "value": "CUSTOM:MinksAndMisfits"
+        "value": "DECORATIONS"
       }
     ],
     "hardness": 0.0,
     "resistance": 0.0,
-    "luminance": 13,
+    "luminance": 0,
     "unbreakable": false,
     "isSolid": false,
-    "isWaterloggable": true,
+    "isWaterloggable": false,
     "hasBlockItem": true,
     "maxStackSize": 64,
     "rarity": "COMMON",
     "immuneToFire": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "WET_GRASS"
+      "value": "PLANT"
     },
     "breakSound": {
       "value": ""
@@ -87,7 +87,7 @@
     "xpAmountMin": 0,
     "xpAmountMax": 0,
     "forceTicking": false,
-    "emissiveRendering": true,
+    "emissiveRendering": false,
     "hasTileEntity": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
@@ -110,13 +110,10 @@
       },
       {
         "value": "Blocks.BUBBLE_COLUMN"
-      },
-      {
-        "value": "Blocks.SAND#0"
       }
     ],
     "isBonemealable": false,
-    "frequencyOnChunks": 5,
+    "frequencyOnChunks": 10,
     "generateFeature": true,
     "restrictionBiomes": [
       {
@@ -124,7 +121,7 @@
       }
     ],
     "generationType": "Grass",
-    "patchSize": 64,
-    "generateAtAnyHeight": false
+    "patchSize": 50,
+    "generateAtAnyHeight": true
   }
 }

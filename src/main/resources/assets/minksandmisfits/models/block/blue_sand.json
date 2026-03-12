@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minksandmisfits:block/bluesand",
+    "up": "minksandmisfits:block/bluesand",
+    "north": "minksandmisfits:block/bluesand",
+    "east": "minksandmisfits:block/bluesand",
+    "south": "minksandmisfits:block/bluesand",
+    "west": "minksandmisfits:block/bluesand",
+    "particle": "minksandmisfits:block/bluesand"
+  },
+  "render_type": "solid"
+}

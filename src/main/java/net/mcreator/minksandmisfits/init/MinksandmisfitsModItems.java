@@ -25,6 +25,8 @@ public class MinksandmisfitsModItems {
 	public static final DeferredItem<Item> MINK_SPAWN_EGG;
 	public static final DeferredItem<Item> DASHTEST;
 	public static final DeferredItem<Item> DINOFLAGELLATE;
+	public static final DeferredItem<Item> BLUE_SAND;
+	public static final DeferredItem<Item> BLUE_SAND_STONE;
 	static {
 		BASIC_PLAYER_SPAWN_EGG = REGISTRY.register("basic_player_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.BASIC_PLAYER, -7821124, -4491161, new Item.Properties()));
 		HOUSE_ANCHOR_SPAWN_EGG = REGISTRY.register("house_anchor_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.HOUSE_ANCHOR, -1, -1, new Item.Properties()));
@@ -33,6 +35,8 @@ public class MinksandmisfitsModItems {
 		MINK_SPAWN_EGG = REGISTRY.register("mink_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.MINK, -12505297, -3624794, new Item.Properties()));
 		DASHTEST = REGISTRY.register("dashtest", DashtestItem::new);
 		DINOFLAGELLATE = block(MinksandmisfitsModBlocks.DINOFLAGELLATE);
+		BLUE_SAND = block(MinksandmisfitsModBlocks.BLUE_SAND);
+		BLUE_SAND_STONE = block(MinksandmisfitsModBlocks.BLUE_SAND_STONE);
 	}
 
 	// Start of user code block custom items

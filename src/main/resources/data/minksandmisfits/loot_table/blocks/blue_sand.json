@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "minksandmisfits:blocks/blue_sand",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minksandmisfits:blue_sand"
+        }
+      ]
+    }
+  ]
+}

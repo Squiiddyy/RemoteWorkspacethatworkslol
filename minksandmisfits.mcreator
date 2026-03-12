@@ -229,9 +229,7 @@
       "registry_name": "somber_shore",
       "metadata": {
         "files": [
-          "src/main/resources/data/minksandmisfits/worldgen/biome/somber_shore.json",
-          "src/main/resources/data/minksandmisfits/worldgen/placed_feature/somber_shore_tree.json",
-          "src/main/resources/data/minksandmisfits/worldgen/configured_feature/somber_shore_tree.json"
+          "src/main/resources/data/minksandmisfits/worldgen/biome/somber_shore.json"
         ]
       },
       "path": "~/SomberShore"
@@ -372,19 +370,19 @@
       "path": "~/Minks"
     },
     {
-      "name": "A",
+      "name": "Dinoflagellate",
       "type": "plant",
       "compiles": true,
       "locked_code": false,
       "registry_name": "dinoflagellate",
       "metadata": {
         "files": [
+          "src/main/java/net/mcreator/minksandmisfits/block/DinoflagellateBlock.java",
           "src/main/resources/assets/minksandmisfits/models/block/dinoflagellate.json",
           "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/dinoflagellate_biome_modifier.json",
           "src/main/resources/data/minksandmisfits/worldgen/placed_feature/dinoflagellate.json",
           "src/main/resources/assets/minksandmisfits/models/item/dinoflagellate.json",
           "src/main/resources/data/minksandmisfits/loot_table/blocks/dinoflagellate.json",
-          "src/main/java/net/mcreator/minksandmisfits/block/ABlock.java",
           "src/main/resources/data/minksandmisfits/worldgen/configured_feature/dinoflagellate.json",
           "src/main/resources/assets/minksandmisfits/blockstates/dinoflagellate.json"
         ]
@@ -392,17 +390,13 @@
       "path": "~/SomberShore"
     },
     {
-      "name": "Planktomplace",
+      "name": "DinoflagellateAdditionalPlacinggrowthCondition",
       "type": "procedure",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "planktomplace",
+      "registry_name": "dinoflagellate_additional_placinggrowth_condition",
       "metadata": {
         "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "x",
             "type": "number"
@@ -421,7 +415,56 @@
           }
         ],
         "files": [
-          "src/main/java/net/mcreator/minksandmisfits/procedures/PlanktomplaceProcedure.java"
+          "src/main/java/net/mcreator/minksandmisfits/procedures/DinoflagellateAdditionalPlacinggrowthConditionProcedure.java"
+        ]
+      },
+      "path": "~/SomberShore"
+    },
+    {
+      "name": "BlueSand",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_sand",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minksandmisfits/blockstates/blue_sand.json",
+          "src/main/java/net/mcreator/minksandmisfits/block/BlueSandBlock.java",
+          "src/main/resources/data/minksandmisfits/loot_table/blocks/blue_sand.json",
+          "src/main/resources/assets/minksandmisfits/models/block/blue_sand.json",
+          "src/main/resources/assets/minksandmisfits/models/item/blue_sand.json"
+        ]
+      },
+      "path": "~/SomberShore"
+    },
+    {
+      "name": "BlueSandStone",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_sand_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minksandmisfits/models/item/blue_sand_stone.json",
+          "src/main/resources/assets/minksandmisfits/blockstates/blue_sand_stone.json",
+          "src/main/resources/assets/minksandmisfits/models/block/blue_sand_stone.json",
+          "src/main/resources/data/minksandmisfits/loot_table/blocks/blue_sand_stone.json",
+          "src/main/java/net/mcreator/minksandmisfits/block/BlueSandStoneBlock.java"
+        ]
+      },
+      "path": "~/SomberShore"
+    },
+    {
+      "name": "SomberLake",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "somber_lake",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/worldgen/configured_feature/somber_lake.json",
+          "src/main/resources/data/minksandmisfits/worldgen/placed_feature/somber_lake.json",
+          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/somber_lake_biome_modifier.json"
         ]
       },
       "path": "~/SomberShore"
@@ -429,7 +472,17 @@
   ],
   "variable_elements": [],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "BLOCKS:minecraft:mineable/shovel": [
+      "~CUSTOM:BlueSand"
+    ],
+    "BLOCKS:minecraft:enderman_holdable": [
+      "CUSTOM:BlueSand"
+    ],
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:BlueSandStone"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
     "en_us": {
@@ -450,7 +503,9 @@
       "item.minksandmisfits.mink_spawn_egg": "Mink Spawn Egg",
       "effect.minksandmisfits.mink_fast_swimmer": "Mink Fast Swimmer",
       "item.minksandmisfits.dashtest": "Dashtest",
-      "block.minksandmisfits.dinoflagellate": "Dinoflagellate"
+      "block.minksandmisfits.dinoflagellate": "Dinoflagellate",
+      "block.minksandmisfits.blue_sand": "Blue Sand",
+      "block.minksandmisfits.blue_sand_stone": "Blue Sand Stone"
     }
   },
   "metadata": {

@@ -15,7 +15,6 @@ import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.dimension.BuiltinDimensionTypes;
 import net.minecraft.world.level.chunk.ChunkGenerator;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.biome.MultiNoiseBiomeSource;
 import net.minecraft.world.level.biome.FeatureSorter;
 import net.minecraft.world.level.biome.Climate;
@@ -48,10 +47,10 @@ public class MinksandmisfitsModBiomes {
 				// Inject biomes to biome source
 				if (chunkGenerator.getBiomeSource() instanceof MultiNoiseBiomeSource noiseSource) {
 					List<Pair<Climate.ParameterPoint, Holder<Biome>>> parameters = new ArrayList<>(noiseSource.parameters().values());
-					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.8f, 0.5f), Climate.Parameter.span(-0.5f, 0.5f), Climate.Parameter.span(0.25f, 1f), Climate.Parameter.span(-0.5f, 0.5f),
-							Climate.Parameter.point(0.0f), Climate.Parameter.span(-1f, 1f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minksandmisfits", "somber_shore")))));
-					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.8f, 0.5f), Climate.Parameter.span(-0.5f, 0.5f), Climate.Parameter.span(0.25f, 1f), Climate.Parameter.span(-0.5f, 0.5f),
-							Climate.Parameter.point(1.0f), Climate.Parameter.span(-1f, 1f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minksandmisfits", "somber_shore")))));
+					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.8f, 0.5f), Climate.Parameter.span(-0.1f, 0.8f), Climate.Parameter.span(0f, 0.9f), Climate.Parameter.span(-1f, 0.4f),
+							Climate.Parameter.point(0.0f), Climate.Parameter.span(-0.75f, 1f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minksandmisfits", "somber_shore")))));
+					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.8f, 0.5f), Climate.Parameter.span(-0.1f, 0.8f), Climate.Parameter.span(0f, 0.9f), Climate.Parameter.span(-1f, 0.4f),
+							Climate.Parameter.point(1.0f), Climate.Parameter.span(-0.75f, 1f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minksandmisfits", "somber_shore")))));
 					chunkGenerator.biomeSource = MultiNoiseBiomeSource.createFromList(new Climate.ParameterList<>(parameters));
 					chunkGenerator.featuresPerStep = Suppliers
 							.memoize(() -> FeatureSorter.buildFeaturesPerStep(List.copyOf(chunkGenerator.biomeSource.possibleBiomes()), biome -> chunkGenerator.generationSettingsGetter.apply(biome).features(), true));
@@ -71,8 +70,8 @@ public class MinksandmisfitsModBiomes {
 
 	private static SurfaceRules.RuleSource injectOverworldSurfaceRules(SurfaceRules.RuleSource currentRuleSource) {
 		List<SurfaceRules.RuleSource> customSurfaceRules = new ArrayList<>();
-		customSurfaceRules.add(preliminarySurfaceRule(ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minksandmisfits", "somber_shore")), Blocks.SAND.defaultBlockState(), Blocks.SANDSTONE.defaultBlockState(),
-				Blocks.SAND.defaultBlockState()));
+		customSurfaceRules.add(preliminarySurfaceRule(ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minksandmisfits", "somber_shore")), MinksandmisfitsModBlocks.BLUE_SAND.get().defaultBlockState(),
+				MinksandmisfitsModBlocks.BLUE_SAND_STONE.get().defaultBlockState(), MinksandmisfitsModBlocks.BLUE_SAND.get().defaultBlockState()));
 		if (currentRuleSource instanceof SurfaceRules.SequenceRuleSource sequenceRuleSource) {
 			customSurfaceRules.addAll(sequenceRuleSource.sequence());
 			return SurfaceRules.sequence(customSurfaceRules.toArray(SurfaceRules.RuleSource[]::new));
