@@ -28,7 +28,7 @@
     ],
     "growapableSpawnType": "Water",
     "growapableMaxHeight": 3,
-    "customBoundingBox": false,
+    "customBoundingBox": true,
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -36,7 +36,7 @@
         "my": 0.0,
         "mz": 0.0,
         "Mx": 16.0,
-        "My": 16.0,
+        "My": 0.1,
         "Mz": 16.0,
         "subtract": false
       }
@@ -55,7 +55,7 @@
     "luminance": 0,
     "unbreakable": false,
     "isSolid": false,
-    "isWaterloggable": false,
+    "isWaterloggable": true,
     "hasBlockItem": true,
     "maxStackSize": 64,
     "rarity": "COMMON",

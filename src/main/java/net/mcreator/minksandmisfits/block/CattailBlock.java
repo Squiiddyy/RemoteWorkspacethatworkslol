@@ -6,11 +6,11 @@ import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.IceBlock;
 import net.minecraft.world.level.block.DoublePlantBlock;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.BlockGetter;
-import net.minecraft.tags.BlockTags;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
@@ -30,7 +30,7 @@ public class CattailBlock extends DoublePlantBlock {
 	}
 
 	private boolean canPlantTypeSurvive(BlockState state, LevelReader world, BlockPos pos) {
-		return state.is(BlockTags.DIRT) || state.getBlock() == Blocks.FARMLAND;
+		return (state.is(Blocks.WATER) || state.getBlock() instanceof IceBlock) && world.getFluidState(pos.relative(Direction.UP)).isEmpty();
 	}
 
 	@Override

@@ -481,6 +481,9 @@
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:BlueSandStone"
+    ],
+    "BLOCKS:minecraft:sand": [
+      "CUSTOM:BlueSand"
     ]
   },
   "tab_element_order": {},
@@ -555,6 +558,10 @@
       },
       {
         "name": "Muskrats",
+        "children": []
+      },
+      {
+        "name": "SeaOtter",
         "children": []
       }
     ]
