@@ -36,7 +36,7 @@
         "my": 0.0,
         "mz": 0.0,
         "Mx": 16.0,
-        "My": 0.1,
+        "My": 1.0,
         "Mz": 16.0,
         "subtract": false
       }
@@ -47,12 +47,12 @@
     },
     "creativeTabs": [
       {
-        "value": "DECORATIONS"
+        "value": "CUSTOM:MinksAndMisfits"
       }
     ],
     "hardness": 0.0,
     "resistance": 0.0,
-    "luminance": 0,
+    "luminance": 13,
     "unbreakable": false,
     "isSolid": false,
     "isWaterloggable": true,
@@ -62,7 +62,7 @@
     "immuneToFire": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "PLANT"
+      "value": "WET_GRASS"
     },
     "breakSound": {
       "value": ""
@@ -87,7 +87,7 @@
     "xpAmountMin": 0,
     "xpAmountMax": 0,
     "forceTicking": false,
-    "emissiveRendering": false,
+    "emissiveRendering": true,
     "hasTileEntity": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
@@ -113,7 +113,7 @@
       }
     ],
     "isBonemealable": false,
-    "frequencyOnChunks": 10,
+    "frequencyOnChunks": 14,
     "generateFeature": true,
     "restrictionBiomes": [
       {
@@ -121,7 +121,7 @@
       }
     ],
     "generationType": "Grass",
-    "patchSize": 50,
+    "patchSize": 55,
     "generateAtAnyHeight": true
   }
 }

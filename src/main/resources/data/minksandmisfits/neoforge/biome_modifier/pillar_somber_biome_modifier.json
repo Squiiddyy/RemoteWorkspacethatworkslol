@@ -1,6 +1,6 @@
 {
   "type": "neoforge:add_features",
   "biomes": "minksandmisfits:somber_shore",
-  "features": "minksandmisfits:somber_lake",
-  "step": "lakes"
+  "features": "minksandmisfits:pillar_somber",
+  "step": "surface_structures"
 }

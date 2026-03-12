@@ -244,7 +244,10 @@
         "files": [
           "src/main/resources/data/minksandmisfits/loot_table/blocks/cattail.json",
           "src/main/resources/assets/minksandmisfits/models/block/cattail.json",
+          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/cattail_biome_modifier.json",
+          "src/main/resources/data/minksandmisfits/worldgen/configured_feature/cattail.json",
           "src/main/resources/assets/minksandmisfits/blockstates/cattail.json",
+          "src/main/resources/data/minksandmisfits/worldgen/placed_feature/cattail.json",
           "src/main/resources/assets/minksandmisfits/models/item/cattail.json",
           "src/main/java/net/mcreator/minksandmisfits/block/CattailBlock.java",
           "src/main/resources/assets/minksandmisfits/models/block/cattail_bottom.json"
@@ -390,37 +393,6 @@
       "path": "~/SomberShore"
     },
     {
-      "name": "DinoflagellateAdditionalPlacinggrowthCondition",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dinoflagellate_additional_placinggrowth_condition",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/minksandmisfits/procedures/DinoflagellateAdditionalPlacinggrowthConditionProcedure.java"
-        ]
-      },
-      "path": "~/SomberShore"
-    },
-    {
       "name": "BlueSand",
       "type": "block",
       "compiles": true,
@@ -455,6 +427,51 @@
       "path": "~/SomberShore"
     },
     {
+      "name": "SeagrassSomber",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "seagrass_somber",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/worldgen/placed_feature/seagrass_somber.json",
+          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/seagrass_somber_biome_modifier.json",
+          "src/main/resources/data/minksandmisfits/worldgen/configured_feature/seagrass_somber.json"
+        ]
+      },
+      "path": "~/SomberShore"
+    },
+    {
+      "name": "PillarSomber",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pillar_somber",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/worldgen/placed_feature/pillar_somber.json",
+          "src/main/resources/data/minksandmisfits/worldgen/configured_feature/pillar_somber.json",
+          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/pillar_somber_biome_modifier.json"
+        ]
+      },
+      "path": "~/SomberShore"
+    },
+    {
+      "name": "SomberPools",
+      "type": "feature",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "somber_pools",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/somber_pools_biome_modifier.json",
+          "src/main/resources/data/minksandmisfits/worldgen/configured_feature/somber_pools.json",
+          "src/main/resources/data/minksandmisfits/worldgen/placed_feature/somber_pools.json"
+        ]
+      },
+      "path": "~/SomberShore"
+    },
+    {
       "name": "SomberLake",
       "type": "feature",
       "compiles": true,
@@ -468,6 +485,68 @@
         ]
       },
       "path": "~/SomberShore"
+    },
+    {
+      "name": "MinkDrops",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_drops",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/loot_table/entities/mink.json"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkFur",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_fur",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minksandmisfits/models/item/mink_fur.json",
+          "src/main/java/net/mcreator/minksandmisfits/item/MinkFurItem.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkRightclickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_rightclicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/MinkRightclickedOnEntityProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
     }
   ],
   "variable_elements": [],
@@ -508,7 +587,8 @@
       "item.minksandmisfits.dashtest": "Dashtest",
       "block.minksandmisfits.dinoflagellate": "Dinoflagellate",
       "block.minksandmisfits.blue_sand": "Blue Sand",
-      "block.minksandmisfits.blue_sand_stone": "Blue Sand Stone"
+      "block.minksandmisfits.blue_sand_stone": "Blue Sand Stone",
+      "item.minksandmisfits.mink_fur": "Mink Fur"
     }
   },
   "metadata": {
@@ -562,6 +642,10 @@
       },
       {
         "name": "SeaOtter",
+        "children": []
+      },
+      {
+        "name": "Pee",
         "children": []
       }
     ]

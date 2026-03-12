@@ -47,9 +47,9 @@ public class MinksandmisfitsModBiomes {
 				// Inject biomes to biome source
 				if (chunkGenerator.getBiomeSource() instanceof MultiNoiseBiomeSource noiseSource) {
 					List<Pair<Climate.ParameterPoint, Holder<Biome>>> parameters = new ArrayList<>(noiseSource.parameters().values());
-					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.8f, 0.5f), Climate.Parameter.span(-0.1f, 0.8f), Climate.Parameter.span(0f, 0.9f), Climate.Parameter.span(-1f, 0.4f),
+					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.66f, 0.55f), Climate.Parameter.span(-0.11f, 0.88f), Climate.Parameter.span(-0.16f, 0.2f), Climate.Parameter.span(-1f, 0.2f),
 							Climate.Parameter.point(0.0f), Climate.Parameter.span(-0.75f, 1f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minksandmisfits", "somber_shore")))));
-					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.8f, 0.5f), Climate.Parameter.span(-0.1f, 0.8f), Climate.Parameter.span(0f, 0.9f), Climate.Parameter.span(-1f, 0.4f),
+					addParameterPoint(parameters, new Pair<>(new Climate.ParameterPoint(Climate.Parameter.span(-0.66f, 0.55f), Climate.Parameter.span(-0.11f, 0.88f), Climate.Parameter.span(-0.16f, 0.2f), Climate.Parameter.span(-1f, 0.2f),
 							Climate.Parameter.point(1.0f), Climate.Parameter.span(-0.75f, 1f), 0), biomeRegistry.getHolderOrThrow(ResourceKey.create(Registries.BIOME, ResourceLocation.fromNamespaceAndPath("minksandmisfits", "somber_shore")))));
 					chunkGenerator.biomeSource = MultiNoiseBiomeSource.createFromList(new Climate.ParameterList<>(parameters));
 					chunkGenerator.featuresPerStep = Suppliers

@@ -55,7 +55,7 @@
     "luminance": 0,
     "unbreakable": false,
     "isSolid": false,
-    "isWaterloggable": false,
+    "isWaterloggable": true,
     "hasBlockItem": true,
     "maxStackSize": 64,
     "rarity": "COMMON",
@@ -104,13 +104,42 @@
     "fireSpreadSpeed": 60,
     "jumpFactor": 1.0,
     "speedFactor": 1.0,
-    "canBePlacedOn": [],
+    "canBePlacedOn": [
+      {
+        "value": "CUSTOM:BlueSand"
+      },
+      {
+        "value": "Blocks.MUD"
+      },
+      {
+        "value": "Blocks.GRAVEL"
+      },
+      {
+        "value": "Blocks.SAND#0"
+      },
+      {
+        "value": "Blocks.CLAY"
+      }
+    ],
     "isBonemealable": false,
     "frequencyOnChunks": 5,
-    "generateFeature": false,
-    "restrictionBiomes": [],
+    "generateFeature": true,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:SomberShore"
+      },
+      {
+        "value": "mangrove_swamp"
+      },
+      {
+        "value": "swamp"
+      },
+      {
+        "value": "river"
+      }
+    ],
     "generationType": "Flower",
-    "patchSize": 64,
+    "patchSize": 49,
     "generateAtAnyHeight": false
   }
 }
