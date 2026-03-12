@@ -174,10 +174,10 @@
       "registry_name": "opossum",
       "metadata": {
         "files": [
-          "src/main/resources/assets/minksandmisfits/models/item/opossum_spawn_egg.json",
-          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/opossum_biome_modifier.json",
           "src/main/java/net/mcreator/minksandmisfits/entity/OpossumEntity.java",
-          "src/main/java/net/mcreator/minksandmisfits/client/renderer/OpossumRenderer.java"
+          "src/main/java/net/mcreator/minksandmisfits/client/renderer/OpossumRenderer.java",
+          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/opossum_biome_modifier.json",
+          "src/main/resources/assets/minksandmisfits/models/item/opossum_spawn_egg.json"
         ]
       },
       "path": "~/Opossums"
@@ -593,19 +593,19 @@
   },
   "metadata": {
     "files": [
-      "src/main/java/net/mcreator/minksandmisfits/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModBiomes.java",
+      "src/main/java/net/mcreator/minksandmisfits/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModMobEffects.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModBlocks.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModItems.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntities.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntityRenderers.java",
-      "src/main/resources/META-INF/accesstransformer.cfg",
       "src/main/resources/minksandmisfits.mixins.json",
+      "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsMod.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/resources/pack.mcmeta",
+      "src/main/resources/META-INF/accesstransformer.cfg",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModTabs.java",
-      "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsMod.java"
+      "src/main/resources/pack.mcmeta"
     ]
   },
   "foldersRoot": {
@@ -646,6 +646,10 @@
       },
       {
         "name": "Pee",
+        "children": []
+      },
+      {
+        "name": "Flying Foxes",
         "children": []
       }
     ]
