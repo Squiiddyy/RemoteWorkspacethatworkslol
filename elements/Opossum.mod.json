@@ -3,7 +3,7 @@
   "_type": "livingentity",
   "definition": {
     "mobName": "Opossum",
-    "mobLabel": "",
+    "mobLabel": "Opp",
     "mobModelName": "Silverfish",
     "mobModelTexture": "opfish3.png",
     "transparentModelCondition": {

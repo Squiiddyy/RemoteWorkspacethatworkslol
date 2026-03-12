@@ -29,6 +29,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
@@ -39,6 +40,8 @@ public class OpossumEntity extends TamableAnimal {
 		super(type, world);
 		xpReward = 2;
 		setNoAi(false);
+		setCustomName(Component.literal("Opp"));
+		setCustomNameVisible(true);
 		refreshDimensions();
 	}
 
