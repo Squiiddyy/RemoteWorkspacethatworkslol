@@ -26,5 +26,9 @@ public class MinksandmisfitsModTabs {
 				tabData.accept(MinksandmisfitsModBlocks.DINOFLAGELLATE.get().asItem());
 				tabData.accept(MinksandmisfitsModBlocks.BLUE_SAND.get().asItem());
 				tabData.accept(MinksandmisfitsModBlocks.BLUE_SAND_STONE.get().asItem());
+				tabData.accept(MinksandmisfitsModItems.MINK_FUR.get());
+				tabData.accept(MinksandmisfitsModItems.GRAPE.get());
+				tabData.accept(MinksandmisfitsModBlocks.GRAPE_VINE.get().asItem());
+				tabData.accept(MinksandmisfitsModItems.TICK_SPAWN_EGG.get());
 			}).build());
 }

@@ -19,5 +19,10 @@
   "block.minksandmisfits.dinoflagellate": "Dinoflagellate",
   "block.minksandmisfits.blue_sand": "Blue Sand",
   "block.minksandmisfits.blue_sand_stone": "Blue Sand Stone",
-  "item.minksandmisfits.mink_fur": "Mink Fur"
+  "item.minksandmisfits.mink_fur": "Mink Fur",
+  "item.minksandmisfits.grape": "Grape",
+  "block.minksandmisfits.grape_vine": "Grape Vine",
+  "item.minksandmisfits.bug_remains": "Bug Remains",
+  "entity.minksandmisfits.tick": "Tick",
+  "item.minksandmisfits.tick_spawn_egg": "Tick Spawn Egg"
 }

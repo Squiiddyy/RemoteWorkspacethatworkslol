@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "minksandmisfits:block/grape_vine"
+    },
+    "half=lower": {
+      "model": "minksandmisfits:block/grape_vine_bottom"
+    }
+  }
+}

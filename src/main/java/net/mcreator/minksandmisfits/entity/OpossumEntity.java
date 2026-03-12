@@ -14,11 +14,12 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.ai.goal.TemptGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.FollowOwnerGoal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
+import net.minecraft.world.entity.monster.Spider;
+import net.minecraft.world.entity.monster.Silverfish;
+import net.minecraft.world.entity.monster.Endermite;
+import net.minecraft.world.entity.monster.CaveSpider;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.*;
@@ -29,10 +30,10 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.minksandmisfits.init.MinksandmisfitsModItems;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModEntities;
 
 public class OpossumEntity extends TamableAnimal {
@@ -40,8 +41,6 @@ public class OpossumEntity extends TamableAnimal {
 		super(type, world);
 		xpReward = 2;
 		setNoAi(false);
-		setCustomName(Component.literal("Opp"));
-		setCustomNameVisible(true);
 		refreshDimensions();
 	}
 
@@ -50,20 +49,29 @@ public class OpossumEntity extends TamableAnimal {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1.25, (float) 8, (float) 2));
 		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(3, new TemptGoal(this, 1, Ingredient.of(Items.APPLE), false));
-		this.goalSelector.addGoal(4, new TemptGoal(this, 1, Ingredient.of(Items.SALMON), false));
-		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(6, new FloatGoal(this));
+		this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.1));
+		this.goalSelector.addGoal(4, new TemptGoal(this, 1, Ingredient.of(MinksandmisfitsModItems.GRAPE.get()), false));
+		this.goalSelector.addGoal(5, new TemptGoal(this, 1, Ingredient.of(Items.APPLE), false));
+		this.goalSelector.addGoal(6, new TemptGoal(this, 1, Ingredient.of(Items.SALMON), false));
+		this.targetSelector.addGoal(7, new NearestAttackableTargetGoal(this, Spider.class, true, true));
+		this.targetSelector.addGoal(8, new NearestAttackableTargetGoal(this, FleaEntity.class, true, true));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, CaveSpider.class, true, true));
+		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, Silverfish.class, true, true));
+		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, Endermite.class, true, true));
+		this.goalSelector.addGoal(12, new PanicGoal(this, 1.25));
+		this.goalSelector.addGoal(13, new MeleeAttackGoal(this, 0.9, false) {
+			@Override
+			protected boolean canPerformAttack(LivingEntity entity) {
+				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < 2.7556 && this.mob.getSensing().hasLineOfSight(entity);
+			}
+		});
+		this.goalSelector.addGoal(14, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(15, new FloatGoal(this));
 	}
 
 	@Override
 	public Vec3 getPassengerRidingPosition(Entity entity) {
 		return super.getPassengerRidingPosition(entity).add(0, 0.1F, 0);
-	}
-
-	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(serverLevel, source, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(Items.APPLE));
 	}
 
 	@Override
@@ -140,12 +148,12 @@ public class OpossumEntity extends TamableAnimal {
 
 	@Override
 	public boolean isFood(ItemStack stack) {
-		return Ingredient.of(new ItemStack(Items.SALMON), new ItemStack(Items.APPLE)).test(stack);
+		return Ingredient.of(new ItemStack(Items.SALMON), new ItemStack(Items.APPLE), new ItemStack(MinksandmisfitsModItems.GRAPE.get())).test(stack);
 	}
 
 	@Override
 	public EntityDimensions getDefaultDimensions(Pose pose) {
-		return super.getDefaultDimensions(pose).scale(0.8f);
+		return super.getDefaultDimensions(pose).scale(1.1f);
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
@@ -155,11 +163,11 @@ public class OpossumEntity extends TamableAnimal {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.2);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.24);
 		builder = builder.add(Attributes.MAX_HEALTH, 8);
 		builder = builder.add(Attributes.ARMOR, 0.5);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 1);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 10);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 20);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 20);
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.4);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.2);
 		return builder;

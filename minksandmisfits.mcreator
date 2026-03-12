@@ -174,10 +174,10 @@
       "registry_name": "opossum",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/minksandmisfits/entity/OpossumEntity.java",
-          "src/main/java/net/mcreator/minksandmisfits/client/renderer/OpossumRenderer.java",
+          "src/main/resources/assets/minksandmisfits/models/item/opossum_spawn_egg.json",
           "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/opossum_biome_modifier.json",
-          "src/main/resources/assets/minksandmisfits/models/item/opossum_spawn_egg.json"
+          "src/main/java/net/mcreator/minksandmisfits/entity/OpossumEntity.java",
+          "src/main/java/net/mcreator/minksandmisfits/client/renderer/OpossumRenderer.java"
         ]
       },
       "path": "~/Opossums"
@@ -193,6 +193,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "files": [
@@ -526,6 +542,10 @@
             "type": "entity"
           },
           {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "number"
           },
@@ -547,6 +567,226 @@
         ]
       },
       "path": "~/Minks"
+    },
+    {
+      "name": "PosionImune",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "posion_imune",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/PosionImuneProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "Grape",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grape",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/item/GrapeItem.java",
+          "src/main/resources/assets/minksandmisfits/models/item/grape.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "GrapeVine",
+      "type": "plant",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grape_vine",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minksandmisfits/models/block/grape_vine_bottom.json",
+          "src/main/resources/data/minksandmisfits/worldgen/configured_feature/grape_vine.json",
+          "src/main/resources/data/minksandmisfits/worldgen/placed_feature/grape_vine.json",
+          "src/main/resources/assets/minksandmisfits/blockstates/grape_vine.json",
+          "src/main/java/net/mcreator/minksandmisfits/block/GrapeVineBlock.java",
+          "src/main/resources/assets/minksandmisfits/models/item/grape_vine.json",
+          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/grape_vine_biome_modifier.json",
+          "src/main/resources/assets/minksandmisfits/models/block/grape_vine.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "VineDrops",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vine_drops",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/loot_table/blocks/grape_vine.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "OpossumLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opossum_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/loot_table/entities/opossum.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "BugRemains",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bug_remains",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/item/BugRemainsItem.java",
+          "src/main/resources/assets/minksandmisfits/models/item/bug_remains.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "OpossumKill",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opossum_kill",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/OpossumKillProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "Eatbug",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eatbug",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/client/particle/EatbugParticle.java",
+          "src/main/resources/assets/minksandmisfits/particles/eatbug.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "Flea",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tick",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/tick_biome_modifier.json",
+          "src/main/java/net/mcreator/minksandmisfits/entity/FleaEntity.java",
+          "src/main/java/net/mcreator/minksandmisfits/client/renderer/FleaRenderer.java",
+          "src/main/resources/assets/minksandmisfits/models/item/tick_spawn_egg.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "TickPoisonHit",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tick_poison_hit",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/TickPoisonHitProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "OpossumOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opossum_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/OpossumOnInitialEntitySpawnProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
     }
   ],
   "variable_elements": [],
@@ -563,6 +803,9 @@
     ],
     "BLOCKS:minecraft:sand": [
       "CUSTOM:BlueSand"
+    ],
+    "ENTITIES:minecraft:arthropod": [
+      "CUSTOM:Flea"
     ]
   },
   "tab_element_order": {},
@@ -588,24 +831,31 @@
       "block.minksandmisfits.dinoflagellate": "Dinoflagellate",
       "block.minksandmisfits.blue_sand": "Blue Sand",
       "block.minksandmisfits.blue_sand_stone": "Blue Sand Stone",
-      "item.minksandmisfits.mink_fur": "Mink Fur"
+      "item.minksandmisfits.mink_fur": "Mink Fur",
+      "item.minksandmisfits.grape": "Grape",
+      "block.minksandmisfits.grape_vine": "Grape Vine",
+      "item.minksandmisfits.bug_remains": "Bug Remains",
+      "entity.minksandmisfits.tick": "Tick",
+      "item.minksandmisfits.tick_spawn_egg": "Tick Spawn Egg"
     }
   },
   "metadata": {
     "files": [
-      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModBiomes.java",
       "src/main/java/net/mcreator/minksandmisfits/mixin/NoiseGeneratorSettingsMixin.java",
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModBiomes.java",
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModParticleTypes.java",
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModParticles.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModMobEffects.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModBlocks.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModItems.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntities.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntityRenderers.java",
-      "src/main/resources/minksandmisfits.mixins.json",
-      "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsMod.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/resources/META-INF/accesstransformer.cfg",
+      "src/main/resources/minksandmisfits.mixins.json",
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/pack.mcmeta",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModTabs.java",
-      "src/main/resources/pack.mcmeta"
+      "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsMod.java"
     ]
   },
   "foldersRoot": {

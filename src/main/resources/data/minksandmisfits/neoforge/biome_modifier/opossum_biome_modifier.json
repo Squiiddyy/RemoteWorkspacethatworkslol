@@ -1,13 +1,9 @@
 {
   "type": "neoforge:add_spawns",
-  "biomes": [
-    "birch_forest",
-    "forest",
-    "plains"
-  ],
+  "biomes": "#minecraft:is_forest",
   "spawners": {
     "type": "minksandmisfits:opossum",
-    "weight": 8,
+    "weight": 7,
     "minCount": 3,
     "maxCount": 10
   }

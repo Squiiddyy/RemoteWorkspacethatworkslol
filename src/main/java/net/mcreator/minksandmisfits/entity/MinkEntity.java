@@ -5,6 +5,7 @@ import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.EventHooks;
 
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.SpawnEggItem;
@@ -13,7 +14,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.animal.Cod;
 import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -25,7 +25,6 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -47,7 +46,7 @@ public class MinkEntity extends TamableAnimal {
 	protected void registerGoals() {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new LeapAtTargetGoal(this, (float) 0.4));
-		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
+		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.1, false) {
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < 1.5625 && this.mob.getSensing().hasLineOfSight(entity);
@@ -124,14 +123,14 @@ public class MinkEntity extends TamableAnimal {
 		Entity entity = this;
 		Level world = this.level();
 
-		MinkRightclickedOnEntityProcedure.execute(world, x, y, z, entity);
+		MinkRightclickedOnEntityProcedure.execute(world, x, y, z, entity, sourceentity);
 		return retval;
 	}
 
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		MinkOnEntityTickUpdateProcedure.execute(this);
+		MinkOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override
@@ -172,9 +171,8 @@ public class MinkEntity extends TamableAnimal {
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
-		event.register(MinksandmisfitsModEntities.MINK.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)),
-				RegisterSpawnPlacementsEvent.Operation.REPLACE);
+		event.register(MinksandmisfitsModEntities.MINK.get(), SpawnPlacementTypes.IN_WATER, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+				(entityType, world, reason, pos, random) -> (world.getBlockState(pos).is(Blocks.WATER) && world.getBlockState(pos.above()).is(Blocks.WATER)), RegisterSpawnPlacementsEvent.Operation.REPLACE);
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

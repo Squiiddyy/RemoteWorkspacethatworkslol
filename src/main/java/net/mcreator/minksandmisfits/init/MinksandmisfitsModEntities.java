@@ -18,6 +18,7 @@ import net.minecraft.core.registries.Registries;
 import net.mcreator.minksandmisfits.entity.OpossumEntity;
 import net.mcreator.minksandmisfits.entity.MinkEntity;
 import net.mcreator.minksandmisfits.entity.HouseAnchorEntity;
+import net.mcreator.minksandmisfits.entity.FleaEntity;
 import net.mcreator.minksandmisfits.entity.BasicPlayerEntity;
 import net.mcreator.minksandmisfits.MinksandmisfitsMod;
 
@@ -37,9 +38,13 @@ public class MinksandmisfitsModEntities {
 
 					.sized(0.4f, 0.3f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MinkEntity>> MINK = register("mink",
-			EntityType.Builder.<MinkEntity>of(MinkEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+			EntityType.Builder.<MinkEntity>of(MinkEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.9f, 0.9f));
+	public static final DeferredHolder<EntityType<?>, EntityType<FleaEntity>> TICK = register("tick",
+			EntityType.Builder.<FleaEntity>of(FleaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.ridingOffset(-0.6f).sized(0.6f, 1.8f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -53,6 +58,7 @@ public class MinksandmisfitsModEntities {
 		HouseAnchorEntity.init(event);
 		OpossumEntity.init(event);
 		MinkEntity.init(event);
+		FleaEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -61,5 +67,6 @@ public class MinksandmisfitsModEntities {
 		event.put(HOUSE_ANCHOR.get(), HouseAnchorEntity.createAttributes().build());
 		event.put(OPOSSUM.get(), OpossumEntity.createAttributes().build());
 		event.put(MINK.get(), MinkEntity.createAttributes().build());
+		event.put(TICK.get(), FleaEntity.createAttributes().build());
 	}
 }

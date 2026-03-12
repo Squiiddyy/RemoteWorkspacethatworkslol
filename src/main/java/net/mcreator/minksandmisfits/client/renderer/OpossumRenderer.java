@@ -17,7 +17,7 @@ public class OpossumRenderer extends MobRenderer<OpossumEntity, SilverfishModel<
 
 	@Override
 	protected void scale(OpossumEntity entity, PoseStack poseStack, float f) {
-		poseStack.scale(0.8f, 0.8f, 0.8f);
+		poseStack.scale(1.1f, 1.1f, 1.1f);
 		poseStack.scale(entity.getAgeScale(), entity.getAgeScale(), entity.getAgeScale());
 	}
 

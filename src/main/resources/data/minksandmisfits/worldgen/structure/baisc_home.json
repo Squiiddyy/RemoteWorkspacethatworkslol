@@ -13,7 +13,8 @@
   "biomes": [
     "plains",
     "forest",
-    "flower_forest"
+    "flower_forest",
+    "sunflower_plains"
   ],
   "use_expansion_hack": false
 }

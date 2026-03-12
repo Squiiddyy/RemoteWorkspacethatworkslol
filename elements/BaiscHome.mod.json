@@ -9,8 +9,8 @@
         "value": "Blocks.STRUCTURE_BLOCK"
       }
     ],
-    "spacing": 33,
-    "separation": 30,
+    "spacing": 36,
+    "separation": 33,
     "restrictionBiomes": [
       {
         "value": "plains"
@@ -20,6 +20,9 @@
       },
       {
         "value": "mutated_forest"
+      },
+      {
+        "value": "mutated_plains"
       }
     ],
     "terrainAdaptation": "beard_thin",
