@@ -998,6 +998,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ],
         "files": [
@@ -1053,6 +1069,26 @@
         ]
       },
       "path": "~/Minks"
+    },
+    {
+      "name": "IsSomberColor",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "is_somber_color",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/IsSomberColorProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
     }
   ],
   "variable_elements": [],
@@ -1095,6 +1131,9 @@
     ],
     "ITEMS:minecraft:freeze_immune_wearables": [
       "CUSTOM:MinkFurArmorArmor.boots"
+    ],
+    "BLOCKS:minecraft:animals_spawnable_on": [
+      "CUSTOM:BlueSand"
     ]
   },
   "tab_element_order": {},

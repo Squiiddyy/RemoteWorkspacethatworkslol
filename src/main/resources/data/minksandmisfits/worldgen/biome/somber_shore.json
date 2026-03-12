@@ -12,7 +12,14 @@
   },
   "spawners": {
     "monster": [],
-    "creature": [],
+    "creature": [
+      {
+        "type": "minksandmisfits:mink",
+        "weight": 20,
+        "minCount": 1,
+        "maxCount": 3
+      }
+    ],
     "ambient": [],
     "axolotls": [],
     "underground_water_creature": [],

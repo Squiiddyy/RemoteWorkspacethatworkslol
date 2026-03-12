@@ -68,8 +68,8 @@
       "max": 0.88
     },
     "genContinentalness": {
-      "min": -0.16,
-      "max": 0.2
+      "min": -0.25,
+      "max": 0.075
     },
     "genErosion": {
       "min": -1.0,
@@ -121,6 +121,16 @@
     "spawnBastionRemnant": false,
     "spawnEndCity": false,
     "spawnRuinedPortal": "NONE",
-    "spawnEntries": []
+    "spawnEntries": [
+      {
+        "entity": {
+          "value": "CUSTOM:Mink"
+        },
+        "minGroup": 1,
+        "maxGroup": 3,
+        "weight": 20,
+        "spawnType": "creature"
+      }
+    ]
   }
 }

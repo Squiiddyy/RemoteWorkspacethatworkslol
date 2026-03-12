@@ -9,7 +9,8 @@
     "birch_forest",
     "old_growth_birch_forest",
     "dark_forest",
-    "swamp"
+    "swamp",
+    "minksandmisfits:somber_shore"
   ],
   "spawners": {
     "type": "minksandmisfits:mink",

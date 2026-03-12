@@ -48,6 +48,15 @@
         "condition": {
           "name": "MinkHasArmor"
         }
+      },
+      {
+        "model": "Modelmink",
+        "texture": "minktext1somber.png",
+        "disableHurtOverlay": false,
+        "glow": false,
+        "condition": {
+          "name": "IsSomberColor"
+        }
       }
     ],
     "animations": [],
@@ -226,6 +235,9 @@
       },
       {
         "value": "swamp"
+      },
+      {
+        "value": "CUSTOM:SomberShore"
       }
     ],
     "spawnInDungeons": false,
