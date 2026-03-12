@@ -7,6 +7,7 @@ import net.neoforged.neoforge.event.EventHooks;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
+<<<<<<< HEAD
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.Items;
@@ -17,6 +18,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.animal.Cod;
 import net.minecraft.world.entity.animal.Chicken;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+=======
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.monster.Monster;
+>>>>>>> branch 'tommy' of https://github.com/Squiiddyy/RemoteWorkspacethatworkslol.git
 import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -63,6 +68,11 @@ public class MinkEntity extends TamableAnimal {
 		this.goalSelector.addGoal(11, new RandomSwimmingGoal(this, 1, 40));
 		this.goalSelector.addGoal(12, new BreathAirGoal(this));
 		this.goalSelector.addGoal(13, new FloatGoal(this));
+	}
+
+	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(serverLevel, source, recentlyHitIn);
+		this.spawnAtLocation(new ItemStack(Blocks.REDSTONE_ORE));
 	}
 
 	@Override
