@@ -30,5 +30,6 @@
   "item.minksandmisfits.mink_fur_armor_armor_boots": "Mink Fur Boots",
   "effect.minksandmisfits.soft_fall": "Soft Fall",
   "effect.minksandmisfits.snow_boost": "Snow Boost",
-  "item.minksandmisfits.mink_armor": "Mink Armor"
+  "item.minksandmisfits.mink_armor": "Mink Armor",
+  "effect.minksandmisfits.detarget": "Detarget"
 }

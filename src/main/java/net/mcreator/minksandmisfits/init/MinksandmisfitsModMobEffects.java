@@ -12,6 +12,7 @@ import net.minecraft.core.registries.Registries;
 import net.mcreator.minksandmisfits.potion.SoftFallMobEffect;
 import net.mcreator.minksandmisfits.potion.SnowBoostMobEffect;
 import net.mcreator.minksandmisfits.potion.MinkFastSwimmerMobEffect;
+import net.mcreator.minksandmisfits.potion.DetargetMobEffect;
 import net.mcreator.minksandmisfits.MinksandmisfitsMod;
 
 public class MinksandmisfitsModMobEffects {
@@ -19,4 +20,5 @@ public class MinksandmisfitsModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> MINK_FAST_SWIMMER = REGISTRY.register("mink_fast_swimmer", () -> new MinkFastSwimmerMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SOFT_FALL = REGISTRY.register("soft_fall", () -> new SoftFallMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SNOW_BOOST = REGISTRY.register("snow_boost", () -> new SnowBoostMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> DETARGET = REGISTRY.register("detarget", () -> new DetargetMobEffect());
 }

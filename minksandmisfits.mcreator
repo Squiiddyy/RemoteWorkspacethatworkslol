@@ -1089,6 +1089,54 @@
         ]
       },
       "path": "~/Minks"
+    },
+    {
+      "name": "OpossumFear",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opossum_fear",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/OpossumFearProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "Detarget",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detarget",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/potion/DetargetMobEffect.java"
+        ]
+      },
+      "path": "~/Opossums"
     }
   ],
   "variable_elements": [],
@@ -1170,7 +1218,8 @@
       "item.minksandmisfits.mink_fur_armor_armor_boots": "Mink Fur Boots",
       "effect.minksandmisfits.soft_fall": "Soft Fall",
       "effect.minksandmisfits.snow_boost": "Snow Boost",
-      "item.minksandmisfits.mink_armor": "Mink Armor"
+      "item.minksandmisfits.mink_armor": "Mink Armor",
+      "effect.minksandmisfits.detarget": "Detarget"
     }
   },
   "metadata": {
