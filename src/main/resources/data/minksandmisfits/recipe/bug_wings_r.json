@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aba",
+    "bab",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "minksandmisfits:bug_remains"
+    },
+    "b": {
+      "item": "minecraft:feather"
+    }
+  },
+  "result": {
+    "id": "minksandmisfits:bug_chestplate",
+    "count": 1
+  }
+}

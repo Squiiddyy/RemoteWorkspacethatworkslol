@@ -23,6 +23,6 @@ public class OpossumRenderer extends MobRenderer<OpossumEntity, SilverfishModel<
 
 	@Override
 	public ResourceLocation getTextureLocation(OpossumEntity entity) {
-		return ResourceLocation.parse("minksandmisfits:textures/entities/opfish3.png");
+		return ResourceLocation.parse("minksandmisfits:textures/entities/" + entity.getTexture() + ".png");
 	}
 }

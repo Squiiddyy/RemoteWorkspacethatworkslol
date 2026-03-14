@@ -34,6 +34,9 @@ public class MinksandmisfitsModItems {
 	public static final DeferredItem<Item> TICK_SPAWN_EGG;
 	public static final DeferredItem<Item> MINK_FUR_ARMOR_ARMOR_BOOTS;
 	public static final DeferredItem<Item> MINK_ARMOR;
+	public static final DeferredItem<Item> BUG_HELMET;
+	public static final DeferredItem<Item> BUG_CHESTPLATE;
+	public static final DeferredItem<Item> OPOSSUM_RIDEABLE_SPAWN_EGG;
 	static {
 		BASIC_PLAYER_SPAWN_EGG = REGISTRY.register("basic_player_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.BASIC_PLAYER, -7821124, -4491161, new Item.Properties()));
 		HOUSE_ANCHOR_SPAWN_EGG = REGISTRY.register("house_anchor_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.HOUSE_ANCHOR, -1, -1, new Item.Properties()));
@@ -51,6 +54,9 @@ public class MinksandmisfitsModItems {
 		TICK_SPAWN_EGG = REGISTRY.register("tick_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.TICK, -1, -1, new Item.Properties()));
 		MINK_FUR_ARMOR_ARMOR_BOOTS = REGISTRY.register("mink_fur_armor_armor_boots", MinkFurArmorArmorItem.Boots::new);
 		MINK_ARMOR = REGISTRY.register("mink_armor", MinkArmorItem::new);
+		BUG_HELMET = REGISTRY.register("bug_helmet", BugItem.Helmet::new);
+		BUG_CHESTPLATE = REGISTRY.register("bug_chestplate", BugItem.Chestplate::new);
+		OPOSSUM_RIDEABLE_SPAWN_EGG = REGISTRY.register("opossum_rideable_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.OPOSSUM_RIDEABLE, -1917227, -11255230, new Item.Properties()));
 	}
 
 	// Start of user code block custom items

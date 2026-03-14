@@ -31,5 +31,11 @@
   "effect.minksandmisfits.soft_fall": "Soft Fall",
   "effect.minksandmisfits.snow_boost": "Snow Boost",
   "item.minksandmisfits.mink_armor": "Mink Armor",
-  "effect.minksandmisfits.detarget": "Detarget"
+  "effect.minksandmisfits.detarget": "Detarget",
+  "item.minksandmisfits.bug_chestplate": "Bug Wings",
+  "item.minksandmisfits.bug_helmet": "Bug Hat",
+  "effect.minksandmisfits.slow_decent": "Slow Decent",
+  "key.minksandmisfits.fly_dash": "Fly Dash",
+  "entity.minksandmisfits.opossum_rideable": "Opossum",
+  "item.minksandmisfits.opossum_rideable_spawn_egg": "Opossum Spawn Egg"
 }

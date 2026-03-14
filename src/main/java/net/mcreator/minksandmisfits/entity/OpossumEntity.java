@@ -29,17 +29,41 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.mcreator.minksandmisfits.procedures.OpossumOnEntityTickUpdateProcedure;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModItems;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModEntities;
 
 public class OpossumEntity extends TamableAnimal {
+
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(OpossumEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Integer> ANIM = SynchedEntityData.defineId(OpossumEntity.class, EntityDataSerializers.INT);
+
 	public OpossumEntity(EntityType<OpossumEntity> type, Level world) {
 		super(type, world);
 		xpReward = 2;
 		setNoAi(false);
 		refreshDimensions();
+	}
+
+	@Override
+	protected void defineSynchedData(SynchedEntityData.Builder builder) {
+		super.defineSynchedData(builder);
+		builder.define(TEXTURE, "opfish3");
+		builder.define(ANIM, 0);
+	}
+
+	public void setTexture(String texture) {
+		this.entityData.set(TEXTURE, texture);
+	}
+
+	public String getTexture() {
+		return this.entityData.get(TEXTURE);
 	}
 
 	@Override
@@ -89,6 +113,19 @@ public class OpossumEntity extends TamableAnimal {
 	}
 
 	@Override
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putString("Texture", this.getTexture());
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("Texture"))
+			this.setTexture(compound.getString("Texture"));
+	}
+
+	@Override
 	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
 		ItemStack itemstack = sourceentity.getItemInHand(hand);
 		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
@@ -131,6 +168,12 @@ public class OpossumEntity extends TamableAnimal {
 			}
 		}
 		return retval;
+	}
+
+	@Override
+	public void baseTick() {
+		super.baseTick();
+		OpossumOnEntityTickUpdateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override

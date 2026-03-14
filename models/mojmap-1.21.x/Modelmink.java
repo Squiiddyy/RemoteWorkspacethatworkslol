@@ -92,7 +92,7 @@ public class Modelmink<T extends Entity> extends EntityModel<T> {
 			float headPitch) {
 		this.BackLegL.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 		this.FrontLegR.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
-		this.tail.xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;
+		this.tail.xRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
 		this.BackLegR.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
 		this.FrontLegL.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 		this.MainHead.yRot = netHeadYaw / (180F / (float) Math.PI);

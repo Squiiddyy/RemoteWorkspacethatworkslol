@@ -1,0 +1,43 @@
+{
+  "_fv": 79,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Slow Decent",
+    "icon": "detarget",
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "NEUTRAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredbyHoney": false,
+    "modifiers": [
+      {
+        "attribute": {
+          "value": "ENTITY_GRAVITY"
+        },
+        "amount": -0.75,
+        "operation": "ADD_MULTIPLIED_BASE"
+      },
+      {
+        "attribute": {
+          "value": "SAFE_FALL_DISTANCE"
+        },
+        "amount": 5.0,
+        "operation": "ADD_VALUE"
+      },
+      {
+        "attribute": {
+          "value": "FALL_DAMAGE_MULTIPLIER"
+        },
+        "amount": -0.1,
+        "operation": "ADD_MULTIPLIED_BASE"
+      }
+    ]
+  }
+}

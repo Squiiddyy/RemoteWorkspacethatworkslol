@@ -29,8 +29,12 @@ public class MinksandmisfitsModTabs {
 				tabData.accept(MinksandmisfitsModItems.MINK_FUR.get());
 				tabData.accept(MinksandmisfitsModItems.GRAPE.get());
 				tabData.accept(MinksandmisfitsModBlocks.GRAPE_VINE.get().asItem());
+				tabData.accept(MinksandmisfitsModItems.BUG_REMAINS.get());
 				tabData.accept(MinksandmisfitsModItems.TICK_SPAWN_EGG.get());
 				tabData.accept(MinksandmisfitsModItems.MINK_FUR_ARMOR_ARMOR_BOOTS.get());
 				tabData.accept(MinksandmisfitsModItems.MINK_ARMOR.get());
+				tabData.accept(MinksandmisfitsModItems.BUG_HELMET.get());
+				tabData.accept(MinksandmisfitsModItems.BUG_CHESTPLATE.get());
+				tabData.accept(MinksandmisfitsModItems.OPOSSUM_RIDEABLE_SPAWN_EGG.get());
 			}).build());
 }

@@ -15,11 +15,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.registries.Registries;
 
-import net.mcreator.minksandmisfits.entity.OpossumEntity;
-import net.mcreator.minksandmisfits.entity.MinkEntity;
-import net.mcreator.minksandmisfits.entity.HouseAnchorEntity;
-import net.mcreator.minksandmisfits.entity.FleaEntity;
-import net.mcreator.minksandmisfits.entity.BasicPlayerEntity;
+import net.mcreator.minksandmisfits.entity.*;
 import net.mcreator.minksandmisfits.MinksandmisfitsMod;
 
 @EventBusSubscriber
@@ -45,6 +41,10 @@ public class MinksandmisfitsModEntities {
 			EntityType.Builder.<FleaEntity>of(FleaEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.ridingOffset(-0.6f).sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<OpossumRideableEntity>> OPOSSUM_RIDEABLE = register("opossum_rideable",
+			EntityType.Builder.<OpossumRideableEntity>of(OpossumRideableEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.4f, 0.3f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -59,6 +59,7 @@ public class MinksandmisfitsModEntities {
 		OpossumEntity.init(event);
 		MinkEntity.init(event);
 		FleaEntity.init(event);
+		OpossumRideableEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -68,5 +69,6 @@ public class MinksandmisfitsModEntities {
 		event.put(OPOSSUM.get(), OpossumEntity.createAttributes().build());
 		event.put(MINK.get(), MinkEntity.createAttributes().build());
 		event.put(TICK.get(), FleaEntity.createAttributes().build());
+		event.put(OPOSSUM_RIDEABLE.get(), OpossumRideableEntity.createAttributes().build());
 	}
 }

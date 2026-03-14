@@ -1,0 +1,12 @@
+{
+  "_fv": 79,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "V",
+    "keyBindingName": "Fly Dash",
+    "keyBindingCategoryKey": "movement",
+    "onKeyPressed": {
+      "name": "FlyDashOnKeyPressed"
+    }
+  }
+}

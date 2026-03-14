@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "minksandmisfits:bug_remains"
+    }
+  },
+  "result": {
+    "id": "minksandmisfits:bug_helmet",
+    "count": 1
+  }
+}
