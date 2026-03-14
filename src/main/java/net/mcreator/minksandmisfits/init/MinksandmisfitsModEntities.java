@@ -45,6 +45,14 @@ public class MinksandmisfitsModEntities {
 			EntityType.Builder.<OpossumRideableEntity>of(OpossumRideableEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.4f, 0.3f));
+	public static final DeferredHolder<EntityType<?>, EntityType<MuskRatEntity>> MUSK_RAT = register("musk_rat",
+			EntityType.Builder.<MuskRatEntity>of(MuskRatEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(0.9f, 0.9f));
+	public static final DeferredHolder<EntityType<?>, EntityType<CrayfishEntity>> CRAYFISH = register("crayfish",
+			EntityType.Builder.<CrayfishEntity>of(CrayfishEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
+
+					.sized(1f, 1f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
@@ -60,6 +68,8 @@ public class MinksandmisfitsModEntities {
 		MinkEntity.init(event);
 		FleaEntity.init(event);
 		OpossumRideableEntity.init(event);
+		MuskRatEntity.init(event);
+		CrayfishEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -70,5 +80,7 @@ public class MinksandmisfitsModEntities {
 		event.put(MINK.get(), MinkEntity.createAttributes().build());
 		event.put(TICK.get(), FleaEntity.createAttributes().build());
 		event.put(OPOSSUM_RIDEABLE.get(), OpossumRideableEntity.createAttributes().build());
+		event.put(MUSK_RAT.get(), MuskRatEntity.createAttributes().build());
+		event.put(CRAYFISH.get(), CrayfishEntity.createAttributes().build());
 	}
 }

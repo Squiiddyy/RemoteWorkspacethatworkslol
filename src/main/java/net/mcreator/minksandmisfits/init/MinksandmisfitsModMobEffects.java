@@ -9,11 +9,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.core.registries.Registries;
 
-import net.mcreator.minksandmisfits.potion.SoftFallMobEffect;
-import net.mcreator.minksandmisfits.potion.SnowBoostMobEffect;
-import net.mcreator.minksandmisfits.potion.SlowDecentMobEffect;
-import net.mcreator.minksandmisfits.potion.MinkFastSwimmerMobEffect;
-import net.mcreator.minksandmisfits.potion.DetargetMobEffect;
+import net.mcreator.minksandmisfits.potion.*;
 import net.mcreator.minksandmisfits.MinksandmisfitsMod;
 
 public class MinksandmisfitsModMobEffects {
@@ -23,4 +19,5 @@ public class MinksandmisfitsModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> SNOW_BOOST = REGISTRY.register("snow_boost", () -> new SnowBoostMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> DETARGET = REGISTRY.register("detarget", () -> new DetargetMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SLOW_DECENT = REGISTRY.register("slow_decent", () -> new SlowDecentMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> MINK_LIKE = REGISTRY.register("mink_like", () -> new MinkLikeMobEffect());
 }

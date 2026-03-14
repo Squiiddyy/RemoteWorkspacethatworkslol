@@ -22,7 +22,7 @@ public class HouseAnchorRenderer extends MobRenderer<HouseAnchorEntity, SlimeMod
 
 	@Override
 	public ResourceLocation getTextureLocation(HouseAnchorEntity entity) {
-		return ResourceLocation.parse("minksandmisfits:textures/entities/steve-texture_orig.png");
+		return ResourceLocation.parse("minksandmisfits:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 	@Override

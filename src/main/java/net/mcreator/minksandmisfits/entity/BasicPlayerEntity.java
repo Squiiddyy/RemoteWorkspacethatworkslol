@@ -18,6 +18,10 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.minksandmisfits.procedures.PlayerWanderDistanceProcedure;
@@ -27,11 +31,30 @@ import net.mcreator.minksandmisfits.procedures.BasicPlayerEntityIsHurtProcedure;
 import javax.annotation.Nullable;
 
 public class BasicPlayerEntity extends Monster {
+
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(BasicPlayerEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<Integer> ANIM = SynchedEntityData.defineId(BasicPlayerEntity.class, EntityDataSerializers.INT);
+
 	public BasicPlayerEntity(EntityType<BasicPlayerEntity> type, Level world) {
 		super(type, world);
 		xpReward = 4;
 		setNoAi(false);
 		setPersistenceRequired();
+	}
+
+	@Override
+	protected void defineSynchedData(SynchedEntityData.Builder builder) {
+		super.defineSynchedData(builder);
+		builder.define(TEXTURE, "steve");
+		builder.define(ANIM, 0);
+	}
+
+	public void setTexture(String texture) {
+		this.entityData.set(TEXTURE, texture);
+	}
+
+	public String getTexture() {
+		return this.entityData.get(TEXTURE);
 	}
 
 	@Override
@@ -95,6 +118,19 @@ public class BasicPlayerEntity extends Monster {
 		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata);
 		BasicPlayerOnInitialEntitySpawnProcedure.execute(this);
 		return retval;
+	}
+
+	@Override
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putString("Texture", this.getTexture());
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("Texture"))
+			this.setTexture(compound.getString("Texture"));
 	}
 
 	@Override

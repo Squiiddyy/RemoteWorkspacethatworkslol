@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "minksandmisfits:item/minkfur"
+  },
+  "render_type": "translucent"
+}

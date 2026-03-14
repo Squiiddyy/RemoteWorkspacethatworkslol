@@ -24,6 +24,6 @@ public class FleaRenderer extends HumanoidMobRenderer<FleaEntity, HumanoidModel<
 
 	@Override
 	public ResourceLocation getTextureLocation(FleaEntity entity) {
-		return ResourceLocation.parse("minksandmisfits:textures/entities/mink.png");
+		return ResourceLocation.parse("minksandmisfits:textures/entities/" + entity.getTexture() + ".png");
 	}
 }

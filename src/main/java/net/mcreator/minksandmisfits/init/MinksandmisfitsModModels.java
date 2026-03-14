@@ -10,6 +10,7 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.mcreator.minksandmisfits.client.model.Modelmink;
 import net.mcreator.minksandmisfits.client.model.Modelbughat;
+import net.mcreator.minksandmisfits.client.model.ModelMinkLike;
 import net.mcreator.minksandmisfits.client.model.ModelBugWings;
 
 @EventBusSubscriber(Dist.CLIENT)
@@ -17,6 +18,7 @@ public class MinksandmisfitsModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(Modelmink.LAYER_LOCATION, Modelmink::createBodyLayer);
+		event.registerLayerDefinition(ModelMinkLike.LAYER_LOCATION, ModelMinkLike::createBodyLayer);
 		event.registerLayerDefinition(Modelbughat.LAYER_LOCATION, Modelbughat::createBodyLayer);
 		event.registerLayerDefinition(ModelBugWings.LAYER_LOCATION, ModelBugWings::createBodyLayer);
 	}

@@ -37,6 +37,10 @@ public class MinksandmisfitsModItems {
 	public static final DeferredItem<Item> BUG_HELMET;
 	public static final DeferredItem<Item> BUG_CHESTPLATE;
 	public static final DeferredItem<Item> OPOSSUM_RIDEABLE_SPAWN_EGG;
+	public static final DeferredItem<Item> MINK_TRANSFORM;
+	public static final DeferredItem<Item> MINK_FUR_CARPET;
+	public static final DeferredItem<Item> MUSK_RAT_SPAWN_EGG;
+	public static final DeferredItem<Item> CRAYFISH_SPAWN_EGG;
 	static {
 		BASIC_PLAYER_SPAWN_EGG = REGISTRY.register("basic_player_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.BASIC_PLAYER, -7821124, -4491161, new Item.Properties()));
 		HOUSE_ANCHOR_SPAWN_EGG = REGISTRY.register("house_anchor_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.HOUSE_ANCHOR, -1, -1, new Item.Properties()));
@@ -57,6 +61,10 @@ public class MinksandmisfitsModItems {
 		BUG_HELMET = REGISTRY.register("bug_helmet", BugItem.Helmet::new);
 		BUG_CHESTPLATE = REGISTRY.register("bug_chestplate", BugItem.Chestplate::new);
 		OPOSSUM_RIDEABLE_SPAWN_EGG = REGISTRY.register("opossum_rideable_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.OPOSSUM_RIDEABLE, -1917227, -11255230, new Item.Properties()));
+		MINK_TRANSFORM = REGISTRY.register("mink_transform", MinkTransformItem::new);
+		MINK_FUR_CARPET = block(MinksandmisfitsModBlocks.MINK_FUR_CARPET);
+		MUSK_RAT_SPAWN_EGG = REGISTRY.register("musk_rat_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.MUSK_RAT, -1, -1, new Item.Properties()));
+		CRAYFISH_SPAWN_EGG = REGISTRY.register("crayfish_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.CRAYFISH, -1, -1, new Item.Properties()));
 	}
 
 	// Start of user code block custom items

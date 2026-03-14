@@ -18,6 +18,7 @@ import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.minksandmisfits.network.MinksandmisfitsModVariables;
 import net.mcreator.minksandmisfits.init.*;
 
 import java.util.concurrent.ConcurrentLinkedQueue;
@@ -42,6 +43,7 @@ public class MinksandmisfitsMod {
 		MinksandmisfitsModItems.REGISTRY.register(modEventBus);
 		MinksandmisfitsModEntities.REGISTRY.register(modEventBus);
 		MinksandmisfitsModTabs.REGISTRY.register(modEventBus);
+		MinksandmisfitsModVariables.ATTACHMENT_TYPES.register(modEventBus);
 		MinksandmisfitsModMobEffects.REGISTRY.register(modEventBus);
 		MinksandmisfitsModParticleTypes.REGISTRY.register(modEventBus);
 		// Start of user code block mod init

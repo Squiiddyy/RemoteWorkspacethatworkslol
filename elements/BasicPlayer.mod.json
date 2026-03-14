@@ -5,7 +5,7 @@
     "mobName": "Basic Player",
     "mobLabel": "",
     "mobModelName": "Biped",
-    "mobModelTexture": "steve-texture_orig.png",
+    "mobModelTexture": "steve.png",
     "transparentModelCondition": {
       "fixedValue": false
     },

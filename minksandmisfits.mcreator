@@ -175,7 +175,6 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/minksandmisfits/models/item/opossum_spawn_egg.json",
-          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/opossum_biome_modifier.json",
           "src/main/java/net/mcreator/minksandmisfits/entity/OpossumEntity.java",
           "src/main/java/net/mcreator/minksandmisfits/client/renderer/OpossumRenderer.java"
         ]
@@ -1279,9 +1278,279 @@
         ]
       },
       "path": "~/Opossums"
+    },
+    {
+      "name": "MinkLike",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_like",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/potion/MinkLikeMobEffect.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkTransformRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_transform_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/MinkTransformRightclickedProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkTransform",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_transform",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/item/MinkTransformItem.java",
+          "src/main/resources/assets/minksandmisfits/models/item/mink_transform.json"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkFurCarpet",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_fur_carpet",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minksandmisfits/models/block/mink_fur_carpet.json",
+          "src/main/java/net/mcreator/minksandmisfits/block/MinkFurCarpetBlock.java",
+          "src/main/resources/data/minksandmisfits/loot_table/blocks/mink_fur_carpet.json",
+          "src/main/resources/assets/minksandmisfits/models/item/mink_fur_carpet.json",
+          "src/main/resources/assets/minksandmisfits/blockstates/mink_fur_carpet.json"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkFurCarpetR",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_fur_carpet_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/recipe/mink_fur_carpet_r.json",
+          "src/main/resources/data/minksandmisfits/advancement/recipes/mink_fur_carpet_r.json"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MuskRat",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "musk_rat",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/client/renderer/MuskRatRenderer.java",
+          "src/main/resources/assets/minksandmisfits/models/item/musk_rat_spawn_egg.json",
+          "src/main/java/net/mcreator/minksandmisfits/entity/MuskRatEntity.java",
+          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/musk_rat_biome_modifier.json"
+        ]
+      },
+      "path": "~/Muskrats"
+    },
+    {
+      "name": "TamedNoLongerAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tamed_no_longer_attack",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/TamedNoLongerAttackProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "Crayfish",
+      "type": "livingentity",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crayfish",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/client/renderer/CrayfishRenderer.java",
+          "src/main/resources/assets/minksandmisfits/models/item/crayfish_spawn_egg.json",
+          "src/main/java/net/mcreator/minksandmisfits/entity/CrayfishEntity.java",
+          "src/main/resources/data/minksandmisfits/neoforge/biome_modifier/crayfish_biome_modifier.json"
+        ]
+      },
+      "path": "~/Muskrats"
+    },
+    {
+      "name": "MinkLikeModel",
+      "type": "humanoidmodel",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_like_model",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "SetMinklike",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "set_minklike",
+      "metadata": {
+        "dependencies": [],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/SetMinklikeProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkLikePlayerPotion",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_like_player_potion",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "entityModel",
+            "type": "model"
+          },
+          {
+            "name": "playerRenderEvent",
+            "type": "playerrendering"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/MinkLikePlayerPotionProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkLikePlayerPotionArm",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_like_player_potion_arm",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "armRenderEvent",
+            "type": "armrendering"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "entityModel",
+            "type": "model"
+          },
+          {
+            "name": "poseStack",
+            "type": "posestack"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/MinkLikePlayerPotionArmProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "OpossumRideableOnInitialEntitySpawn",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opossum_rideable_on_initial_entity_spawn",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/OpossumRideableOnInitialEntitySpawnProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "MinkLikeModel",
+      "type": "model",
+      "scope": "global",
+      "value": "null"
+    },
+    {
+      "name": "MinkkLikeTexture",
+      "type": "texturelocation",
+      "scope": "global",
+      "value": "null"
+    },
+    {
+      "name": "InvisibleSkin",
+      "type": "texturelocation",
+      "scope": "global",
+      "value": "null"
+    }
+  ],
   "sound_elements": [
     {
       "name": "minkhiss",
@@ -1327,6 +1596,9 @@
     ],
     "ITEMS:minecraft:chest_armor": [
       "~CUSTOM:Bug.body"
+    ],
+    "ITEMS:minecraft:enchantable/durability": [
+      "~CUSTOM:MinkTransform"
     ]
   },
   "tab_element_order": {},
@@ -1370,13 +1642,21 @@
       "effect.minksandmisfits.slow_decent": "Slow Decent",
       "key.minksandmisfits.fly_dash": "Fly Dash",
       "entity.minksandmisfits.opossum_rideable": "Opossum",
-      "item.minksandmisfits.opossum_rideable_spawn_egg": "Opossum Spawn Egg"
+      "item.minksandmisfits.opossum_rideable_spawn_egg": "Opossum Spawn Egg",
+      "effect.minksandmisfits.mink_like": "Mink Like",
+      "item.minksandmisfits.mink_transform": "Mink Transform",
+      "block.minksandmisfits.mink_fur_carpet": "Mink Fur Carpet",
+      "entity.minksandmisfits.musk_rat": "Musk Rat",
+      "item.minksandmisfits.musk_rat_spawn_egg": "Musk Rat Spawn Egg",
+      "entity.minksandmisfits.crayfish": "Crayfish",
+      "item.minksandmisfits.crayfish_spawn_egg": "Crayfish Spawn Egg"
     }
   },
   "metadata": {
     "files": [
       "src/main/java/net/mcreator/minksandmisfits/mixin/NoiseGeneratorSettingsMixin.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModBiomes.java",
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModHumanoidModels.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModKeyMappings.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModParticleTypes.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModParticles.java",
@@ -1396,6 +1676,7 @@
       "src/main/java/net/mcreator/minksandmisfits/mixin/CameraAccessor.java",
       "src/main/java/net/mcreator/minksandmisfits/mixin/LevelRendererMixin.java",
       "src/main/java/net/mcreator/minksandmisfits/network/PlayPlayerAnimationMessage.java",
+      "src/main/java/net/mcreator/minksandmisfits/network/MinksandmisfitsModVariables.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModModels.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModSounds.java",

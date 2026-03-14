@@ -19,7 +19,6 @@ public class MinksandmisfitsModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.minksandmisfits.minks_and_misfits")).icon(() -> new ItemStack(MinksandmisfitsModItems.BASIC_PLAYER_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(MinksandmisfitsModItems.BASIC_PLAYER_SPAWN_EGG.get());
 				tabData.accept(MinksandmisfitsModItems.HOUSE_ANCHOR_SPAWN_EGG.get());
-				tabData.accept(MinksandmisfitsModItems.OPOSSUM_SPAWN_EGG.get());
 				tabData.accept(MinksandmisfitsModBlocks.CATTAIL.get().asItem());
 				tabData.accept(MinksandmisfitsModItems.MINK_SPAWN_EGG.get());
 				tabData.accept(MinksandmisfitsModItems.DASHTEST.get());
@@ -36,5 +35,9 @@ public class MinksandmisfitsModTabs {
 				tabData.accept(MinksandmisfitsModItems.BUG_HELMET.get());
 				tabData.accept(MinksandmisfitsModItems.BUG_CHESTPLATE.get());
 				tabData.accept(MinksandmisfitsModItems.OPOSSUM_RIDEABLE_SPAWN_EGG.get());
+				tabData.accept(MinksandmisfitsModItems.MINK_TRANSFORM.get());
+				tabData.accept(MinksandmisfitsModBlocks.MINK_FUR_CARPET.get().asItem());
+				tabData.accept(MinksandmisfitsModItems.MUSK_RAT_SPAWN_EGG.get());
+				tabData.accept(MinksandmisfitsModItems.CRAYFISH_SPAWN_EGG.get());
 			}).build());
 }

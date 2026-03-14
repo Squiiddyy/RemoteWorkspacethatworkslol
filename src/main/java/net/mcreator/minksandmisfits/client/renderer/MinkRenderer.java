@@ -64,21 +64,6 @@ public class MinkRenderer extends MobRenderer<MinkEntity, Modelmink<MinkEntity>>
 			}
 		});
 		this.addLayer(new RenderLayer<MinkEntity, Modelmink<MinkEntity>>(this) {
-			final ResourceLocation LAYER_TEXTURE = ResourceLocation.parse("minksandmisfits:textures/entities/minkarmor.png");
-
-			@Override
-			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, MinkEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
-				Level world = entity.level();
-				double x = entity.getX();
-				double y = entity.getY();
-				double z = entity.getZ();
-				if (MinkHasArmorProcedure.execute(entity)) {
-					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
-					this.getParentModel().renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY);
-				}
-			}
-		});
-		this.addLayer(new RenderLayer<MinkEntity, Modelmink<MinkEntity>>(this) {
 			final ResourceLocation LAYER_TEXTURE = ResourceLocation.parse("minksandmisfits:textures/entities/minktext1somber.png");
 
 			@Override
@@ -97,6 +82,21 @@ public class MinkRenderer extends MobRenderer<MinkEntity, Modelmink<MinkEntity>>
 				}
 			}
 		});
+		this.addLayer(new RenderLayer<MinkEntity, Modelmink<MinkEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = ResourceLocation.parse("minksandmisfits:textures/entities/minkarmor.png");
+
+			@Override
+			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, MinkEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
+				Level world = entity.level();
+				double x = entity.getX();
+				double y = entity.getY();
+				double z = entity.getZ();
+				if (MinkHasArmorProcedure.execute(entity)) {
+					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
+					this.getParentModel().renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY);
+				}
+			}
+		});
 	}
 
 	@Override
@@ -107,6 +107,6 @@ public class MinkRenderer extends MobRenderer<MinkEntity, Modelmink<MinkEntity>>
 
 	@Override
 	public ResourceLocation getTextureLocation(MinkEntity entity) {
-		return ResourceLocation.parse("minksandmisfits:textures/entities/minktext1.png");
+		return ResourceLocation.parse("minksandmisfits:textures/entities/" + entity.getTexture() + ".png");
 	}
 }

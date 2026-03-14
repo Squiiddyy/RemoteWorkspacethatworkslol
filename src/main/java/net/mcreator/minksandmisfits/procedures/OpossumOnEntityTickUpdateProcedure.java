@@ -18,6 +18,9 @@ public class OpossumOnEntityTickUpdateProcedure {
 		if ((findEntityInWorldRange(world, OpossumEntity.class, x, y, z, 4)) instanceof LivingEntity _livEnt1 && _livEnt1.isBaby()) {
 			entity.startRiding((findEntityInWorldRange(world, OpossumRideableEntity.class, x, y, z, 4)));
 		}
+		if (!((findEntityInWorldRange(world, OpossumEntity.class, x, y, z, 4)) instanceof LivingEntity _livEnt5 && _livEnt5.isBaby())) {
+			entity.stopRiding();
+		}
 	}
 
 	private static Entity findEntityInWorldRange(LevelAccessor world, Class<? extends Entity> clazz, double x, double y, double z, double range) {

@@ -17,6 +17,6 @@ public class BasicPlayerRenderer extends HumanoidMobRenderer<BasicPlayerEntity, 
 
 	@Override
 	public ResourceLocation getTextureLocation(BasicPlayerEntity entity) {
-		return ResourceLocation.parse("minksandmisfits:textures/entities/steve-texture_orig.png");
+		return ResourceLocation.parse("minksandmisfits:textures/entities/" + entity.getTexture() + ".png");
 	}
 }

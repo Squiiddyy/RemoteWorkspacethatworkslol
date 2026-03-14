@@ -1,0 +1,8 @@
+{
+  "_fv": 79,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">after_model_registration</field><next><block type=\"variables_set_model\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">global:MinkLikeModel</field><value name=\"VAL\"><block type=\"entity_model_instance\"><field name=\"model\">ModelMinkLike</field></block></value><next><block type=\"variables_set_texturelocation\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">global:MinkkLikeTexture</field><value name=\"VAL\"><block type=\"texture_from_workspace\"><field name=\"texture\">minklike</field></block></value><next><block type=\"variables_set_texturelocation\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">global:InvisibleSkin</field><value name=\"VAL\"><block type=\"texture_from_workspace\"><field name=\"texture\">invisibleskin</field></block></value></block></next></block></next></block></next></block><block type=\"texture_from_entity\" x=\"242\" y=\"315\"><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block><block type=\"variables_set_model\" x=\"187\" y=\"423\"><mutation xmlns=\"http://www.w3.org/1999/xhtml\" is_player_var=\"false\" has_entity=\"false\"></mutation><field name=\"VAR\">global:MinkLikeModel</field></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}

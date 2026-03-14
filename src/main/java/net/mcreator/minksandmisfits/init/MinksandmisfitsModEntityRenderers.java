@@ -20,5 +20,7 @@ public class MinksandmisfitsModEntityRenderers {
 		event.registerEntityRenderer(MinksandmisfitsModEntities.MINK.get(), MinkRenderer::new);
 		event.registerEntityRenderer(MinksandmisfitsModEntities.TICK.get(), FleaRenderer::new);
 		event.registerEntityRenderer(MinksandmisfitsModEntities.OPOSSUM_RIDEABLE.get(), OpossumRideableRenderer::new);
+		event.registerEntityRenderer(MinksandmisfitsModEntities.MUSK_RAT.get(), MuskRatRenderer::new);
+		event.registerEntityRenderer(MinksandmisfitsModEntities.CRAYFISH.get(), CrayfishRenderer::new);
 	}
 }

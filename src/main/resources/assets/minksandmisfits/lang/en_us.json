@@ -37,5 +37,12 @@
   "effect.minksandmisfits.slow_decent": "Slow Decent",
   "key.minksandmisfits.fly_dash": "Fly Dash",
   "entity.minksandmisfits.opossum_rideable": "Opossum",
-  "item.minksandmisfits.opossum_rideable_spawn_egg": "Opossum Spawn Egg"
+  "item.minksandmisfits.opossum_rideable_spawn_egg": "Opossum Spawn Egg",
+  "effect.minksandmisfits.mink_like": "Mink Like",
+  "item.minksandmisfits.mink_transform": "Mink Transform",
+  "block.minksandmisfits.mink_fur_carpet": "Mink Fur Carpet",
+  "entity.minksandmisfits.musk_rat": "Musk Rat",
+  "item.minksandmisfits.musk_rat_spawn_egg": "Musk Rat Spawn Egg",
+  "entity.minksandmisfits.crayfish": "Crayfish",
+  "item.minksandmisfits.crayfish_spawn_egg": "Crayfish Spawn Egg"
 }

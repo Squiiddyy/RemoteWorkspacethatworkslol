@@ -5,6 +5,7 @@ import net.neoforged.neoforge.event.EventHooks;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.levelgen.Heightmap;
+import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.SpawnEggItem;
@@ -25,6 +26,7 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.world.DifficultyInstance;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
@@ -35,8 +37,11 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.mcreator.minksandmisfits.procedures.OpossumRideableOnInitialEntitySpawnProcedure;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModItems;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModEntities;
+
+import javax.annotation.Nullable;
 
 public class OpossumRideableEntity extends TamableAnimal {
 
@@ -108,7 +113,14 @@ public class OpossumRideableEntity extends TamableAnimal {
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.ender_dragon.death"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.silverfish.death"));
+	}
+
+	@Override
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata) {
+		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata);
+		OpossumRideableOnInitialEntitySpawnProcedure.execute(world, this.getX(), this.getY(), this.getZ());
+		return retval;
 	}
 
 	@Override
