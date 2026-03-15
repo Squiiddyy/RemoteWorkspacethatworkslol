@@ -44,5 +44,9 @@
   "entity.minksandmisfits.musk_rat": "Musk Rat",
   "item.minksandmisfits.musk_rat_spawn_egg": "Musk Rat Spawn Egg",
   "entity.minksandmisfits.crayfish": "Crayfish",
-  "item.minksandmisfits.crayfish_spawn_egg": "Crayfish Spawn Egg"
+  "item.minksandmisfits.crayfish_spawn_egg": "Crayfish Spawn Egg",
+  "item.minksandmisfits.life_gem": "Life Gem",
+  "item.minksandmisfits.soul_of_life": "Soul Of Life",
+  "effect.minksandmisfits.long_life": "Long Life",
+  "item.minksandmisfits.soul_of_life.description_0": "§aBoosts any tamed animals max hp and provides permanent but slow life regeneration"
 }

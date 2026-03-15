@@ -41,6 +41,8 @@ public class MinksandmisfitsModItems {
 	public static final DeferredItem<Item> MINK_FUR_CARPET;
 	public static final DeferredItem<Item> MUSK_RAT_SPAWN_EGG;
 	public static final DeferredItem<Item> CRAYFISH_SPAWN_EGG;
+	public static final DeferredItem<Item> LIFE_GEM;
+	public static final DeferredItem<Item> SOUL_OF_LIFE;
 	static {
 		BASIC_PLAYER_SPAWN_EGG = REGISTRY.register("basic_player_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.BASIC_PLAYER, -7821124, -4491161, new Item.Properties()));
 		HOUSE_ANCHOR_SPAWN_EGG = REGISTRY.register("house_anchor_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.HOUSE_ANCHOR, -1, -1, new Item.Properties()));
@@ -65,6 +67,8 @@ public class MinksandmisfitsModItems {
 		MINK_FUR_CARPET = block(MinksandmisfitsModBlocks.MINK_FUR_CARPET);
 		MUSK_RAT_SPAWN_EGG = REGISTRY.register("musk_rat_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.MUSK_RAT, -1, -1, new Item.Properties()));
 		CRAYFISH_SPAWN_EGG = REGISTRY.register("crayfish_spawn_egg", () -> new DeferredSpawnEggItem(MinksandmisfitsModEntities.CRAYFISH, -1, -1, new Item.Properties()));
+		LIFE_GEM = REGISTRY.register("life_gem", LifeGemItem::new);
+		SOUL_OF_LIFE = REGISTRY.register("soul_of_life", SoulOfLifeItem::new);
 	}
 
 	// Start of user code block custom items

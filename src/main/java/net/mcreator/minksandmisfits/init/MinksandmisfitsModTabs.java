@@ -39,5 +39,7 @@ public class MinksandmisfitsModTabs {
 				tabData.accept(MinksandmisfitsModBlocks.MINK_FUR_CARPET.get().asItem());
 				tabData.accept(MinksandmisfitsModItems.MUSK_RAT_SPAWN_EGG.get());
 				tabData.accept(MinksandmisfitsModItems.CRAYFISH_SPAWN_EGG.get());
+				tabData.accept(MinksandmisfitsModItems.LIFE_GEM.get());
+				tabData.accept(MinksandmisfitsModItems.SOUL_OF_LIFE.get());
 			}).build());
 }

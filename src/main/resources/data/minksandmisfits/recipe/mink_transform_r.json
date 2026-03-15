@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minksandmisfits:mink_fur"
+    },
+    "b": {
+      "item": "minksandmisfits:life_gem"
+    }
+  },
+  "result": {
+    "id": "minksandmisfits:mink_transform",
+    "count": 1
+  }
+}

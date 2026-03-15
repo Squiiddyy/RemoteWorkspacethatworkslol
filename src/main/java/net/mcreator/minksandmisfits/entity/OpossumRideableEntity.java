@@ -178,7 +178,6 @@ public class OpossumRideableEntity extends TamableAnimal {
 					this.setPersistenceRequired();
 			}
 		}
-		sourceentity.startRiding(this);
 		return retval;
 	}
 

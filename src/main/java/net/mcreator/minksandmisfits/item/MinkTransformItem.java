@@ -12,7 +12,7 @@ import net.mcreator.minksandmisfits.procedures.MinkTransformRightclickedProcedur
 
 public class MinkTransformItem extends Item {
 	public MinkTransformItem() {
-		super(new Item.Properties().durability(20).rarity(Rarity.RARE));
+		super(new Item.Properties().durability(20).rarity(Rarity.EPIC));
 	}
 
 	@Override

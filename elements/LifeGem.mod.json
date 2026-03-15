@@ -3,24 +3,24 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "minecraft:clock_47",
+    "texture": "lifegem",
     "customModelName": "Normal",
     "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],
-    "name": "Mink Transform",
-    "rarity": "EPIC",
+    "name": "Life Gem",
+    "rarity": "UNCOMMON",
     "creativeTabs": [
       {
         "value": "CUSTOM:MinksAndMisfits"
       }
     ],
-    "stackSize": 1,
+    "stackSize": 64,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
-    "damageCount": 20,
+    "damageCount": 0,
     "recipeRemainder": {
       "value": ""
     },
@@ -39,9 +39,6 @@
     },
     "inventorySize": 9,
     "inventoryStackSize": 99,
-    "onRightClickedInAir": {
-      "name": "MinkTransformRightclicked"
-    },
     "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,

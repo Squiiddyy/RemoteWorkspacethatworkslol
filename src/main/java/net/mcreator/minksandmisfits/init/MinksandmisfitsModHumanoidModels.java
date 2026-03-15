@@ -22,13 +22,12 @@ public class MinksandmisfitsModHumanoidModels {
 	public static void initModels(EntityRenderersEvent.AddLayers event) {
 		ModelMinkLike mink_like_model_temp = new ModelMinkLike(Minecraft.getInstance().getEntityModels().bakeLayer(ModelMinkLike.LAYER_LOCATION));
 		MINK_LIKE_MODEL = new PlayerModel(new ModelPart(Collections.emptyList(),
-				Map.ofEntries(Map.entry("hat", new ModelPart(Collections.emptyList(), Collections.emptyMap())), Map.entry("head", new ModelPart(Collections.emptyList(), Collections.emptyMap())),
-						Map.entry("body", new ModelPart(Collections.emptyList(), Collections.emptyMap())), Map.entry("left_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap())),
-						Map.entry("right_arm", new ModelPart(Collections.emptyList(), Collections.emptyMap())), Map.entry("left_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap())),
-						Map.entry("right_leg", new ModelPart(Collections.emptyList(), Collections.emptyMap())), Map.entry("left_sleeve", new ModelPart(Collections.emptyList(), Collections.emptyMap())),
-						Map.entry("right_sleeve", new ModelPart(Collections.emptyList(), Collections.emptyMap())), Map.entry("left_pants", new ModelPart(Collections.emptyList(), Collections.emptyMap())),
-						Map.entry("right_pants", new ModelPart(Collections.emptyList(), Collections.emptyMap())), Map.entry("jacket", new ModelPart(Collections.emptyList(), Collections.emptyMap())),
-						Map.entry("cloak", new ModelPart(Collections.emptyList(), Collections.emptyMap())), Map.entry("ear", new ModelPart(Collections.emptyList(), Collections.emptyMap())))),
+				Map.ofEntries(Map.entry("hat", new ModelPart(Collections.emptyList(), Collections.emptyMap())), Map.entry("head", mink_like_model_temp.Head), Map.entry("body", mink_like_model_temp.Body),
+						Map.entry("left_arm", mink_like_model_temp.LeftArm), Map.entry("right_arm", mink_like_model_temp.RightArm), Map.entry("left_leg", mink_like_model_temp.LeftLeg), Map.entry("right_leg", mink_like_model_temp.RightLeg),
+						Map.entry("left_sleeve", new ModelPart(Collections.emptyList(), Collections.emptyMap())), Map.entry("right_sleeve", new ModelPart(Collections.emptyList(), Collections.emptyMap())),
+						Map.entry("left_pants", new ModelPart(Collections.emptyList(), Collections.emptyMap())), Map.entry("right_pants", new ModelPart(Collections.emptyList(), Collections.emptyMap())),
+						Map.entry("jacket", new ModelPart(Collections.emptyList(), Collections.emptyMap())), Map.entry("cloak", new ModelPart(Collections.emptyList(), Collections.emptyMap())),
+						Map.entry("ear", new ModelPart(Collections.emptyList(), Collections.emptyMap())))),
 				false);
 	}
 }

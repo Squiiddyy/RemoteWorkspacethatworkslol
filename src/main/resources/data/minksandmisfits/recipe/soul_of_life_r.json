@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " ab",
+    " ba",
+    "a  "
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:soul_sand"
+    },
+    "b": {
+      "item": "minksandmisfits:life_gem"
+    }
+  },
+  "result": {
+    "id": "minksandmisfits:soul_of_life",
+    "count": 1
+  }
+}

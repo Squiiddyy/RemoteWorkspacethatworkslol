@@ -1,0 +1,27 @@
+{
+  "_fv": 79,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Long Life",
+    "icon": "snow_boost",
+    "color": {
+      "value": -9702062,
+      "falpha": 0.0
+    },
+    "particle": {
+      "value": "CUSTOM:LifePart"
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "BENEFICIAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredbyHoney": false,
+    "modifiers": [],
+    "onActiveTick": {
+      "name": "LongLifeOnEffectActiveTick"
+    }
+  }
+}

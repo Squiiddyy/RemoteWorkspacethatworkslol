@@ -1529,6 +1529,131 @@
         ]
       },
       "path": "~/Opossums"
+    },
+    {
+      "name": "LifeGem",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "life_gem",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minksandmisfits/models/item/life_gem.json",
+          "src/main/java/net/mcreator/minksandmisfits/item/LifeGemItem.java"
+        ]
+      },
+      "path": "~/Player like/PlayerLikes"
+    },
+    {
+      "name": "MinkTransformR",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_transform_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/advancement/recipes/mink_transform_r.json",
+          "src/main/resources/data/minksandmisfits/recipe/mink_transform_r.json"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "SoulOfLifeRightclicked",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_of_life_rightclicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/SoulOfLifeRightclickedProcedure.java"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "SoulOfLife",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_of_life",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minksandmisfits/models/item/soul_of_life.json",
+          "src/main/java/net/mcreator/minksandmisfits/item/SoulOfLifeItem.java"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "LongLife",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "long_life",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/potion/LongLifeMobEffect.java"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "LongLifeOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "long_life_on_effect_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/LongLifeOnEffectActiveTickProcedure.java"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "LifePart",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "life_part",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minksandmisfits/particles/life_part.json",
+          "src/main/java/net/mcreator/minksandmisfits/client/particle/LifePartParticle.java"
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "SoulOfLifeR",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "soul_of_life_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/advancement/recipes/soul_of_life_r.json",
+          "src/main/resources/data/minksandmisfits/recipe/soul_of_life_r.json"
+        ]
+      },
+      "path": "~/Misc"
     }
   ],
   "variable_elements": [
@@ -1649,7 +1774,11 @@
       "entity.minksandmisfits.musk_rat": "Musk Rat",
       "item.minksandmisfits.musk_rat_spawn_egg": "Musk Rat Spawn Egg",
       "entity.minksandmisfits.crayfish": "Crayfish",
-      "item.minksandmisfits.crayfish_spawn_egg": "Crayfish Spawn Egg"
+      "item.minksandmisfits.crayfish_spawn_egg": "Crayfish Spawn Egg",
+      "item.minksandmisfits.life_gem": "Life Gem",
+      "item.minksandmisfits.soul_of_life": "Soul Of Life",
+      "effect.minksandmisfits.long_life": "Long Life",
+      "item.minksandmisfits.soul_of_life.description_0": "§aBoosts any tamed animals max hp and provides permanent but slow life regeneration"
     }
   },
   "metadata": {
@@ -1734,6 +1863,10 @@
       },
       {
         "name": "Sea Otters",
+        "children": []
+      },
+      {
+        "name": "Misc",
         "children": []
       }
     ]
