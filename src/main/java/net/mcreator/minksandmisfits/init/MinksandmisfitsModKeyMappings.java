@@ -15,6 +15,7 @@ import net.neoforged.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
+import net.mcreator.minksandmisfits.network.MinkDashMessage;
 import net.mcreator.minksandmisfits.network.FlyDashMessage;
 
 @EventBusSubscriber(Dist.CLIENT)
@@ -32,10 +33,24 @@ public class MinksandmisfitsModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping MINK_DASH = new KeyMapping("key.minksandmisfits.mink_dash", GLFW.GLFW_KEY_R, "key.categories.movement") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				PacketDistributor.sendToServer(new MinkDashMessage(0, 0));
+				MinkDashMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
 		event.register(FLY_DASH);
+		event.register(MINK_DASH);
 	}
 
 	@EventBusSubscriber(Dist.CLIENT)
@@ -44,6 +59,7 @@ public class MinksandmisfitsModKeyMappings {
 		public static void onClientTick(ClientTickEvent.Post event) {
 			if (Minecraft.getInstance().screen == null) {
 				FLY_DASH.consumeClick();
+				MINK_DASH.consumeClick();
 			}
 		}
 	}

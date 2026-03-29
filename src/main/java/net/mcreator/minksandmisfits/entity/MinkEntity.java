@@ -46,9 +46,6 @@ import net.mcreator.minksandmisfits.init.MinksandmisfitsModEntities;
 import javax.annotation.Nullable;
 
 public class MinkEntity extends TamableAnimal {
-
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(MinkEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<Integer> ANIM = SynchedEntityData.defineId(MinkEntity.class, EntityDataSerializers.INT);
 	public static final EntityDataAccessor<Integer> DATA_Color = SynchedEntityData.defineId(MinkEntity.class, EntityDataSerializers.INT);
 	public static final EntityDataAccessor<Integer> DATA_Armor = SynchedEntityData.defineId(MinkEntity.class, EntityDataSerializers.INT);
 
@@ -56,44 +53,32 @@ public class MinkEntity extends TamableAnimal {
 		super(type, world);
 		xpReward = 3;
 		setNoAi(false);
-		refreshDimensions();
 	}
 
 	@Override
 	protected void defineSynchedData(SynchedEntityData.Builder builder) {
 		super.defineSynchedData(builder);
-		builder.define(TEXTURE, "minktext1");
-		builder.define(ANIM, 0);
 		builder.define(DATA_Color, 0);
 		builder.define(DATA_Armor, 0);
-	}
-
-	public void setTexture(String texture) {
-		this.entityData.set(TEXTURE, texture);
-	}
-
-	public String getTexture() {
-		return this.entityData.get(TEXTURE);
 	}
 
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new LeapAtTargetGoal(this, (float) 0.4));
-		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.1, false) {
+		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1, false) {
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
-				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < 1.5625 && this.mob.getSensing().hasLineOfSight(entity);
+				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < 3.0625 && this.mob.getSensing().hasLineOfSight(entity);
 			}
 		});
 		this.goalSelector.addGoal(3, new FollowOwnerGoal(this, 1.1, (float) 9, (float) 2));
-		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 0.75));
-		this.goalSelector.addGoal(5, new TemptGoal(this, 1, Ingredient.of(Items.COD), false));
-		this.goalSelector.addGoal(6, new TemptGoal(this, 1, Ingredient.of(Items.CHICKEN), false));
-		this.goalSelector.addGoal(7, new FollowParentGoal(this, 1.1));
-		this.goalSelector.addGoal(8, new OwnerHurtByTargetGoal(this));
-		this.targetSelector.addGoal(9, new HurtByTargetGoal(this));
-		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, MuskRatEntity.class, true, true) {
+		this.goalSelector.addGoal(4, new TemptGoal(this, 1.05, Ingredient.of(Items.COD), false));
+		this.goalSelector.addGoal(5, new TemptGoal(this, 1.05, Ingredient.of(Items.CHICKEN), false));
+		this.goalSelector.addGoal(6, new FollowParentGoal(this, 1.1));
+		this.goalSelector.addGoal(7, new OwnerHurtByTargetGoal(this));
+		this.targetSelector.addGoal(8, new HurtByTargetGoal(this));
+		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, MuskRatEntity.class, true, true) {
 			@Override
 			public boolean canUse() {
 				double x = MinkEntity.this.getX();
@@ -114,7 +99,7 @@ public class MinkEntity extends TamableAnimal {
 				return super.canContinueToUse() && TamedNoLongerAttackProcedure.execute(entity);
 			}
 		});
-		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, Cod.class, true, true) {
+		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, Cod.class, true, true) {
 			@Override
 			public boolean canUse() {
 				double x = MinkEntity.this.getX();
@@ -135,7 +120,7 @@ public class MinkEntity extends TamableAnimal {
 				return super.canContinueToUse() && TamedNoLongerAttackProcedure.execute(entity);
 			}
 		});
-		this.targetSelector.addGoal(12, new NearestAttackableTargetGoal(this, CrayfishEntity.class, true, true) {
+		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, CrayfishEntity.class, true, true) {
 			@Override
 			public boolean canUse() {
 				double x = MinkEntity.this.getX();
@@ -156,7 +141,7 @@ public class MinkEntity extends TamableAnimal {
 				return super.canContinueToUse() && TamedNoLongerAttackProcedure.execute(entity);
 			}
 		});
-		this.targetSelector.addGoal(13, new NearestAttackableTargetGoal(this, Chicken.class, true, true) {
+		this.targetSelector.addGoal(12, new NearestAttackableTargetGoal(this, Chicken.class, true, true) {
 			@Override
 			public boolean canUse() {
 				double x = MinkEntity.this.getX();
@@ -177,11 +162,11 @@ public class MinkEntity extends TamableAnimal {
 				return super.canContinueToUse() && TamedNoLongerAttackProcedure.execute(entity);
 			}
 		});
-		this.goalSelector.addGoal(14, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(15, new RandomSwimmingGoal(this, 1, 40));
-		this.goalSelector.addGoal(16, new BreedGoal(this, 0.9));
-		this.goalSelector.addGoal(17, new BreathAirGoal(this));
-		this.goalSelector.addGoal(18, new FloatGoal(this));
+		this.goalSelector.addGoal(13, new RandomSwimmingGoal(this, 1, 40));
+		this.goalSelector.addGoal(14, new BreedGoal(this, 0.9));
+		this.goalSelector.addGoal(15, new FloatGoal(this));
+		this.goalSelector.addGoal(16, new RandomStrollGoal(this, 0.75));
+		this.goalSelector.addGoal(17, new RandomLookAroundGoal(this));
 	}
 
 	@Override
@@ -204,7 +189,6 @@ public class MinkEntity extends TamableAnimal {
 	@Override
 	public void addAdditionalSaveData(CompoundTag compound) {
 		super.addAdditionalSaveData(compound);
-		compound.putString("Texture", this.getTexture());
 		compound.putInt("DataColor", this.entityData.get(DATA_Color));
 		compound.putInt("DataArmor", this.entityData.get(DATA_Armor));
 	}
@@ -212,8 +196,6 @@ public class MinkEntity extends TamableAnimal {
 	@Override
 	public void readAdditionalSaveData(CompoundTag compound) {
 		super.readAdditionalSaveData(compound);
-		if (compound.contains("Texture"))
-			this.setTexture(compound.getString("Texture"));
 		if (compound.contains("DataColor"))
 			this.entityData.set(DATA_Color, compound.getInt("DataColor"));
 		if (compound.contains("DataArmor"))
@@ -310,11 +292,6 @@ public class MinkEntity extends TamableAnimal {
 		return false;
 	}
 
-	@Override
-	public EntityDimensions getDefaultDimensions(Pose pose) {
-		return super.getDefaultDimensions(pose).scale(0.9f);
-	}
-
 	public static void init(RegisterSpawnPlacementsEvent event) {
 		event.register(MinksandmisfitsModEntities.MINK.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getBlockState(pos.below()).is(BlockTags.ANIMALS_SPAWNABLE_ON) && world.getRawBrightness(pos, 0) > 8), RegisterSpawnPlacementsEvent.Operation.REPLACE);
@@ -325,7 +302,7 @@ public class MinkEntity extends TamableAnimal {
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
 		builder = builder.add(Attributes.MAX_HEALTH, 12);
 		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 4);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 5);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 26);
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.65);
 		return builder;

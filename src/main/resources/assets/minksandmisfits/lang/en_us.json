@@ -48,5 +48,7 @@
   "item.minksandmisfits.life_gem": "Life Gem",
   "item.minksandmisfits.soul_of_life": "Soul Of Life",
   "effect.minksandmisfits.long_life": "Long Life",
-  "item.minksandmisfits.soul_of_life.description_0": "§aBoosts any tamed animals max hp and provides permanent but slow life regeneration"
+  "item.minksandmisfits.soul_of_life.description_0": "§aBoosts any tamed animals max hp and provides permanent but slow life regeneration",
+  "key.minksandmisfits.mink_dash": "Mink Dash",
+  "effect.minksandmisfits.mink_water_power": "Mink Water Power"
 }

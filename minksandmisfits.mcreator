@@ -108,6 +108,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
             "name": "entity",
             "type": "entity"
           },
@@ -1654,6 +1658,78 @@
         ]
       },
       "path": "~/Misc"
+    },
+    {
+      "name": "MinkDash",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_dash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/network/MinkDashMessage.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkDashOnKeyPressed",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_dash_on_key_pressed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/MinkDashOnKeyPressedProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkDashReset",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_dash_reset",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/MinkDashResetProcedure.java"
+        ]
+      },
+      "path": "~/Minks"
+    },
+    {
+      "name": "MinkWaterPower",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mink_water_power",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/potion/MinkWaterPowerMobEffect.java"
+        ]
+      },
+      "path": "~/Minks"
     }
   ],
   "variable_elements": [
@@ -1674,6 +1750,12 @@
       "type": "texturelocation",
       "scope": "global",
       "value": "null"
+    },
+    {
+      "name": "Dashes",
+      "type": "number",
+      "scope": "world",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -1778,7 +1860,9 @@
       "item.minksandmisfits.life_gem": "Life Gem",
       "item.minksandmisfits.soul_of_life": "Soul Of Life",
       "effect.minksandmisfits.long_life": "Long Life",
-      "item.minksandmisfits.soul_of_life.description_0": "§aBoosts any tamed animals max hp and provides permanent but slow life regeneration"
+      "item.minksandmisfits.soul_of_life.description_0": "§aBoosts any tamed animals max hp and provides permanent but slow life regeneration",
+      "key.minksandmisfits.mink_dash": "Mink Dash",
+      "effect.minksandmisfits.mink_water_power": "Mink Water Power"
     }
   },
   "metadata": {
@@ -1795,25 +1879,14 @@
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntities.java",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModEntityRenderers.java",
       "src/main/resources/META-INF/accesstransformer.cfg",
-      "src/main/resources/minksandmisfits.mixins.json",
-      "src/main/java/net/mcreator/minksandmisfits/mixin/ItemInHandLayerMixin.java",
-      "src/main/java/net/mcreator/minksandmisfits/client/ItemArms.java",
-      "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsModPlayerAnimationAPI.java",
-      "src/main/java/net/mcreator/minksandmisfits/mixin/EntityRenderDispatcherMixin.java",
-      "src/main/java/net/mcreator/minksandmisfits/mixin/LivingEntityRendererMixin.java",
-      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModTabs.java",
-      "src/main/java/net/mcreator/minksandmisfits/mixin/CameraAccessor.java",
-      "src/main/java/net/mcreator/minksandmisfits/mixin/LevelRendererMixin.java",
-      "src/main/java/net/mcreator/minksandmisfits/network/PlayPlayerAnimationMessage.java",
       "src/main/java/net/mcreator/minksandmisfits/network/MinksandmisfitsModVariables.java",
+      "src/main/resources/minksandmisfits.mixins.json",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModModels.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModSounds.java",
-      "src/main/java/net/mcreator/minksandmisfits/mixin/ItemInHandRendererMixin.java",
       "src/main/resources/pack.mcmeta",
       "src/main/resources/assets/minksandmisfits/sounds.json",
-      "src/main/java/net/mcreator/minksandmisfits/mixin/PlayerAnimationRendererMixin.java",
-      "src/main/java/net/mcreator/minksandmisfits/mixin/PlayerAnimationMixin.java",
+      "src/main/java/net/mcreator/minksandmisfits/init/MinksandmisfitsModTabs.java",
       "src/main/java/net/mcreator/minksandmisfits/MinksandmisfitsMod.java"
     ]
   },

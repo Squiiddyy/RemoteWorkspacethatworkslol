@@ -13,7 +13,8 @@ import net.mcreator.minksandmisfits.MinksandmisfitsMod;
 public class MinkFastSwimmerMobEffect extends MobEffect {
 	public MinkFastSwimmerMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -1);
-		this.addAttributeModifier(NeoForgeMod.SWIM_SPEED, ResourceLocation.fromNamespaceAndPath(MinksandmisfitsMod.MODID, "effect.mink_fast_swimmer_0"), 0.5, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
-		this.addAttributeModifier(Attributes.WATER_MOVEMENT_EFFICIENCY, ResourceLocation.fromNamespaceAndPath(MinksandmisfitsMod.MODID, "effect.mink_fast_swimmer_1"), 5, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
+		this.addAttributeModifier(NeoForgeMod.SWIM_SPEED, ResourceLocation.fromNamespaceAndPath(MinksandmisfitsMod.MODID, "effect.mink_fast_swimmer_0"), 0.25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
+		this.addAttributeModifier(Attributes.GRAVITY, ResourceLocation.fromNamespaceAndPath(MinksandmisfitsMod.MODID, "effect.mink_fast_swimmer_1"), 0.6, AttributeModifier.Operation.ADD_MULTIPLIED_BASE);
+		this.addAttributeModifier(Attributes.WATER_MOVEMENT_EFFICIENCY, ResourceLocation.fromNamespaceAndPath(MinksandmisfitsMod.MODID, "effect.mink_fast_swimmer_2"), 0.3, AttributeModifier.Operation.ADD_VALUE);
 	}
 }

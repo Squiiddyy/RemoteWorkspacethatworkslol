@@ -101,12 +101,11 @@ public class MinkRenderer extends MobRenderer<MinkEntity, Modelmink<MinkEntity>>
 
 	@Override
 	protected void scale(MinkEntity entity, PoseStack poseStack, float f) {
-		poseStack.scale(0.9f, 0.9f, 0.9f);
 		poseStack.scale(entity.getAgeScale(), entity.getAgeScale(), entity.getAgeScale());
 	}
 
 	@Override
 	public ResourceLocation getTextureLocation(MinkEntity entity) {
-		return ResourceLocation.parse("minksandmisfits:textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("minksandmisfits:textures/entities/minktext1.png");
 	}
 }

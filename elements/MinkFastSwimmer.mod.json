@@ -21,15 +21,22 @@
         "attribute": {
           "value": "SWIM_SPEED"
         },
-        "amount": 0.5,
+        "amount": 0.25,
+        "operation": "ADD_MULTIPLIED_BASE"
+      },
+      {
+        "attribute": {
+          "value": "ENTITY_GRAVITY"
+        },
+        "amount": 0.6,
         "operation": "ADD_MULTIPLIED_BASE"
       },
       {
         "attribute": {
           "value": "WATER_MOVEMENT_EFFICIENCY"
         },
-        "amount": 5.0,
-        "operation": "ADD_MULTIPLIED_BASE"
+        "amount": 0.3,
+        "operation": "ADD_VALUE"
       }
     ]
   }

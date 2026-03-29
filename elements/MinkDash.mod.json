@@ -1,0 +1,12 @@
+{
+  "_fv": 79,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "R",
+    "keyBindingName": "Mink Dash",
+    "keyBindingCategoryKey": "movement",
+    "onKeyPressed": {
+      "name": "MinkDashOnKeyPressed"
+    }
+  }
+}

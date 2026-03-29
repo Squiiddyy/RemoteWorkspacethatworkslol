@@ -21,4 +21,5 @@ public class MinksandmisfitsModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> SLOW_DECENT = REGISTRY.register("slow_decent", () -> new SlowDecentMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> MINK_LIKE = REGISTRY.register("mink_like", () -> new MinkLikeMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> LONG_LIFE = REGISTRY.register("long_life", () -> new LongLifeMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> MINK_WATER_POWER = REGISTRY.register("mink_water_power", () -> new MinkWaterPowerMobEffect());
 }
