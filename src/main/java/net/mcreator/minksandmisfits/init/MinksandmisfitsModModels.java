@@ -10,6 +10,7 @@ import net.neoforged.api.distmarker.Dist;
 
 import net.mcreator.minksandmisfits.client.model.Modelmink;
 import net.mcreator.minksandmisfits.client.model.Modelbughat;
+import net.mcreator.minksandmisfits.client.model.ModelOpossum;
 import net.mcreator.minksandmisfits.client.model.ModelMinkLike;
 import net.mcreator.minksandmisfits.client.model.ModelBugWings;
 
@@ -21,5 +22,6 @@ public class MinksandmisfitsModModels {
 		event.registerLayerDefinition(ModelMinkLike.LAYER_LOCATION, ModelMinkLike::createBodyLayer);
 		event.registerLayerDefinition(Modelbughat.LAYER_LOCATION, Modelbughat::createBodyLayer);
 		event.registerLayerDefinition(ModelBugWings.LAYER_LOCATION, ModelBugWings::createBodyLayer);
+		event.registerLayerDefinition(ModelOpossum.LAYER_LOCATION, ModelOpossum::createBodyLayer);
 	}
 }

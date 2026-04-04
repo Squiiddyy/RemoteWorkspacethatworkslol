@@ -14,10 +14,10 @@ public class MinkOnInitialEntitySpawnProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof MinkEntity _datEntSetI)
-			_datEntSetI.getEntityData().set(MinkEntity.DATA_Color, Mth.nextInt(RandomSource.create(), 1, 2));
+			_datEntSetI.getEntityData().set(MinkEntity.DATA_Color, Mth.nextInt(RandomSource.create(), 1, Mth.nextInt(RandomSource.create(), 1, 3)));
 		if (world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("minksandmisfits:somber_shore"))) {
 			if (entity instanceof MinkEntity _datEntSetI)
-				_datEntSetI.getEntityData().set(MinkEntity.DATA_Color, 3);
+				_datEntSetI.getEntityData().set(MinkEntity.DATA_Color, 4);
 		}
 	}
 }

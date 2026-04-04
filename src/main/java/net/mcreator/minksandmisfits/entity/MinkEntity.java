@@ -37,10 +37,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
-import net.mcreator.minksandmisfits.procedures.TamedNoLongerAttackProcedure;
-import net.mcreator.minksandmisfits.procedures.MinkRightclickedOnEntityProcedure;
-import net.mcreator.minksandmisfits.procedures.MinkOnInitialEntitySpawnProcedure;
-import net.mcreator.minksandmisfits.procedures.MinkOnEntityTickUpdateProcedure;
+import net.mcreator.minksandmisfits.procedures.*;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModEntities;
 
 import javax.annotation.Nullable;
@@ -48,6 +45,7 @@ import javax.annotation.Nullable;
 public class MinkEntity extends TamableAnimal {
 	public static final EntityDataAccessor<Integer> DATA_Color = SynchedEntityData.defineId(MinkEntity.class, EntityDataSerializers.INT);
 	public static final EntityDataAccessor<Integer> DATA_Armor = SynchedEntityData.defineId(MinkEntity.class, EntityDataSerializers.INT);
+	public final AnimationState animationState0 = new AnimationState();
 
 	public MinkEntity(EntityType<MinkEntity> type, Level world) {
 		super(type, world);
@@ -65,19 +63,159 @@ public class MinkEntity extends TamableAnimal {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new LeapAtTargetGoal(this, (float) 0.4));
+		this.goalSelector.addGoal(1, new LeapAtTargetGoal(this, (float) 0.4) {
+			@Override
+			public boolean canUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canUse() && SitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canContinueToUse() && SitCheckProcedure.execute(entity);
+			}
+		});
 		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1, false) {
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
-				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < 3.0625 && this.mob.getSensing().hasLineOfSight(entity);
+				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < 3.24 && this.mob.getSensing().hasLineOfSight(entity);
 			}
 		});
-		this.goalSelector.addGoal(3, new FollowOwnerGoal(this, 1.1, (float) 9, (float) 2));
-		this.goalSelector.addGoal(4, new TemptGoal(this, 1.05, Ingredient.of(Items.COD), false));
-		this.goalSelector.addGoal(5, new TemptGoal(this, 1.05, Ingredient.of(Items.CHICKEN), false));
-		this.goalSelector.addGoal(6, new FollowParentGoal(this, 1.1));
-		this.goalSelector.addGoal(7, new OwnerHurtByTargetGoal(this));
-		this.targetSelector.addGoal(8, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(3, new FollowOwnerGoal(this, 1.1, (float) 9, (float) 2) {
+			@Override
+			public boolean canUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canUse() && SitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canContinueToUse() && SitCheckProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(4, new TemptGoal(this, 1.05, Ingredient.of(Items.COD), false) {
+			@Override
+			public boolean canUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canUse() && SitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canContinueToUse() && SitCheckProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(5, new TemptGoal(this, 1.05, Ingredient.of(Items.CHICKEN), false) {
+			@Override
+			public boolean canUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canUse() && SitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canContinueToUse() && SitCheckProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(6, new FollowParentGoal(this, 1.1) {
+			@Override
+			public boolean canUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canUse() && SitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canContinueToUse() && SitCheckProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(7, new OwnerHurtByTargetGoal(this) {
+			@Override
+			public boolean canUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canUse() && SitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canContinueToUse() && SitCheckProcedure.execute(entity);
+			}
+		});
+		this.targetSelector.addGoal(8, new HurtByTargetGoal(this) {
+			@Override
+			public boolean canUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canUse() && SitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canContinueToUse() && SitCheckProcedure.execute(entity);
+			}
+		});
 		this.targetSelector.addGoal(9, new NearestAttackableTargetGoal(this, MuskRatEntity.class, true, true) {
 			@Override
 			public boolean canUse() {
@@ -163,9 +301,49 @@ public class MinkEntity extends TamableAnimal {
 			}
 		});
 		this.goalSelector.addGoal(13, new RandomSwimmingGoal(this, 1, 40));
-		this.goalSelector.addGoal(14, new BreedGoal(this, 0.9));
+		this.goalSelector.addGoal(14, new BreedGoal(this, 0.9) {
+			@Override
+			public boolean canUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canUse() && SitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canContinueToUse() && SitCheckProcedure.execute(entity);
+			}
+		});
 		this.goalSelector.addGoal(15, new FloatGoal(this));
-		this.goalSelector.addGoal(16, new RandomStrollGoal(this, 0.75));
+		this.goalSelector.addGoal(16, new RandomStrollGoal(this, 0.75) {
+			@Override
+			public boolean canUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canUse() && SitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = MinkEntity.this.getX();
+				double y = MinkEntity.this.getY();
+				double z = MinkEntity.this.getZ();
+				Entity entity = MinkEntity.this;
+				Level world = MinkEntity.this.level();
+				return super.canContinueToUse() && SitCheckProcedure.execute(entity);
+			}
+		});
 		this.goalSelector.addGoal(17, new RandomLookAroundGoal(this));
 	}
 
@@ -252,6 +430,14 @@ public class MinkEntity extends TamableAnimal {
 
 		MinkRightclickedOnEntityProcedure.execute(world, x, y, z, entity, sourceentity);
 		return retval;
+	}
+
+	@Override
+	public void tick() {
+		super.tick();
+		if (this.level().isClientSide()) {
+			this.animationState0.animateWhen(SitCheckAnimationProcedure.execute(this), this.tickCount);
+		}
 	}
 
 	@Override

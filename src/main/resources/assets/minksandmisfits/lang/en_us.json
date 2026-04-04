@@ -7,8 +7,8 @@
   "entity.minksandmisfits.basic_player": "Basic Player",
   "item.minksandmisfits.house_anchor_spawn_egg": "House Anchor Spawn Egg",
   "entity.minksandmisfits.house_anchor": "House Anchor",
-  "item.minksandmisfits.opossum_spawn_egg": "Opossum Spawn Egg",
-  "entity.minksandmisfits.opossum": "Opossum",
+  "item.minksandmisfits.opossum_spawn_egg": "Opossum (Rider) Spawn Egg",
+  "entity.minksandmisfits.opossum": "Opossum (Rider)",
   "biome.minksandmisfits.somber_shore": "Somber Shore",
   "block.minksandmisfits.cattail": "Cattail",
   "item_group.minksandmisfits.minks_and_misfits": "Minks And Misfits",
@@ -50,5 +50,6 @@
   "effect.minksandmisfits.long_life": "Long Life",
   "item.minksandmisfits.soul_of_life.description_0": "§aBoosts any tamed animals max hp and provides permanent but slow life regeneration",
   "key.minksandmisfits.mink_dash": "Mink Dash",
-  "effect.minksandmisfits.mink_water_power": "Mink Water Power"
+  "effect.minksandmisfits.mink_water_power": "Mink Water Power",
+  "attribute.minksandmisfits.sitting": "Sitting"
 }

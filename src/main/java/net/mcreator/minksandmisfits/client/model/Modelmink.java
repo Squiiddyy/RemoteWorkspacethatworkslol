@@ -16,7 +16,7 @@ import net.minecraft.client.model.EntityModel;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-// Made with Blockbench 5.0.7
+// Made with Blockbench 5.1.1
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 public class Modelmink<T extends Entity> extends EntityModel<T> {
@@ -58,7 +58,7 @@ public class Modelmink<T extends Entity> extends EntityModel<T> {
 		PartDefinition FrontLegL = partdefinition.addOrReplaceChild("FrontLegL", CubeListBuilder.create().texOffs(8, 31).addBox(-1.0F, -1.0F, -1.0F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(1.9F, 21.0F, -3.0F));
 		PartDefinition BackLegR = partdefinition.addOrReplaceChild("BackLegR", CubeListBuilder.create().texOffs(32, 26).addBox(-0.9F, -1.0F, -1.1F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(-1.0F, 21.0F, 7.0F));
 		PartDefinition BackLegL = partdefinition.addOrReplaceChild("BackLegL", CubeListBuilder.create().texOffs(32, 32).addBox(-1.1F, -1.0F, -1.1F, 2.0F, 4.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(2.0F, 21.0F, 7.0F));
-		PartDefinition tail = partdefinition.addOrReplaceChild("tail", CubeListBuilder.create().texOffs(0, 17).addBox(0.0F, -2.5F, 0.0F, 0.0F, 5.0F, 9.0F, new CubeDeformation(0.0F)), PartPose.offset(0.5F, 18.5F, 8.0F));
+		PartDefinition tail = partdefinition.addOrReplaceChild("tail", CubeListBuilder.create().texOffs(0, 17).addBox(0.0F, -2.5F, -1.0F, 0.0F, 5.0F, 9.0F, new CubeDeformation(0.0F)), PartPose.offset(0.5F, 18.5F, 8.0F));
 		return LayerDefinition.create(meshdefinition, 64, 64);
 	}
 
@@ -74,10 +74,10 @@ public class Modelmink<T extends Entity> extends EntityModel<T> {
 	}
 
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-		this.BackLegL.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
+		this.BackLegL.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
 		this.FrontLegR.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
-		this.tail.xRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
-		this.BackLegR.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
+		this.tail.yRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;
+		this.BackLegR.yRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 		this.FrontLegL.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
 		this.MainHead.yRot = netHeadYaw / (180F / (float) Math.PI);
 		this.MainHead.xRot = headPitch / (180F / (float) Math.PI);

@@ -4,10 +4,10 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.minksandmisfits.entity.MinkEntity;
 
-public class IsSomberColorProcedure {
+public class IsColor3Procedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		return (entity instanceof MinkEntity _datEntI ? _datEntI.getEntityData().get(MinkEntity.DATA_Color) : 0) == 4;
+		return (entity instanceof MinkEntity _datEntI ? _datEntI.getEntityData().get(MinkEntity.DATA_Color) : 0) == 3;
 	}
 }

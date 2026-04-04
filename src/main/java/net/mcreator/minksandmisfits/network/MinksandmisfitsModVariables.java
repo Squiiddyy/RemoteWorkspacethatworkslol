@@ -82,6 +82,7 @@ public class MinksandmisfitsModVariables {
 		public static final String DATA_NAME = "minksandmisfits_worldvars";
 		boolean _syncDirty = false;
 		public double Dashes = 0;
+		public boolean Sitting = false;
 
 		public static WorldVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			WorldVariables data = new WorldVariables();
@@ -91,11 +92,13 @@ public class MinksandmisfitsModVariables {
 
 		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			Dashes = nbt.getDouble("Dashes");
+			Sitting = nbt.getBoolean("Sitting");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			nbt.putDouble("Dashes", Dashes);
+			nbt.putBoolean("Sitting", Sitting);
 			return nbt;
 		}
 

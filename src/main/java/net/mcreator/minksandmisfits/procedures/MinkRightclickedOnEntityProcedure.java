@@ -18,6 +18,7 @@ import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModItems;
+import net.mcreator.minksandmisfits.init.MinksandmisfitsModAttributes;
 import net.mcreator.minksandmisfits.entity.MinkEntity;
 
 public class MinkRightclickedOnEntityProcedure {
@@ -46,6 +47,14 @@ public class MinkRightclickedOnEntityProcedure {
 				_livingEntity11.getAttribute(Attributes.KNOCKBACK_RESISTANCE).setBaseValue(0.5);
 			if (entity instanceof LivingEntity _livingEntity12 && _livingEntity12.getAttributes().hasAttribute(Attributes.EXPLOSION_KNOCKBACK_RESISTANCE))
 				_livingEntity12.getAttribute(Attributes.EXPLOSION_KNOCKBACK_RESISTANCE).setBaseValue(0.5);
+		}
+		if ((entity instanceof TamableAnimal _tamIsTamedBy && sourceentity instanceof LivingEntity _livEnt ? _tamIsTamedBy.isOwnedBy(_livEnt) : false) && entity instanceof LivingEntity _livingEntity14
+				&& _livingEntity14.getAttributes().hasAttribute(MinksandmisfitsModAttributes.SITTING)) {
+			if (entity.getPersistentData().getBoolean("Sitting") == false) {
+				entity.getPersistentData().putBoolean("Sitting", true);
+			} else {
+				entity.getPersistentData().putBoolean("Sitting", false);
+			}
 		}
 	}
 

@@ -46,6 +46,7 @@ public class MinksandmisfitsMod {
 		MinksandmisfitsModVariables.ATTACHMENT_TYPES.register(modEventBus);
 		MinksandmisfitsModMobEffects.REGISTRY.register(modEventBus);
 		MinksandmisfitsModParticleTypes.REGISTRY.register(modEventBus);
+		MinksandmisfitsModAttributes.REGISTRY.register(modEventBus);
 		// Start of user code block mod init
 		// End of user code block mod init
 	}

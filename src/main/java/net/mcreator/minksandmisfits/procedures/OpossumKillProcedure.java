@@ -25,6 +25,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModParticleTypes;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModItems;
+import net.mcreator.minksandmisfits.entity.OpossumRideableEntity;
 import net.mcreator.minksandmisfits.entity.OpossumEntity;
 import net.mcreator.minksandmisfits.entity.FleaEntity;
 import net.mcreator.minksandmisfits.MinksandmisfitsMod;
@@ -48,7 +49,7 @@ public class OpossumKillProcedure {
 		if (entity == null || sourceentity == null)
 			return;
 		if ((entity instanceof Spider || entity instanceof CaveSpider || entity instanceof Silverfish || entity instanceof Endermite || entity instanceof FleaEntity) && (sourceentity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false)
-				&& sourceentity instanceof OpossumEntity) {
+				&& (sourceentity instanceof OpossumRideableEntity || sourceentity instanceof OpossumEntity)) {
 			if (world instanceof ServerLevel _level) {
 				ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MinksandmisfitsModItems.BUG_REMAINS.get()));
 				entityToSpawn.setPickUpDelay(10);
@@ -86,7 +87,7 @@ public class OpossumKillProcedure {
 				}
 			});
 		}
-		if (entity instanceof Endermite && (sourceentity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) && sourceentity instanceof OpossumEntity) {
+		if (entity instanceof Endermite && (sourceentity instanceof TamableAnimal _tamEnt ? _tamEnt.isTame() : false) && (sourceentity instanceof OpossumRideableEntity || sourceentity instanceof OpossumEntity)) {
 			if (Math.random() < 0.65) {
 				if (world instanceof ServerLevel _level) {
 					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(Items.ENDER_PEARL));
