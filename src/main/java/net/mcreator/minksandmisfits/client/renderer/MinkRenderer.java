@@ -98,6 +98,51 @@ public class MinkRenderer extends MobRenderer<MinkEntity, Modelmink<MinkEntity>>
 				}
 			}
 		});
+		this.addLayer(new RenderLayer<MinkEntity, Modelmink<MinkEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = ResourceLocation.parse("minksandmisfits:textures/entities/minkcollar.png");
+
+			@Override
+			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, MinkEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
+				Level world = entity.level();
+				double x = entity.getX();
+				double y = entity.getY();
+				double z = entity.getZ();
+				if (CollarCheckProcedure.execute(entity)) {
+					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.entityCutoutNoCull(LAYER_TEXTURE));
+					this.getParentModel().renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY);
+				}
+			}
+		});
+		this.addLayer(new RenderLayer<MinkEntity, Modelmink<MinkEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = ResourceLocation.parse("minksandmisfits:textures/entities/minktotem.png");
+
+			@Override
+			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, MinkEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
+				Level world = entity.level();
+				double x = entity.getX();
+				double y = entity.getY();
+				double z = entity.getZ();
+				if (TotemCheckProcedure.execute(entity)) {
+					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.eyes(LAYER_TEXTURE));
+					this.getParentModel().renderToBuffer(poseStack, vertexConsumer, light, OverlayTexture.NO_OVERLAY);
+				}
+			}
+		});
+		this.addLayer(new RenderLayer<MinkEntity, Modelmink<MinkEntity>>(this) {
+			final ResourceLocation LAYER_TEXTURE = ResourceLocation.parse("minksandmisfits:textures/entities/minktextsombereyes.png");
+
+			@Override
+			public void render(PoseStack poseStack, MultiBufferSource bufferSource, int light, MinkEntity entity, float limbSwing, float limbSwingAmount, float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
+				Level world = entity.level();
+				double x = entity.getX();
+				double y = entity.getY();
+				double z = entity.getZ();
+				if (IsSomberColorProcedure.execute(entity)) {
+					VertexConsumer vertexConsumer = bufferSource.getBuffer(RenderType.eyes(LAYER_TEXTURE));
+					this.getParentModel().renderToBuffer(poseStack, vertexConsumer, light, LivingEntityRenderer.getOverlayCoords(entity, 0));
+				}
+			}
+		});
 	}
 
 	@Override
@@ -123,7 +168,7 @@ public class MinkRenderer extends MobRenderer<MinkEntity, Modelmink<MinkEntity>>
 				this.root().getAllParts().forEach(ModelPart::resetPose);
 				this.animate(entity.animationState0, minkAnimation.MinkSit, ageInTicks, 1f);
 				if (MinkPlaybackConditionProcedure.execute(entity))
-					this.animateWalk(minkAnimation.MinkSwim, limbSwing, limbSwingAmount, 1f, 50f);
+					this.animateWalk(minkAnimation.MinkSwim, limbSwing, limbSwingAmount, 1f, 100f);
 			}
 		};
 

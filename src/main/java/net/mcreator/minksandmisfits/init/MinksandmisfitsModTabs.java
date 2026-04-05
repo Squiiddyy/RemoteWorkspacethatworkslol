@@ -32,8 +32,6 @@ public class MinksandmisfitsModTabs {
 				tabData.accept(MinksandmisfitsModItems.TICK_SPAWN_EGG.get());
 				tabData.accept(MinksandmisfitsModItems.MINK_FUR_ARMOR_ARMOR_BOOTS.get());
 				tabData.accept(MinksandmisfitsModItems.MINK_ARMOR.get());
-				tabData.accept(MinksandmisfitsModItems.BUG_HELMET.get());
-				tabData.accept(MinksandmisfitsModItems.BUG_CHESTPLATE.get());
 				tabData.accept(MinksandmisfitsModItems.OPOSSUM_RIDEABLE_SPAWN_EGG.get());
 				tabData.accept(MinksandmisfitsModItems.MINK_TRANSFORM.get());
 				tabData.accept(MinksandmisfitsModBlocks.MINK_FUR_CARPET.get().asItem());
@@ -41,5 +39,8 @@ public class MinksandmisfitsModTabs {
 				tabData.accept(MinksandmisfitsModItems.CRAYFISH_SPAWN_EGG.get());
 				tabData.accept(MinksandmisfitsModItems.LIFE_GEM.get());
 				tabData.accept(MinksandmisfitsModItems.SOUL_OF_LIFE.get());
+				tabData.accept(MinksandmisfitsModItems.ROASTED_BUG.get());
+				tabData.accept(MinksandmisfitsModItems.ROASTED_BUG_SAND_WITCH.get());
+				tabData.accept(MinksandmisfitsModItems.RAPTORIAL_CLAW.get());
 			}).build());
 }

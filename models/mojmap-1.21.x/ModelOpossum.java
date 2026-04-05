@@ -32,36 +32,36 @@ public class ModelOpossum<T extends Entity> extends EntityModel<T> {
 		PartDefinition partdefinition = meshdefinition.getRoot();
 
 		PartDefinition opossum = partdefinition.addOrReplaceChild("opossum", CubeListBuilder.create(),
-				PartPose.offset(-0.5F, 18.5F, 1.0F));
+				PartPose.offset(-0.5F, 19.5F, 1.0F));
 
 		PartDefinition tailop = opossum.addOrReplaceChild("tailop", CubeListBuilder.create(),
 				PartPose.offset(0.5F, 0.0F, 4.0F));
 
 		PartDefinition cube_r1 = tailop
 				.addOrReplaceChild("cube_r1",
-						CubeListBuilder.create().texOffs(0, 16).addBox(-0.5F, -3.0F, 0.0F, 0.0F, 6.0F, 12.0F,
+						CubeListBuilder.create().texOffs(0, 16).addBox(-0.5F, -3.5F, 0.0F, 0.0F, 6.0F, 12.0F,
 								new CubeDeformation(0.0F)),
 						PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.2618F, 0.0F, 0.0F));
 
 		PartDefinition backlegright = opossum.addOrReplaceChild("backlegright", CubeListBuilder.create().texOffs(44, 9)
-				.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)),
+				.addBox(-1.0F, -0.5F, -1.0F, 2.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(-2.0F, 2.0F, 3.0F));
 
 		PartDefinition backlegleft = opossum.addOrReplaceChild("backlegleft", CubeListBuilder.create().texOffs(44, 4)
-				.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)),
+				.addBox(-1.0F, -0.5F, -1.0F, 2.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(2.0F, 2.0F, 3.0F));
 
 		PartDefinition bodyop = opossum.addOrReplaceChild("bodyop",
 				CubeListBuilder.create().texOffs(0, 0)
-						.addBox(-3.5F, -2.5F, -6.0F, 7.0F, 5.0F, 11.0F, new CubeDeformation(0.0F)).texOffs(24, 16)
-						.addBox(-3.0F, -4.0F, -6.0F, 0.0F, 6.0F, 12.0F, new CubeDeformation(0.0F)).texOffs(0, 34)
-						.addBox(3.0F, -4.0F, -6.0F, 0.0F, 6.0F, 12.0F, new CubeDeformation(0.0F)),
+						.addBox(-3.5F, -3.0F, -6.0F, 7.0F, 5.0F, 11.0F, new CubeDeformation(0.0F)).texOffs(24, 16)
+						.addBox(-3.0F, -4.5F, -6.0F, 0.0F, 6.0F, 12.0F, new CubeDeformation(0.0F)).texOffs(0, 34)
+						.addBox(3.0F, -4.5F, -6.0F, 0.0F, 6.0F, 12.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		PartDefinition head = opossum.addOrReplaceChild("head",
 				CubeListBuilder.create().texOffs(24, 34)
-						.addBox(-3.5F, -2.5F, -5.0F, 7.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)).texOffs(36, 0)
-						.addBox(-2.5F, 0.5F, -7.0F, 5.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)),
+						.addBox(-3.5F, -3.0F, -5.0F, 7.0F, 5.0F, 5.0F, new CubeDeformation(0.0F)).texOffs(36, 0)
+						.addBox(-2.5F, 0.0F, -7.0F, 5.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(0.0F, -2.0F, -6.0F));
 
 		PartDefinition earL_r1 = head.addOrReplaceChild("earL_r1",
@@ -75,11 +75,11 @@ public class ModelOpossum<T extends Entity> extends EntityModel<T> {
 				PartPose.offsetAndRotation(-2.5F, -1.5F, -2.0F, 0.0F, 0.0F, -0.3054F));
 
 		PartDefinition frontlegleft = opossum.addOrReplaceChild("frontlegleft", CubeListBuilder.create().texOffs(36, 9)
-				.addBox(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)),
+				.addBox(-1.0F, -0.5F, -1.0F, 2.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(2.0F, 2.0F, -4.0F));
 
 		PartDefinition frontlegright = opossum.addOrReplaceChild("frontlegright", CubeListBuilder.create()
-				.texOffs(36, 4).addBox(-1.0F, 0.0F, -1.0F, 2.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)),
+				.texOffs(36, 4).addBox(-1.0F, -0.5F, -1.0F, 2.0F, 3.0F, 2.0F, new CubeDeformation(0.0F)),
 				PartPose.offset(-2.0F, 2.0F, -4.0F));
 
 		return LayerDefinition.create(meshdefinition, 64, 64);
@@ -95,10 +95,10 @@ public class ModelOpossum<T extends Entity> extends EntityModel<T> {
 			float headPitch) {
 		this.head.yRot = netHeadYaw / (180F / (float) Math.PI);
 		this.head.xRot = headPitch / (180F / (float) Math.PI);
-		this.backlegleft.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
-		this.tailop.yRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
-		this.backlegright.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
-		this.frontlegleft.xRot = Mth.cos(limbSwing * 0.6662F) * limbSwingAmount;
-		this.frontlegright.xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;
+		this.backlegleft.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
+		this.tailop.yRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
+		this.backlegright.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
+		this.frontlegleft.xRot = Mth.cos(limbSwing * 1.0F) * -1.0F * limbSwingAmount;
+		this.frontlegright.xRot = Mth.cos(limbSwing * 1.0F) * 1.0F * limbSwingAmount;
 	}
 }

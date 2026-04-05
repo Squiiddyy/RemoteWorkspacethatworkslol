@@ -55,6 +55,13 @@ public class OpossumKillProcedure {
 				entityToSpawn.setPickUpDelay(10);
 				_level.addFreshEntity(entityToSpawn);
 			}
+			if (Math.random() < 0.5) {
+				if (world instanceof ServerLevel _level) {
+					ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(MinksandmisfitsModItems.BUG_REMAINS.get()));
+					entityToSpawn.setPickUpDelay(10);
+					_level.addFreshEntity(entityToSpawn);
+				}
+			}
 			if (world instanceof ServerLevel _level)
 				_level.sendParticles((SimpleParticleType) (MinksandmisfitsModParticleTypes.EATBUG.get()), x, y, z, 6, 0.5, 0.5, 0.5, 0.5);
 			if (world instanceof Level _level) {

@@ -7,7 +7,7 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class GrapeItem extends Item {
 	public GrapeItem() {
-		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(2).saturationModifier(0.25f).build()));
+		super(new Item.Properties().food((new FoodProperties.Builder()).nutrition(2).saturationModifier(0.28f).build()));
 	}
 
 	@Override

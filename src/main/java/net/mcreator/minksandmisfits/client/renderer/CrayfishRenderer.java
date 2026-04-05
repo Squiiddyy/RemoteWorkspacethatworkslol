@@ -15,6 +15,6 @@ public class CrayfishRenderer extends MobRenderer<CrayfishEntity, SlimeModel<Cra
 
 	@Override
 	public ResourceLocation getTextureLocation(CrayfishEntity entity) {
-		return ResourceLocation.parse("minksandmisfits:textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("minksandmisfits:textures/entities/bughattext.png");
 	}
 }

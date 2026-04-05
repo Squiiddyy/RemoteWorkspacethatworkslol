@@ -8,6 +8,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
+
 import net.mcreator.minksandmisfits.client.renderer.*;
 
 @EventBusSubscriber(Dist.CLIENT)
@@ -22,5 +24,6 @@ public class MinksandmisfitsModEntityRenderers {
 		event.registerEntityRenderer(MinksandmisfitsModEntities.OPOSSUM_RIDEABLE.get(), OpossumRideableRenderer::new);
 		event.registerEntityRenderer(MinksandmisfitsModEntities.MUSK_RAT.get(), MuskRatRenderer::new);
 		event.registerEntityRenderer(MinksandmisfitsModEntities.CRAYFISH.get(), CrayfishRenderer::new);
+		event.registerEntityRenderer(MinksandmisfitsModEntities.SUPER_SLASH.get(), ThrownItemRenderer::new);
 	}
 }

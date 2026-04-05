@@ -1,0 +1,23 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "SuperSlash"
+	},
+	"elements": [
+		{
+			"from": [-4, 8, 8],
+			"to": [20, 32, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [2, 18, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 5, 5], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 5], "texture": "#0"},
+				"south": {"uv": [0, 0, 5, 5], "texture": "#0"},
+				"west": {"uv": [5, 0, 5, 5], "texture": "#0"},
+				"up": {"uv": [5, 0, 0, 0], "texture": "#0"},
+				"down": {"uv": [10, 0, 5, 0], "texture": "#0"}
+			}
+		}
+	]
+}

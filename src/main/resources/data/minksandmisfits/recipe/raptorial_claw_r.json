@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aa ",
+    "baa",
+    " ba"
+  ],
+  "key": {
+    "a": {
+      "item": "minksandmisfits:bug_remains"
+    },
+    "b": {
+      "item": "minecraft:obsidian"
+    }
+  },
+  "result": {
+    "id": "minksandmisfits:raptorial_claw",
+    "count": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "_fv": 79,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"event_trigger\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">no_ext_trigger</field><next><block type=\"return_logic\"><value name=\"return\"><block type=\"compare_mcitems\"><value name=\"a\"><block type=\"entity_get_slot\"><value name=\"slotid\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value><value name=\"entity\"><block type=\"entity_from_deps\"></block></value></block></value><value name=\"b\"><block type=\"mcitem_all\"><field name=\"value\">Items.TOTEM_OF_UNDYING</field></block></value></block></value></block></next></block><block type=\"entity_get_armor_slot_item\" x=\"130\" y=\"257\"><value name=\"slotid\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value></block><block type=\"entity_from_deps\" x=\"428\" y=\"252\"></block><block type=\"itemhandler_get_slot\" x=\"49\" y=\"323\"><value name=\"slotid\"><block type=\"math_number\"><field name=\"NUM\">0</field></block></value></block><block type=\"itemstack_to_mcitem\" x=\"529\" y=\"313\"></block><block type=\"item_enchanted_with_xp\" x=\"11\" y=\"544\"><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\"></field></block></value><value name=\"levels\"><block type=\"math_number\"><field name=\"NUM\">30</field></block></value><value name=\"treasure\"><block type=\"logic_boolean\"><field name=\"BOOL\">FALSE</field></block></value></block><block type=\"item_get_potion\" x=\"11\" y=\"611\"><field name=\"type\">POTION</field><field name=\"potion\"></field></block></xml>",
+    "skipDependencyNullCheck": false
+  }
+}

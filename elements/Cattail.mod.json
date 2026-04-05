@@ -26,7 +26,7 @@
       null,
       null
     ],
-    "growapableSpawnType": "Water",
+    "growapableSpawnType": "Beach",
     "growapableMaxHeight": 3,
     "customBoundingBox": false,
     "disableOffset": false,

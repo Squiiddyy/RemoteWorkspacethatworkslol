@@ -32,10 +32,6 @@
   "effect.minksandmisfits.snow_boost": "Snow Boost",
   "item.minksandmisfits.mink_armor": "Mink Armor",
   "effect.minksandmisfits.detarget": "Detarget",
-  "item.minksandmisfits.bug_chestplate": "Bug Wings",
-  "item.minksandmisfits.bug_helmet": "Bug Hat",
-  "effect.minksandmisfits.slow_decent": "Slow Decent",
-  "key.minksandmisfits.fly_dash": "Fly Dash",
   "entity.minksandmisfits.opossum_rideable": "Opossum",
   "item.minksandmisfits.opossum_rideable_spawn_egg": "Opossum Spawn Egg",
   "effect.minksandmisfits.mink_like": "Mink Like",
@@ -51,5 +47,15 @@
   "item.minksandmisfits.soul_of_life.description_0": "§aBoosts any tamed animals max hp and provides permanent but slow life regeneration",
   "key.minksandmisfits.mink_dash": "Mink Dash",
   "effect.minksandmisfits.mink_water_power": "Mink Water Power",
-  "attribute.minksandmisfits.sitting": "Sitting"
+  "attribute.minksandmisfits.sitting": "Sitting",
+  "effect.minksandmisfits.super_slash_cooldown": "Super Slash Cooldown",
+  "item.minksandmisfits.slash": "Slash",
+  "item.minksandmisfits.roasted_bug": "Roasted Bug",
+  "item.minksandmisfits.roasted_bug_sand_witch": "Roasted Bug Sandwitch",
+  "item.minksandmisfits.raptorial_claw": "Raptorial Claw",
+  "effect.minksandmisfits.bleedclaw": "Bleed",
+  "death.attack.bleed_damage_claw.player": "%1$s bleed to death whilst trying to escape %2$s",
+  "death.attack.bleed_damage_claw.item": "%1$s bleed to death by %2$s using %3$s",
+  "death.attack.bleed_damage_claw": "%1$s bleed to death",
+  "effect.minksandmisfits.bleedimune": "Bleedimune"
 }

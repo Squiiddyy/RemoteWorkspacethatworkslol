@@ -1,0 +1,7 @@
+{
+  "parent": "minksandmisfits:custom/superslash",
+  "textures": {
+    "0": "minksandmisfits:block/superslash",
+    "particle": "minksandmisfits:item/superslash"
+  }
+}

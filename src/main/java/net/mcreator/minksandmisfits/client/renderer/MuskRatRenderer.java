@@ -15,6 +15,6 @@ public class MuskRatRenderer extends MobRenderer<MuskRatEntity, PigModel<MuskRat
 
 	@Override
 	public ResourceLocation getTextureLocation(MuskRatEntity entity) {
-		return ResourceLocation.parse("minksandmisfits:textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("minksandmisfits:textures/entities/mink.png");
 	}
 }

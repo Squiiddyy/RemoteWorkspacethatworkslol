@@ -27,13 +27,23 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import net.mcreator.minksandmisfits.procedures.OpossumSitCheckProcedure;
+import net.mcreator.minksandmisfits.procedures.OpossumRightclickedOnEntityProcedure;
+import net.mcreator.minksandmisfits.procedures.OpossumPlaybackConditionProcedure;
 import net.mcreator.minksandmisfits.procedures.OpossumOnEntityTickUpdateProcedure;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModItems;
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModEntities;
 
 public class OpossumEntity extends TamableAnimal {
+	public static final EntityDataAccessor<Boolean> DATA_Sitting = SynchedEntityData.defineId(OpossumEntity.class, EntityDataSerializers.BOOLEAN);
+	public final AnimationState animationState0 = new AnimationState();
+
 	public OpossumEntity(EntityType<OpossumEntity> type, Level world) {
 		super(type, world);
 		xpReward = 2;
@@ -42,36 +52,364 @@ public class OpossumEntity extends TamableAnimal {
 	}
 
 	@Override
+	protected void defineSynchedData(SynchedEntityData.Builder builder) {
+		super.defineSynchedData(builder);
+		builder.define(DATA_Sitting, false);
+	}
+
+	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1.25, (float) 9, (float) 2));
-		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.1));
-		this.goalSelector.addGoal(4, new TemptGoal(this, 1, Ingredient.of(MinksandmisfitsModItems.GRAPE.get()), false));
-		this.goalSelector.addGoal(5, new TemptGoal(this, 1, Ingredient.of(Items.APPLE), false));
-		this.goalSelector.addGoal(6, new TemptGoal(this, 1, Ingredient.of(Items.SALMON), false));
-		this.goalSelector.addGoal(7, new FloatGoal(this));
-		this.goalSelector.addGoal(8, new BreathAirGoal(this));
-		this.goalSelector.addGoal(9, new BreedGoal(this, 1));
-		this.targetSelector.addGoal(10, new NearestAttackableTargetGoal(this, Spider.class, true, true));
-		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, FleaEntity.class, true, true));
-		this.targetSelector.addGoal(12, new NearestAttackableTargetGoal(this, CaveSpider.class, true, true));
-		this.targetSelector.addGoal(13, new NearestAttackableTargetGoal(this, Silverfish.class, true, true));
-		this.targetSelector.addGoal(14, new NearestAttackableTargetGoal(this, Endermite.class, true, true));
-		this.goalSelector.addGoal(15, new PanicGoal(this, 1.25));
-		this.goalSelector.addGoal(16, new MeleeAttackGoal(this, 1.35, false) {
+		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1.25, (float) 10, (float) 1.5) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(2, new RandomStrollGoal(this, 1) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(3, new FollowParentGoal(this, 1.1) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(4, new TemptGoal(this, 1, Ingredient.of(MinksandmisfitsModItems.GRAPE.get()), false) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(5, new TemptGoal(this, 1, Ingredient.of(Items.APPLE), false) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(6, new TemptGoal(this, 1, Ingredient.of(MinksandmisfitsModItems.ROASTED_BUG.get()), false) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(7, new TemptGoal(this, 1, Ingredient.of(Items.SALMON), false) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(8, new FloatGoal(this));
+		this.goalSelector.addGoal(9, new BreathAirGoal(this));
+		this.goalSelector.addGoal(10, new BreedGoal(this, 1) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
+		this.targetSelector.addGoal(11, new NearestAttackableTargetGoal(this, Spider.class, true, true) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
+		this.targetSelector.addGoal(12, new NearestAttackableTargetGoal(this, FleaEntity.class, true, true) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
+		this.targetSelector.addGoal(13, new NearestAttackableTargetGoal(this, CaveSpider.class, true, true) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
+		this.targetSelector.addGoal(14, new NearestAttackableTargetGoal(this, Silverfish.class, true, true) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
+		this.targetSelector.addGoal(15, new NearestAttackableTargetGoal(this, Endermite.class, true, true) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(16, new PanicGoal(this, 1.25) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
+		this.goalSelector.addGoal(17, new MeleeAttackGoal(this, 1.36, false) {
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < 3.0625 && this.mob.getSensing().hasLineOfSight(entity);
 			}
+
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
 		});
-		this.goalSelector.addGoal(17, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(18, new RandomSwimmingGoal(this, 1, 40));
+		this.goalSelector.addGoal(18, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(19, new RandomSwimmingGoal(this, 1, 40) {
+			@Override
+			public boolean canUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+
+			@Override
+			public boolean canContinueToUse() {
+				double x = OpossumEntity.this.getX();
+				double y = OpossumEntity.this.getY();
+				double z = OpossumEntity.this.getZ();
+				Entity entity = OpossumEntity.this;
+				Level world = OpossumEntity.this.level();
+				return super.canContinueToUse() && OpossumSitCheckProcedure.execute(entity);
+			}
+		});
 	}
 
 	@Override
 	protected Vec3 getPassengerAttachmentPoint(Entity entity, EntityDimensions dimensions, float f) {
-		return super.getPassengerAttachmentPoint(entity, dimensions, f).add(0, -0.1f, 0);
+		return super.getPassengerAttachmentPoint(entity, dimensions, f).add(0, -0.2f, 0);
 	}
 
 	@Override
@@ -87,6 +425,19 @@ public class OpossumEntity extends TamableAnimal {
 	@Override
 	public SoundEvent getDeathSound() {
 		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.silverfish.death"));
+	}
+
+	@Override
+	public void addAdditionalSaveData(CompoundTag compound) {
+		super.addAdditionalSaveData(compound);
+		compound.putBoolean("DataSitting", this.entityData.get(DATA_Sitting));
+	}
+
+	@Override
+	public void readAdditionalSaveData(CompoundTag compound) {
+		super.readAdditionalSaveData(compound);
+		if (compound.contains("DataSitting"))
+			this.entityData.set(DATA_Sitting, compound.getBoolean("DataSitting"));
 	}
 
 	@Override
@@ -131,7 +482,22 @@ public class OpossumEntity extends TamableAnimal {
 					this.setPersistenceRequired();
 			}
 		}
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level();
+
+		OpossumRightclickedOnEntityProcedure.execute(entity, sourceentity);
 		return retval;
+	}
+
+	@Override
+	public void tick() {
+		super.tick();
+		if (this.level().isClientSide()) {
+			this.animationState0.animateWhen(OpossumPlaybackConditionProcedure.execute(this), this.tickCount);
+		}
 	}
 
 	@Override
@@ -149,12 +515,12 @@ public class OpossumEntity extends TamableAnimal {
 
 	@Override
 	public boolean isFood(ItemStack stack) {
-		return Ingredient.of(new ItemStack(Items.SALMON), new ItemStack(Items.APPLE), new ItemStack(MinksandmisfitsModItems.GRAPE.get())).test(stack);
+		return Ingredient.of(new ItemStack(Items.SALMON), new ItemStack(Items.APPLE), new ItemStack(MinksandmisfitsModItems.GRAPE.get()), new ItemStack(MinksandmisfitsModItems.ROASTED_BUG.get())).test(stack);
 	}
 
 	@Override
 	public EntityDimensions getDefaultDimensions(Pose pose) {
-		return super.getDefaultDimensions(pose).scale(1.2f);
+		return super.getDefaultDimensions(pose).scale(1.25f);
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {

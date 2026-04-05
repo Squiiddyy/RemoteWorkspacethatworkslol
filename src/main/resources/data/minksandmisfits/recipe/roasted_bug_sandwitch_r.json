@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b",
+    "a"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:bread"
+    },
+    "b": {
+      "item": "minksandmisfits:roasted_bug"
+    }
+  },
+  "result": {
+    "id": "minksandmisfits:roasted_bug_sand_witch",
+    "count": 1
+  }
+}

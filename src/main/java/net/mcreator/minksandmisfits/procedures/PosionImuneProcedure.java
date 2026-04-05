@@ -10,6 +10,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 
+import net.mcreator.minksandmisfits.entity.OpossumRideableEntity;
 import net.mcreator.minksandmisfits.entity.OpossumEntity;
 
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public class PosionImuneProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof OpossumEntity && entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(MobEffects.POISON)) {
+		if ((entity instanceof OpossumEntity || entity instanceof OpossumRideableEntity) && entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(MobEffects.POISON)) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(MobEffects.POISON);
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

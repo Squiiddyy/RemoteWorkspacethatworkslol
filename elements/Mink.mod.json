@@ -66,6 +66,33 @@
         "condition": {
           "name": "MinkHasArmor"
         }
+      },
+      {
+        "model": "Default",
+        "texture": "minkcollar.png",
+        "disableHurtOverlay": true,
+        "glow": false,
+        "condition": {
+          "name": "CollarCheck"
+        }
+      },
+      {
+        "model": "Default",
+        "texture": "minktotem.png",
+        "disableHurtOverlay": true,
+        "glow": true,
+        "condition": {
+          "name": "TotemCheck"
+        }
+      },
+      {
+        "model": "Default",
+        "texture": "minktextsombereyes.png",
+        "disableHurtOverlay": false,
+        "glow": true,
+        "condition": {
+          "name": "IsSomberColor"
+        }
       }
     ],
     "animations": [
@@ -89,7 +116,7 @@
           "name": "MinkPlaybackCondition"
         },
         "walking": true,
-        "amplitude": 50.0
+        "amplitude": 100.0
       }
     ],
     "modelWidth": 0.65,
@@ -203,6 +230,11 @@
         "name": "Armor",
         "type": "integer",
         "value": 0
+      },
+      {
+        "name": "Sitting",
+        "type": "logic",
+        "value": false
       }
     ],
     "onRightClickedOn": {
@@ -216,7 +248,7 @@
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"leap_at_target\"><field name=\"speed\">0.4</field><field name=\"condition\">SitCheck,SitCheck</field><next><block type=\"attack_with_range\"><field name=\"range\">1.8</field><field name=\"speed\">1</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">MinkSitCheck,MinkSitCheck</field><next><block type=\"follow_owner\"><field name=\"speed\">1.1</field><field name=\"min_distance\">9</field><field name=\"max_distance\">2</field><field name=\"condition\">SitCheck,SitCheck</field><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1.05</field><field name=\"scared\">FALSE</field><field name=\"condition\">SitCheck,SitCheck</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.FISH#0</field></block></value><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1.05</field><field name=\"scared\">FALSE</field><field name=\"condition\">SitCheck,SitCheck</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.CHICKEN</field></block></value><next><block type=\"follow_parent\"><field name=\"speed\">1.1</field><field name=\"condition\">SitCheck,SitCheck</field><next><block type=\"protect_owner\"><field name=\"condition\">SitCheck,SitCheck</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">SitCheck,SitCheck</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:MuskRat</field><field name=\"condition\">TamedNoLongerAttack,TamedNoLongerAttack</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityCod</field><field name=\"condition\">TamedNoLongerAttack,TamedNoLongerAttack</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:Crayfish</field><field name=\"condition\">TamedNoLongerAttack,TamedNoLongerAttack</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityChicken</field><field name=\"condition\">TamedNoLongerAttack,TamedNoLongerAttack</field><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">0.9</field><field name=\"condition\">SitCheck,SitCheck</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.75</field><field name=\"condition\">SitCheck,SitCheck</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block><block type=\"find_and_move_to_air\" x=\"387\" y=\"681\"><field name=\"condition\">null,null</field></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"leap_at_target\"><field name=\"speed\">0.4</field><field name=\"condition\">SitCheck,SitCheck</field><next><block type=\"attack_with_range\"><field name=\"range\">1.8</field><field name=\"speed\">1</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">MinkSitCheck,MinkSitCheck</field><next><block type=\"follow_owner\"><field name=\"speed\">1.1</field><field name=\"min_distance\">10</field><field name=\"max_distance\">1.5</field><field name=\"condition\">SitCheck,SitCheck</field><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1.05</field><field name=\"scared\">FALSE</field><field name=\"condition\">SitCheck,SitCheck</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.FISH#0</field></block></value><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1.05</field><field name=\"scared\">FALSE</field><field name=\"condition\">SitCheck,SitCheck</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.CHICKEN</field></block></value><next><block type=\"follow_parent\"><field name=\"speed\">1.1</field><field name=\"condition\">SitCheck,SitCheck</field><next><block type=\"protect_owner\"><field name=\"condition\">SitCheck,SitCheck</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">SitCheck,SitCheck</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:MuskRat</field><field name=\"condition\">TamedNoLongerAttack,TamedNoLongerAttack</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityCod</field><field name=\"condition\">TamedNoLongerAttack,TamedNoLongerAttack</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">CUSTOM:Crayfish</field><field name=\"condition\">TamedNoLongerAttack,TamedNoLongerAttack</field><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityChicken</field><field name=\"condition\">TamedNoLongerAttack,TamedNoLongerAttack</field><next><block type=\"swim\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">0.9</field><field name=\"condition\">SitCheck,SitCheck</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.75</field><field name=\"condition\">SitCheck,SitCheck</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block><block type=\"find_and_move_to_air\" x=\"387\" y=\"681\"><field name=\"condition\">null,null</field></block></xml>",
     "breedable": true,
     "tameable": true,
     "breedTriggerItems": [

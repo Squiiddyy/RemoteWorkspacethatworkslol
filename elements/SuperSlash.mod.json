@@ -1,0 +1,25 @@
+{
+  "_fv": 79,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:Slash"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "disableGravity": true,
+    "power": 0.3,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Default",
+    "customModelTexture": "superslash.png",
+    "modelWidth": 2.0,
+    "modelHeight": 1.5,
+    "onFlyingTick": {
+      "name": "SuperSlashWhileProjectileFlyingTick"
+    }
+  }
+}

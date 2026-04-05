@@ -45,6 +45,7 @@ import javax.annotation.Nullable;
 public class MinkEntity extends TamableAnimal {
 	public static final EntityDataAccessor<Integer> DATA_Color = SynchedEntityData.defineId(MinkEntity.class, EntityDataSerializers.INT);
 	public static final EntityDataAccessor<Integer> DATA_Armor = SynchedEntityData.defineId(MinkEntity.class, EntityDataSerializers.INT);
+	public static final EntityDataAccessor<Boolean> DATA_Sitting = SynchedEntityData.defineId(MinkEntity.class, EntityDataSerializers.BOOLEAN);
 	public final AnimationState animationState0 = new AnimationState();
 
 	public MinkEntity(EntityType<MinkEntity> type, Level world) {
@@ -58,6 +59,7 @@ public class MinkEntity extends TamableAnimal {
 		super.defineSynchedData(builder);
 		builder.define(DATA_Color, 0);
 		builder.define(DATA_Armor, 0);
+		builder.define(DATA_Sitting, false);
 	}
 
 	@Override
@@ -90,7 +92,7 @@ public class MinkEntity extends TamableAnimal {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < 3.24 && this.mob.getSensing().hasLineOfSight(entity);
 			}
 		});
-		this.goalSelector.addGoal(3, new FollowOwnerGoal(this, 1.1, (float) 9, (float) 2) {
+		this.goalSelector.addGoal(3, new FollowOwnerGoal(this, 1.1, (float) 10, (float) 1.5) {
 			@Override
 			public boolean canUse() {
 				double x = MinkEntity.this.getX();
@@ -369,6 +371,7 @@ public class MinkEntity extends TamableAnimal {
 		super.addAdditionalSaveData(compound);
 		compound.putInt("DataColor", this.entityData.get(DATA_Color));
 		compound.putInt("DataArmor", this.entityData.get(DATA_Armor));
+		compound.putBoolean("DataSitting", this.entityData.get(DATA_Sitting));
 	}
 
 	@Override
@@ -378,6 +381,8 @@ public class MinkEntity extends TamableAnimal {
 			this.entityData.set(DATA_Color, compound.getInt("DataColor"));
 		if (compound.contains("DataArmor"))
 			this.entityData.set(DATA_Armor, compound.getInt("DataArmor"));
+		if (compound.contains("DataSitting"))
+			this.entityData.set(DATA_Sitting, compound.getBoolean("DataSitting"));
 	}
 
 	@Override

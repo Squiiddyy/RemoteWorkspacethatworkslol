@@ -32,7 +32,7 @@ public class MinksandmisfitsModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<OpossumEntity>> OPOSSUM = register("opossum",
 			EntityType.Builder.<OpossumEntity>of(OpossumEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(0.8f, 0.6f));
+					.sized(0.8f, 0.65f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MinkEntity>> MINK = register("mink",
 			EntityType.Builder.<MinkEntity>of(MinkEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
@@ -44,7 +44,7 @@ public class MinksandmisfitsModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<OpossumRideableEntity>> OPOSSUM_RIDEABLE = register("opossum_rideable",
 			EntityType.Builder.<OpossumRideableEntity>of(OpossumRideableEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(0.8f, 0.6f));
+					.sized(0.8f, 0.65f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MuskRatEntity>> MUSK_RAT = register("musk_rat",
 			EntityType.Builder.<MuskRatEntity>of(MuskRatEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
@@ -53,6 +53,8 @@ public class MinksandmisfitsModEntities {
 			EntityType.Builder.<CrayfishEntity>of(CrayfishEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(1f, 1f));
+	public static final DeferredHolder<EntityType<?>, EntityType<SuperSlashEntity>> SUPER_SLASH = register("super_slash",
+			EntityType.Builder.<SuperSlashEntity>of(SuperSlashEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(2f, 1.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities

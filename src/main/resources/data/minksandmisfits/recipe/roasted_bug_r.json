@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smoking",
+  "category": "food",
+  "experience": 1,
+  "cookingtime": 100,
+  "ingredient": {
+    "item": "minksandmisfits:bug_remains"
+  },
+  "result": {
+    "id": "minksandmisfits:roasted_bug"
+  }
+}

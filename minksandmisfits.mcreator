@@ -1107,132 +1107,6 @@
       "path": "~/Opossums"
     },
     {
-      "name": "Bug",
-      "type": "armor",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bug",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/minksandmisfits/models/item/bug_chestplate.json",
-          "src/main/resources/assets/minksandmisfits/models/item/bug_helmet.json",
-          "src/main/java/net/mcreator/minksandmisfits/item/BugItem.java"
-        ]
-      },
-      "path": "~/Opossums"
-    },
-    {
-      "name": "BugChestplateTickEvent",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bug_chestplate_tick_event",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/minksandmisfits/procedures/BugChestplateTickEventProcedure.java"
-        ]
-      },
-      "path": "~/Opossums"
-    },
-    {
-      "name": "SlowDecent",
-      "type": "potioneffect",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "slow_decent",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/minksandmisfits/potion/SlowDecentMobEffect.java"
-        ]
-      },
-      "path": "~/Opossums"
-    },
-    {
-      "name": "FlyDashOnKeyPressed",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fly_dash_on_key_pressed",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/minksandmisfits/procedures/FlyDashOnKeyPressedProcedure.java"
-        ]
-      },
-      "path": "~/Opossums"
-    },
-    {
-      "name": "Playerloginexploitfix",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "playerloginexploitfix",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
-        "files": [
-          "src/main/java/net/mcreator/minksandmisfits/procedures/PlayerloginexploitfixProcedure.java"
-        ]
-      },
-      "path": "~/Opossums"
-    },
-    {
-      "name": "FlyDash",
-      "type": "keybind",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fly_dash",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/minksandmisfits/network/FlyDashMessage.java"
-        ]
-      },
-      "path": "~/Opossums"
-    },
-    {
-      "name": "BugHatR",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bug_hat_r",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/minksandmisfits/advancement/recipes/bug_hat_r.json",
-          "src/main/resources/data/minksandmisfits/recipe/bug_hat_r.json"
-        ]
-      },
-      "path": "~/Opossums"
-    },
-    {
-      "name": "BugWingsR",
-      "type": "recipe",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "bug_wings_r",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/minksandmisfits/recipe/bug_wings_r.json",
-          "src/main/resources/data/minksandmisfits/advancement/recipes/bug_wings_r.json"
-        ]
-      },
-      "path": "~/Opossums"
-    },
-    {
       "name": "OpossumOnEntityTickUpdate",
       "type": "procedure",
       "compiles": true,
@@ -1294,7 +1168,7 @@
           "src/main/java/net/mcreator/minksandmisfits/potion/MinkLikeMobEffect.java"
         ]
       },
-      "path": "~/Minks"
+      "path": "~/Minks/MinkLike"
     },
     {
       "name": "MinkTransformRightclicked",
@@ -1321,7 +1195,7 @@
           "src/main/java/net/mcreator/minksandmisfits/procedures/MinkTransformRightclickedProcedure.java"
         ]
       },
-      "path": "~/Minks"
+      "path": "~/Minks/MinkLike"
     },
     {
       "name": "MinkTransform",
@@ -1335,7 +1209,7 @@
           "src/main/resources/assets/minksandmisfits/models/item/mink_transform.json"
         ]
       },
-      "path": "~/Minks"
+      "path": "~/Minks/MinkLike"
     },
     {
       "name": "MinkFurCarpet",
@@ -1429,7 +1303,7 @@
       "metadata": {
         "files": []
       },
-      "path": "~/Minks"
+      "path": "~/Minks/MinkLike"
     },
     {
       "name": "SetMinklike",
@@ -1443,7 +1317,7 @@
           "src/main/java/net/mcreator/minksandmisfits/procedures/SetMinklikeProcedure.java"
         ]
       },
-      "path": "~/Minks"
+      "path": "~/Minks/MinkLike"
     },
     {
       "name": "MinkLikePlayerPotion",
@@ -1470,7 +1344,7 @@
           "src/main/java/net/mcreator/minksandmisfits/procedures/MinkLikePlayerPotionProcedure.java"
         ]
       },
-      "path": "~/Minks"
+      "path": "~/Minks/MinkLike"
     },
     {
       "name": "MinkLikePlayerPotionArm",
@@ -1501,7 +1375,7 @@
           "src/main/java/net/mcreator/minksandmisfits/procedures/MinkLikePlayerPotionArmProcedure.java"
         ]
       },
-      "path": "~/Minks"
+      "path": "~/Minks/MinkLike"
     },
     {
       "name": "OpossumRideableOnInitialEntitySpawn",
@@ -1560,7 +1434,7 @@
           "src/main/resources/data/minksandmisfits/recipe/mink_transform_r.json"
         ]
       },
-      "path": "~/Minks"
+      "path": "~/Minks/MinkLike"
     },
     {
       "name": "SoulOfLifeRightclicked",
@@ -1670,7 +1544,7 @@
           "src/main/java/net/mcreator/minksandmisfits/network/MinkDashMessage.java"
         ]
       },
-      "path": "~/Minks"
+      "path": "~/Minks/MinkLike"
     },
     {
       "name": "MinkDashOnKeyPressed",
@@ -1693,7 +1567,7 @@
           "src/main/java/net/mcreator/minksandmisfits/procedures/MinkDashOnKeyPressedProcedure.java"
         ]
       },
-      "path": "~/Minks"
+      "path": "~/Minks/MinkLike"
     },
     {
       "name": "MinkDashReset",
@@ -1716,7 +1590,7 @@
           "src/main/java/net/mcreator/minksandmisfits/procedures/MinkDashResetProcedure.java"
         ]
       },
-      "path": "~/Minks"
+      "path": "~/Minks/MinkLike"
     },
     {
       "name": "MinkWaterPower",
@@ -1821,6 +1695,578 @@
         ]
       },
       "path": "~/Minks"
+    },
+    {
+      "name": "SuperSlashCooldown",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "super_slash_cooldown",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/potion/SuperSlashCooldownMobEffect.java"
+        ]
+      },
+      "path": "~/Minks/MinkLike"
+    },
+    {
+      "name": "MinklikeSuperSlash",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "minklike_super_slash",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/MinklikeSuperSlashProcedure.java"
+        ]
+      },
+      "path": "~/Minks/MinkLike"
+    },
+    {
+      "name": "Slash",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "slash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/item/SlashItem.java",
+          "src/main/resources/assets/minksandmisfits/models/item/slash.json"
+        ]
+      },
+      "path": "~/Minks/MinkLike"
+    },
+    {
+      "name": "SuperSlash",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "super_slash",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/entity/SuperSlashEntity.java"
+        ]
+      },
+      "path": "~/Minks/MinkLike"
+    },
+    {
+      "name": "SuperSlashWhileProjectileFlyingTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "super_slash_while_projectile_flying_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "immediatesourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/SuperSlashWhileProjectileFlyingTickProcedure.java"
+        ]
+      },
+      "path": "~/Minks/MinkLike"
+    },
+    {
+      "name": "OpossumFear2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opossum_fear_2",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/OpossumFear2Procedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "RoastedBug",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roasted_bug",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/item/RoastedBugItem.java",
+          "src/main/resources/assets/minksandmisfits/models/item/roasted_bug.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "RoastedBugR",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roasted_bug_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/recipe/roasted_bug_r.json",
+          "src/main/resources/data/minksandmisfits/advancement/recipes/roasted_bug_r.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "RoastedBugR1",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roasted_bug_r_1",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/recipe/roasted_bug_r_1.json",
+          "src/main/resources/data/minksandmisfits/advancement/recipes/roasted_bug_r_1.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "RoastedBugR2",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roasted_bug_r_2",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/recipe/roasted_bug_r_2.json",
+          "src/main/resources/data/minksandmisfits/advancement/recipes/roasted_bug_r_2.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "RoastedBugSandWitch",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roasted_bug_sand_witch",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/minksandmisfits/models/item/roasted_bug_sand_witch.json",
+          "src/main/java/net/mcreator/minksandmisfits/item/RoastedBugSandWitchItem.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "RoastedBugPlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roasted_bug_player_finishes_using_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/RoastedBugPlayerFinishesUsingItemProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "RoastedBugSandwitchR",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roasted_bug_sandwitch_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/recipe/roasted_bug_sandwitch_r.json",
+          "src/main/resources/data/minksandmisfits/advancement/recipes/roasted_bug_sandwitch_r.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "RoastedBugSandWitchPlayerFinishesUsingItem",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "roasted_bug_sand_witch_player_finishes_using_item",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/RoastedBugSandWitchPlayerFinishesUsingItemProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "RaptorialClaw",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raptorial_claw",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/item/RaptorialClawItem.java",
+          "src/main/resources/assets/minksandmisfits/models/item/raptorial_claw.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "Bleed",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleedclaw",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/potion/BleedMobEffect.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "BleedOnEffectActiveTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleed_on_effect_active_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/BleedOnEffectActiveTickProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "RaptorialClawLivingEntityIsHitWithTool",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raptorial_claw_living_entity_is_hit_with_tool",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/RaptorialClawLivingEntityIsHitWithToolProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "BleedEffectExpires",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleed_effect_expires",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/BleedEffectExpiresProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "BleedDamageClaw",
+      "type": "damagetype",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleed_damage_claw",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/damage_type/bleed_damage_claw.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "Bleedimune",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bleedimune",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/potion/BleedimuneMobEffect.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "RaptorialClawR",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raptorial_claw_r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/minksandmisfits/recipe/raptorial_claw_r.json",
+          "src/main/resources/data/minksandmisfits/advancement/recipes/raptorial_claw_r.json"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "CollarCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "collar_check",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/CollarCheckProcedure.java"
+        ]
+      },
+      "path": "~/TamedMobAddtions"
+    },
+    {
+      "name": "OpossumRightclickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opossum_rightclicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/OpossumRightclickedOnEntityProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "OpossumRideableRightclickedOnEntity",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opossum_rideable_rightclicked_on_entity",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/OpossumRideableRightclickedOnEntityProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "OpossumRideablePlaybackCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opossum_rideable_playback_condition",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/OpossumRideablePlaybackConditionProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "OpossumPlaybackCondition",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opossum_playback_condition",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/OpossumPlaybackConditionProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "OpossumRideableSitCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opossum_rideable_sit_check",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/OpossumRideableSitCheckProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "OpossumSitCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "opossum_sit_check",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/OpossumSitCheckProcedure.java"
+        ]
+      },
+      "path": "~/Opossums"
+    },
+    {
+      "name": "TotemOnTamedMob",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_on_tamed_mob",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ],
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/TotemOnTamedMobProcedure.java"
+        ]
+      },
+      "path": "~/TamedMobAddtions"
+    },
+    {
+      "name": "TotemCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "totem_check",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ],
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/minksandmisfits/procedures/TotemCheckProcedure.java"
+        ]
+      },
+      "path": "~/TamedMobAddtions"
     }
   ],
   "variable_elements": [
@@ -1895,14 +2341,18 @@
     "BLOCKS:minecraft:animals_spawnable_on": [
       "CUSTOM:BlueSand"
     ],
-    "ITEMS:minecraft:head_armor": [
-      "~CUSTOM:Bug.helmet"
-    ],
-    "ITEMS:minecraft:chest_armor": [
-      "~CUSTOM:Bug.body"
-    ],
     "ITEMS:minecraft:enchantable/durability": [
       "~CUSTOM:MinkTransform"
+    ],
+    "ITEMS:minecraft:meat": [
+      "~CUSTOM:RoastedBugSandWitch",
+      "~CUSTOM:RoastedBug"
+    ],
+    "ITEMS:minecraft:shears": [
+      "CUSTOM:RaptorialClaw"
+    ],
+    "ITEMS:minecraft:swords": [
+      "CUSTOM:RaptorialClaw"
     ]
   },
   "tab_element_order": {},
@@ -1941,10 +2391,6 @@
       "effect.minksandmisfits.snow_boost": "Snow Boost",
       "item.minksandmisfits.mink_armor": "Mink Armor",
       "effect.minksandmisfits.detarget": "Detarget",
-      "item.minksandmisfits.bug_chestplate": "Bug Wings",
-      "item.minksandmisfits.bug_helmet": "Bug Hat",
-      "effect.minksandmisfits.slow_decent": "Slow Decent",
-      "key.minksandmisfits.fly_dash": "Fly Dash",
       "entity.minksandmisfits.opossum_rideable": "Opossum",
       "item.minksandmisfits.opossum_rideable_spawn_egg": "Opossum Spawn Egg",
       "effect.minksandmisfits.mink_like": "Mink Like",
@@ -1960,7 +2406,17 @@
       "item.minksandmisfits.soul_of_life.description_0": "§aBoosts any tamed animals max hp and provides permanent but slow life regeneration",
       "key.minksandmisfits.mink_dash": "Mink Dash",
       "effect.minksandmisfits.mink_water_power": "Mink Water Power",
-      "attribute.minksandmisfits.sitting": "Sitting"
+      "attribute.minksandmisfits.sitting": "Sitting",
+      "effect.minksandmisfits.super_slash_cooldown": "Super Slash Cooldown",
+      "item.minksandmisfits.slash": "Slash",
+      "item.minksandmisfits.roasted_bug": "Roasted Bug",
+      "item.minksandmisfits.roasted_bug_sand_witch": "Roasted Bug Sandwitch",
+      "item.minksandmisfits.raptorial_claw": "Raptorial Claw",
+      "effect.minksandmisfits.bleedclaw": "Bleed",
+      "death.attack.bleed_damage_claw.player": "%1$s bleed to death whilst trying to escape %2$s",
+      "death.attack.bleed_damage_claw.item": "%1$s bleed to death by %2$s using %3$s",
+      "death.attack.bleed_damage_claw": "%1$s bleed to death",
+      "effect.minksandmisfits.bleedimune": "Bleedimune"
     }
   },
   "metadata": {
@@ -2007,7 +2463,12 @@
       },
       {
         "name": "Minks",
-        "children": []
+        "children": [
+          {
+            "name": "MinkLike",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Opossums",
@@ -2039,6 +2500,10 @@
       },
       {
         "name": "Misc",
+        "children": []
+      },
+      {
+        "name": "TamedMobAddtions",
         "children": []
       }
     ]

@@ -1,0 +1,35 @@
+{
+  "_fv": 79,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Bleed",
+    "icon": "sink_proof",
+    "color": {
+      "value": -1,
+      "falpha": 0.0
+    },
+    "onAddedSound": {
+      "value": ""
+    },
+    "isInstant": false,
+    "mobEffectCategory": "HARMFUL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "isCuredbyHoney": false,
+    "modifiers": [
+      {
+        "attribute": {
+          "value": "MOVEMENT_SPEED"
+        },
+        "amount": -0.06,
+        "operation": "ADD_MULTIPLIED_BASE"
+      }
+    ],
+    "onActiveTick": {
+      "name": "BleedOnEffectActiveTick"
+    },
+    "onExpired": {
+      "name": "BleedEffectExpires"
+    }
+  }
+}

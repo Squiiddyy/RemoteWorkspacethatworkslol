@@ -20,38 +20,15 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.Difficulty;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.network.syncher.EntityDataSerializers;
-import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import net.mcreator.minksandmisfits.init.MinksandmisfitsModEntities;
 
 public class MuskRatEntity extends Monster {
-
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(MuskRatEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<Integer> ANIM = SynchedEntityData.defineId(MuskRatEntity.class, EntityDataSerializers.INT);
-
 	public MuskRatEntity(EntityType<MuskRatEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
-	}
-
-	@Override
-	protected void defineSynchedData(SynchedEntityData.Builder builder) {
-		super.defineSynchedData(builder);
-		builder.define(TEXTURE, "mink");
-		builder.define(ANIM, 0);
-	}
-
-	public void setTexture(String texture) {
-		this.entityData.set(TEXTURE, texture);
-	}
-
-	public String getTexture() {
-		return this.entityData.get(TEXTURE);
 	}
 
 	@Override
@@ -77,19 +54,6 @@ public class MuskRatEntity extends Monster {
 	@Override
 	public SoundEvent getDeathSound() {
 		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.death"));
-	}
-
-	@Override
-	public void addAdditionalSaveData(CompoundTag compound) {
-		super.addAdditionalSaveData(compound);
-		compound.putString("Texture", this.getTexture());
-	}
-
-	@Override
-	public void readAdditionalSaveData(CompoundTag compound) {
-		super.readAdditionalSaveData(compound);
-		if (compound.contains("Texture"))
-			this.setTexture(compound.getString("Texture"));
 	}
 
 	public static void init(RegisterSpawnPlacementsEvent event) {
